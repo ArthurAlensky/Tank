@@ -1,0 +1,20 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "BSUIR.MG.Tanks", "BSUIR.MG.Tanks\BSUIR.MG.Tanks.vcxproj", "{540DABF7-CF5B-4104-A484-718B8B6B34A4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{540DABF7-CF5B-4104-A484-718B8B6B34A4}.Debug|Win32.ActiveCfg = Debug|Win32
+		{540DABF7-CF5B-4104-A484-718B8B6B34A4}.Debug|Win32.Build.0 = Debug|Win32
+		{540DABF7-CF5B-4104-A484-718B8B6B34A4}.Release|Win32.ActiveCfg = Release|Win32
+		{540DABF7-CF5B-4104-A484-718B8B6B34A4}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
