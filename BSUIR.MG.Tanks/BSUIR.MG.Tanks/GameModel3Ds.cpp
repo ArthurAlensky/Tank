@@ -6,7 +6,7 @@ GameModel3Ds::GameModel3Ds()
 
 GameModel3Ds::GameModel3Ds(const char *fileName, float scale)
 {
-	strcpy(this->fileName, fileName);
+	this->fileName += fileName;
 	this->scale = scale;
 }
 
@@ -14,10 +14,15 @@ GameModel3Ds::~GameModel3Ds()
 {
 }
 
-void GameModel3Ds::setParameters(const char *filename, float scale)
+void GameModel3Ds::setParameters(const char *filename, float scale, const char *rootFolder = NULL)
 {
-	strcpy(fileName, filename);
+	this->fileName += filename;
 	this->scale = scale;
+
+	if(rootFolder != NULL)
+	{
+		this->rootFolder += rootFolder;
+	}
 }
 
 void GameModel3Ds::initModel()
@@ -25,7 +30,9 @@ void GameModel3Ds::initModel()
 	// First we need to actually load the .3DS file.  We just pass in an address to
 	// our t3DModel structure and the file name string we want to load ("face.3ds").
 
-	g_Load3ds.Import3DS(&g_3DModel, (char*)fileName);			// Load our .3DS file into our model structure
+	string model(rootFolder);
+	model += fileName;
+	g_Load3ds.Import3DS(&g_3DModel, (char*)model.c_str());			// Load our .3DS file into our model structure
 
 	// Depending on how many textures we found, load each one (Assuming .BMP)
 	// If you want to load other files than bitmaps, you will need to adjust CreateTexture().
@@ -40,7 +47,9 @@ void GameModel3Ds::initModel()
 		{
 			// Use the name of the texture file to load the bitmap, with a texture ID (i).
 			// We pass in our global texture array, the name of the texture, and an ID to reference it.	
-			createTexture(g_3DModel.pMaterials[i].strFile, g_Texture[i]);			
+			string texture(rootFolder);
+			texture += g_3DModel.pMaterials[i].strFile; 
+			createTexture((LPTSTR)texture.c_str(), g_Texture[i]);			
 		}
 
 		// Set the texture ID for this material

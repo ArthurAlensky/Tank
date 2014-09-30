@@ -172,7 +172,7 @@ void myInit()
 	glFogf(GL_FOG_DENSITY, gFogDensity);
 
 	//initial terrain
-	myTerrain.initializeTerrain("E:/My_Tank/BSUIR.MG.Tanks/Data/Texture/Terrain/sand.tga", "E:/My_Tank/BSUIR.MG.Tanks/Data/Texture/Terrain/cactus.tga");
+	myTerrain.initializeTerrain("E:/My_Tank/Work/Tank/BSUIR.MG.Tanks/Data/Texture/Terrain/sand.tga", "E:/My_Tank/Work/Tank/BSUIR.MG.Tanks/Data/Texture/Terrain/cactus.tga");
 
 	//initial ground collision square
 	groundCollSquare.setParameters(TVector(0.0, 1.0, 0.0), gCenterPoint);
@@ -181,7 +181,8 @@ void myInit()
 	//initial tank
 	tankHeightPos = myTerrain.GetHeight(gCenterPoint.X()+100.0, gCenterPoint.Z());
 
-	myTank.setParameters("E:/My_Tank/BSUIR.MG.Tanks/T-90/T-90.3ds", TVector(gCenterPoint.X()+100.0, tankHeightPos + 9.0, gCenterPoint.Z()), 0.0, &myTerrain, &collisionBoxArray);
+	myTank.setParameters("T-90.3DS", "E:/My_Tank/Work/Tank/TANK-T90/T-90/",TVector(gCenterPoint.X()+100.0, tankHeightPos + 9.0, gCenterPoint.Z()), 0.0, &myTerrain, &collisionBoxArray);
+	//myTank.setParameters("E:/My_Tank/Work/Tank/Tank-34/111.3DS", TVector(gCenterPoint.X()+100.0, tankHeightPos + 9.0, gCenterPoint.Z()), 0.0, &myTerrain, &collisionBoxArray);
 	myTank.initTank();	
 
 	myTank.startFight();
@@ -367,3 +368,4 @@ void myReshape(int width, int height)
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 }
+

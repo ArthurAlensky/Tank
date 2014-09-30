@@ -21,6 +21,7 @@
     <ClInclude Include="Global.h" />
     <ClInclude Include="Mathex.h" />
     <ClInclude Include="GameModel3Ds.h" />
+    <ClInclude Include="resource.h" />
     <ClInclude Include="Tank.h" />
     <ClInclude Include="Terrain.h" />
     <ClInclude Include="Texture.h" />
@@ -34,6 +35,7 @@
     <ClCompile Include="CollisionBoxArray.cpp" />
     <ClCompile Include="CollisionSquare.cpp" />
     <ClCompile Include="ControlWarObject.cpp" />
+    <ClCompile Include="main_disabled.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="GameModel3Ds.cpp" />
     <ClCompile Include="Tank.cpp" />
@@ -41,6 +43,9 @@
     <ClCompile Include="Texture.cpp" />
     <ClCompile Include="Tray.cpp" />
     <ClCompile Include="Tvector.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="BSUIR.MG.Tanks.rc" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{540DABF7-CF5B-4104-A484-718B8B6B34A4}</ProjectGuid>

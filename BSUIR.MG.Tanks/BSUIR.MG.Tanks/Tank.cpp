@@ -9,9 +9,9 @@ Tank::~Tank()
 {
 }
 
-void Tank::setParameters(const char *bodyFile, TVector position, float angleWithX, Terrain *terrain, CollisionBoxArray *collisionBoxArray)
+void Tank::setParameters(const char *bodyFile, const char *rootFolder,TVector position, float angleWithX, Terrain *terrain, CollisionBoxArray *collisionBoxArray)
 {
-	bodyModel.setParameters(bodyFile, 0.2);
+	bodyModel.setParameters(bodyFile, 0.2, rootFolder);
 	this->position = position;
 	this->angleWithX = angleWithX;
 	this->terrain = terrain;
@@ -66,9 +66,12 @@ void Tank::draw(int viewMode)
 
 	//printf("Angle with X when draw tank is %2f\n", angleWithX);
 	glPushMatrix();
-	glTranslatef(position.X(), position.Y(), position.Z());
-	glRotatef(angleWithX, 0.0, 1.0, 0.0);
+	glTranslatef(position.X(), position.Y() - 10, position.Z());
+	//glRotatef(angleWithX, 0.0, 1.0, 0.0);
+
+	glScalef(10,10,10);
 	bodyModel.display(viewMode);
+	
 	glPopMatrix();
 
 	if(!collisionBox.isLife())

@@ -15,7 +15,8 @@
 class GameModel3Ds
 {
 private:
-	char fileName[100];
+	string rootFolder;
+	string fileName;
 	float scale;
 	CLoad3DS g_Load3ds;										// This is 3DS class.  This should go in a good model class.
 	t3DModel g_3DModel;										// This holds the 3D Model info that we load in
@@ -29,7 +30,7 @@ public:
 	GameModel3Ds(const char *filename, float scale);
 	~GameModel3Ds();
 	
-	void setParameters(const char *filename, float scale);
+	void setParameters(const char *filename, float scale, const char *rootFolder);
 	void initModel();
 	void display(int viewMode);
 	void deleteModel();

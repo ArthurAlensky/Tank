@@ -24,7 +24,7 @@ public:
 	Tank();
 	~Tank();
 	
-	void setParameters(const char *bodyFile, TVector position, float angleWithX, Terrain *terrain, CollisionBoxArray *collisionBoxArray);
+	void setParameters(const char *bodyFile, const char *rootFolder,TVector position, float angleWithX, Terrain *terrain, CollisionBoxArray *collisionBoxArray);
 	void plusAngleWithX(float deltaAngle);
 	void move(float deltaTranslate);
 	void initTank();
