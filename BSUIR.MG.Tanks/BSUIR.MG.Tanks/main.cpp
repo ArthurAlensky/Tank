@@ -185,6 +185,10 @@ void myInit()
 	//myTank.setParameters("E:/My_Tank/Work/Tank/Tank-34/111.3DS", TVector(gCenterPoint.X()+100.0, tankHeightPos + 9.0, gCenterPoint.Z()), 0.0, &myTerrain, &collisionBoxArray);
 	myTank.initTank();	
 
+	/*gCameraPosition.setX(myTank.getPosition().X() + 150*cos(gRadViewAngle));
+	gCameraPosition.setY(myTank.getPosition().Y() + 30);
+	gCameraPosition.setZ(myTank.getPosition().Z() - 150*sin(gRadViewAngle));*/
+
 	myTank.startFight();
 	mySetLight();
 }
@@ -196,9 +200,11 @@ void caculateCameraView(unsigned int viewMode)
 	switch(viewMode)
 	{
 	case 0:
-		gRadViewAngle = M_PI*myTank.getAngleWithX()/180.0 - M_PI;
+		gRadViewAngle = M_PI*/*myTank.getAngleWithX()*/1/180.0 - M_PI;
+
+
 		gCameraPosition.setX(myTank.getPosition().X() + 150*cos(gRadViewAngle));
-		gCameraPosition.setY(myTank.getPosition().Y() + 30.0);
+		gCameraPosition.setY(myTank.getPosition().Y() + 30);
 		gCameraPosition.setZ(myTank.getPosition().Z() - 150*sin(gRadViewAngle));
 
 		camera.changePosition(gCameraPosition);

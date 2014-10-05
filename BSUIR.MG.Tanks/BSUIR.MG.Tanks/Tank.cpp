@@ -36,10 +36,10 @@ void Tank::move(float deltaTranslate)
 	if(!life)
 		return;
 
-	position += TVector(deltaTranslate*cos(M_PI*angleWithX/180.0), 0.0, -deltaTranslate*sin(M_PI*angleWithX/180.0));
-	position.setY(terrain->GetHeight((float)position.X(), (float)position.Z()) +9.0);
-
 	radTankAngle = M_PI*angleWithX/180.0;
+
+	position += TVector(deltaTranslate*cos(radTankAngle), 0.0, -deltaTranslate*sin(radTankAngle));	// realitive moving
+	position.setY(terrain->GetHeight((float)position.X(), (float)position.Z()) +9.0);
 	collisionBox.updateCollisionBoxPos(TVector(position.X()-2.2*cos(radTankAngle), position.Y()-2.1, position.Z()));
 }
 
@@ -67,7 +67,7 @@ void Tank::draw(int viewMode)
 	//printf("Angle with X when draw tank is %2f\n", angleWithX);
 	glPushMatrix();
 	glTranslatef(position.X(), position.Y() - 10, position.Z());
-	//glRotatef(angleWithX, 0.0, 1.0, 0.0);
+	glRotatef(angleWithX - 90, 0.0, 1.0, 0.0);
 
 	glScalef(10,10,10);
 	bodyModel.display(viewMode);

@@ -19,7 +19,7 @@ private:
 	GameModel3Ds bodyModel;
 	float radTankAngle;
 	Terrain *terrain;
-	
+
 public:
 	Tank();
 	~Tank();
