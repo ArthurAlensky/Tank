@@ -38,7 +38,7 @@ static int gWinHeight = 600;
 static unsigned int gViewMode = 0;
 static float gTimeStep = 0.6;
 static float gMoveDelta = 2.0;
-static float gAngleTankDelta = 3.0;
+static float gAngleTankDelta = 2.0;
 static float gAngleGunDelta = 5.0;
 static float gBombVelocityMagDelta = 0.4;
 static float gBombVelocityMag = 2.0;
@@ -323,7 +323,16 @@ void mySpecialKeyboard(int key, int x, int y)
 
 void mouseMotion(int x, int y)
 {
-	angleWithX += gAngleTankDelta;
+	static float lastX = 0.0;
+	static float lastY = 0.0;
+
+	angleWithX += lastX - x > 0 ? gAngleTankDelta : -gAngleTankDelta;
+	if(angleWithX>= 360)
+		angleWithX = 0;
+	if(angleWithX < 0)
+		angleWithX = 360;
+
+	lastX = x;
 }
 
 //============================================  OK =========================================================
