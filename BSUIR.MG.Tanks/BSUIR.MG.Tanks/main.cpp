@@ -30,6 +30,8 @@ int g_DetailScale;
 
 int g_ViewMod = GL_TRIANGLES;					// We want the default drawing mode to be normal
 
+int angleWithX = 1;
+
 //global variables
 static int gWinWidth = 1200;
 static int gWinHeight = 600;
@@ -200,7 +202,8 @@ void caculateCameraView(unsigned int viewMode)
 	switch(viewMode)
 	{
 	case 0:
-		gRadViewAngle = M_PI*/*myTank.getAngleWithX()*/1/180.0 - M_PI;
+		//gRadViewAngle = M_PI*myTank.getAngleWithX()/180.0 - M_PI; //Depricated
+		gRadViewAngle = M_PI*angleWithX/180.0 - M_PI;
 
 
 		gCameraPosition.setX(myTank.getPosition().X() + 150*cos(gRadViewAngle));
@@ -318,6 +321,11 @@ void mySpecialKeyboard(int key, int x, int y)
 	}
 }
 
+void mouseMotion(int x, int y)
+{
+	angleWithX += gAngleTankDelta;
+}
+
 //============================================  OK =========================================================
 int main (int argc, char ** const argv)
 {
@@ -334,6 +342,7 @@ int main (int argc, char ** const argv)
 	glutIdleFunc(myIdle);
 	glutKeyboardFunc(myKeyboard);
 	glutSpecialFunc(mySpecialKeyboard);
+	glutPassiveMotionFunc(mouseMotion);
 	glutMainLoop();
 	
 	quit();
