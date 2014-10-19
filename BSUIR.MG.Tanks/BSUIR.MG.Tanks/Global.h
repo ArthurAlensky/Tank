@@ -1,4 +1,4 @@
-#pragma once
+
 #ifndef _MAIN_H
 #define _MAIN_H
 // In Visual Studio 2005 Microsoft added safer versions (denoted by a "_s" suffix) to many 
@@ -95,5 +95,12 @@ struct t3DModel
 	vector<tMaterialInfo> pMaterials;	// The list of material information (Textures and colors)
 	vector<t3DObject> pObject;			// The object list for our model
 };
+
+///////////////////////////////// CREATE TEXTURE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*
+/////
+/////	This creates a texture in OpenGL that we can texture map
+/////
+///////////////////////////////// CREATE TEXTURE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*
+bool createTexture(LPTSTR szFileName, unsigned int &texture);                            // Creates Texture From A Bitmap File
 
 #endif 

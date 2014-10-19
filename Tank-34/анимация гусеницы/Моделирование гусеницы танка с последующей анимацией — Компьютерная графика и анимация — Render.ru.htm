@@ -1,0 +1,1497 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)http://www.render.ru/books/show_book.php?book_id=104 -->
+<html class=" js borderradius boxshadow textshadow opacity cssgradients fontface" lang="ru"><!--<![endif]--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+  
+  <!-- Use the .htaccess and remove these lines to avoid edge case issues.
+       More info: h5bp.com/b/378 -->
+  <!--meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"-->
+
+  <title>Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru</title>
+                                    <meta name="description" content="RENDER.RU - Российский ресурс по компьютерной графике и анимации. Компьютерная графика, 2d, 3d, арт, галереи, статьи, уроки, конкурсы, CG, курсы, обучение.">
+                  <meta name="author" content="">
+
+  <!-- Mobile viewport optimized: j.mp/bplateviewport -->
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory: mathiasbynens.be/notes/touch-icons -->
+
+  <!-- CSS: implied media=all -->
+  <!-- CSS concatenated and minified via ant build script-->
+  <link rel="stylesheet" href="http://www.render.ru/css/bootstrap.css">
+  <link rel="stylesheet" href="http://www.render.ru/css/Jcrop/jquery.Jcrop.css">
+  <link rel="stylesheet" href="http://www.render.ru/css/style.css">
+  <link rel="stylesheet" href="http://www.render.ru/css/comments.css">
+  <link rel="stylesheet" href="http://www.render.ru/css/gallery.css?v=3">
+  <link rel="stylesheet" href="http://www.render.ru/css/jquery.lightbox-0.5.css">
+  <link rel="stylesheet" href="http://www.render.ru/css/superfish.css">
+  <link rel="stylesheet" href="http://www.render.ru/css/validationEngine.jquery.css">
+  <link rel="stylesheet" href="http://www.render.ru/css/jquery.rating.css">
+  <link rel="stylesheet" href="http://www.render.ru/js/mylibs/chosen/chosen.min.css">
+  <link href="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/css" rel="stylesheet" type="text/css">
+
+  <!-- end CSS-->
+
+  <!-- More ideas for your <head> here: h5bp.com/d/head-Tips -->
+
+  <!-- JavaScript at the bottom for fast page loading -->
+
+    <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if offline -->
+    <script type="text/javascript" async="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/ga.js"></script><script type="text/javascript" async="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/watch.js"></script><script src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/cb=gapi.loaded_1" async=""></script><script type="text/javascript" async="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/code.js"></script><script type="text/javascript" async="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/watch.js"></script><script id="facebook-jssdk" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/sdk.js"></script><script src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/cb=gapi.loaded_0" async=""></script><script src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.min.js"></script>
+    <!--script>window.jQuery || document.write('<script src="js/libs/jquery-1.6.4.min.js"><\/script>')</script-->
+
+    <!-- scripts concatenated and minified via ant build script-->
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.textshadow.js"></script>
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.carousel.min.js"></script>
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.hoverIntent.js"></script>
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jcarousellite_1.0.1.pack.js"></script>
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.mousewheel.min.js"></script>
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/superfish.js"></script>
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.validationEngine-ru.js"></script>
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.validationEngine.js"></script>
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.rating.js"></script>
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.rating.pack.js"></script>
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/chosen.jquery.js"></script>
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.Jcrop.js"></script>
+
+    <!-- Add fancyBox -->
+    <link rel="stylesheet" href="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.fancybox.css" type="text/css" media="screen">
+    <script type="text/javascript" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.fancybox.pack.js"></script>
+    <!-- Optionally add helpers - button, thumbnail and/or media -->
+    <link rel="stylesheet" href="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.fancybox-buttons.css" type="text/css" media="screen">
+    <script type="text/javascript" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.fancybox-buttons.js"></script>
+    <script type="text/javascript" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.fancybox-media.js"></script>
+    <link rel="stylesheet" href="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.fancybox-thumbs.css" type="text/css" media="screen">
+    <script type="text/javascript" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.fancybox-thumbs.js"></script>
+
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.color-2.1.0.min.js"></script>
+
+    
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/plugins.js"></script>
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/script.js"></script>
+    <!-- end scripts-->
+
+  <!-- All JavaScript at the bottom, except for Modernizr / Respond.
+       Modernizr enables HTML5 elements & feature detects; Respond is a polyfill for min/max-width CSS3 Media Queries
+       For optimal performance, use a custom Modernizr build: www.modernizr.com/download/ -->
+  <script src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/modernizr.custom.85918.js"></script>
+
+    
+        <script type="text/javascript" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/openapi.js"></script>
+        <script type="text/javascript">
+        VK.init({apiId: 4360114, onlyWidgets: true});
+        </script>
+    
+        <script type="text/javascript" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/plusone.js" gapi_processed="true">
+        {lang: 'ru'}
+        </script>
+        <link href="https://plus.google.com/103334409369664867952" rel="publisher">
+    
+<script type="text/javascript" charset="utf-8" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/cprs.js"></script><script type="text/javascript" charset="utf-8" async="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/extra.js"></script><style type="text/css">.fb_hidden{position:absolute;top:-10000px;z-index:10001}.fb_invisible{display:none}.fb_reset{background:none;border:0;border-spacing:0;color:#000;cursor:auto;direction:ltr;font-family:"lucida grande", tahoma, verdana, arial, sans-serif;font-size:11px;font-style:normal;font-variant:normal;font-weight:normal;letter-spacing:normal;line-height:1;margin:0;overflow:visible;padding:0;text-align:left;text-decoration:none;text-indent:0;text-shadow:none;text-transform:none;visibility:visible;white-space:normal;word-spacing:normal}.fb_reset>div{overflow:hidden}.fb_link img{border:none}
+.fb_dialog{background:rgba(82, 82, 82, .7);position:absolute;top:-10000px;z-index:10001}.fb_reset .fb_dialog_legacy{overflow:visible}.fb_dialog_advanced{padding:10px;-moz-border-radius:8px;-webkit-border-radius:8px;border-radius:8px}.fb_dialog_content{background:#fff;color:#333}.fb_dialog_close_icon{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 0 transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif);cursor:pointer;display:block;height:15px;position:absolute;right:18px;top:17px;width:15px}.fb_dialog_mobile .fb_dialog_close_icon{top:5px;left:5px;right:auto}.fb_dialog_padding{background-color:transparent;position:absolute;width:1px;z-index:-1}.fb_dialog_close_icon:hover{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -15px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_close_icon:active{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yq/r/IE9JII6Z1Ys.png) no-repeat scroll 0 -30px transparent;_background-image:url(http://static.ak.fbcdn.net/rsrc.php/v2/yL/r/s816eWC-2sl.gif)}.fb_dialog_loader{background-color:#f2f2f2;border:1px solid #606060;font-size:24px;padding:20px}.fb_dialog_top_left,.fb_dialog_top_right,.fb_dialog_bottom_left,.fb_dialog_bottom_right{height:10px;width:10px;overflow:hidden;position:absolute}.fb_dialog_top_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 0;left:-10px;top:-10px}.fb_dialog_top_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -10px;right:-10px;top:-10px}.fb_dialog_bottom_left{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -20px;bottom:-10px;left:-10px}.fb_dialog_bottom_right{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ye/r/8YeTNIlTZjm.png) no-repeat 0 -30px;right:-10px;bottom:-10px}.fb_dialog_vert_left,.fb_dialog_vert_right,.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{position:absolute;background:#525252;filter:alpha(opacity=70);opacity:.7}.fb_dialog_vert_left,.fb_dialog_vert_right{width:10px;height:100%}.fb_dialog_vert_left{margin-left:-10px}.fb_dialog_vert_right{right:0;margin-right:-10px}.fb_dialog_horiz_top,.fb_dialog_horiz_bottom{width:100%;height:10px}.fb_dialog_horiz_top{margin-top:-10px}.fb_dialog_horiz_bottom{bottom:0;margin-bottom:-10px}.fb_dialog_iframe{line-height:0}.fb_dialog_content .dialog_title{background:#6d84b4;border:1px solid #3b5998;color:#fff;font-size:14px;font-weight:bold;margin:0}.fb_dialog_content .dialog_title>span{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/yd/r/Cou7n-nqK52.gif) no-repeat 5px 50%;float:left;padding:5px 0 7px 26px}body.fb_hidden{-webkit-transform:none;height:100%;margin:0;overflow:visible;position:absolute;top:-10000px;left:0;width:100%}.fb_dialog.fb_dialog_mobile.loading{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/ya/r/3rhSv5V8j3o.gif) white no-repeat 50% 50%;min-height:100%;min-width:100%;overflow:hidden;position:absolute;top:0;z-index:10001}.fb_dialog.fb_dialog_mobile.loading.centered{max-height:590px;min-height:590px;max-width:500px;min-width:500px}#fb-root #fb_dialog_ipad_overlay{background:rgba(0, 0, 0, .45);position:absolute;left:0;top:0;width:100%;min-height:100%;z-index:10000}#fb-root #fb_dialog_ipad_overlay.hidden{display:none}.fb_dialog.fb_dialog_mobile.loading iframe{visibility:hidden}.fb_dialog_content .dialog_header{-webkit-box-shadow:white 0 1px 1px -1px inset;background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#738ABA), to(#2C4987));border-bottom:1px solid;border-color:#1d4088;color:#fff;font:14px Helvetica, sans-serif;font-weight:bold;text-overflow:ellipsis;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0;vertical-align:middle;white-space:nowrap}.fb_dialog_content .dialog_header table{-webkit-font-smoothing:subpixel-antialiased;height:43px;width:100%}.fb_dialog_content .dialog_header td.header_left{font-size:12px;padding-left:5px;vertical-align:middle;width:60px}.fb_dialog_content .dialog_header td.header_right{font-size:12px;padding-right:5px;vertical-align:middle;width:60px}.fb_dialog_content .touchable_button{background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#4966A6), color-stop(.5, #355492), to(#2A4887));border:1px solid #29447e;-webkit-background-clip:padding-box;-webkit-border-radius:3px;-webkit-box-shadow:rgba(0, 0, 0, .117188) 0 1px 1px inset, rgba(255, 255, 255, .167969) 0 1px 0;display:inline-block;margin-top:3px;max-width:85px;line-height:18px;padding:4px 12px;position:relative}.fb_dialog_content .dialog_header .touchable_button input{border:none;background:none;color:#fff;font:12px Helvetica, sans-serif;font-weight:bold;margin:2px -12px;padding:2px 6px 3px 6px;text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog_content .dialog_header .header_center{color:#fff;font-size:16px;font-weight:bold;line-height:18px;text-align:center;vertical-align:middle}.fb_dialog_content .dialog_content{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat 50% 50%;border:1px solid #555;border-bottom:0;border-top:0;height:150px}.fb_dialog_content .dialog_footer{background:#f2f2f2;border:1px solid #555;border-top-color:#ccc;height:40px}#fb_dialog_loader_close{float:left}.fb_dialog.fb_dialog_mobile .fb_dialog_close_button{text-shadow:rgba(0, 30, 84, .296875) 0 -1px 0}.fb_dialog.fb_dialog_mobile .fb_dialog_close_icon{visibility:hidden}
+.fb_iframe_widget{display:inline-block;position:relative}.fb_iframe_widget span{display:inline-block;position:relative;text-align:justify}.fb_iframe_widget iframe{position:absolute}.fb_iframe_widget_lift{z-index:1}.fb_hide_iframes iframe{position:relative;left:-10000px}.fb_iframe_widget_loader{position:relative;display:inline-block}.fb_iframe_widget_fluid{display:inline}.fb_iframe_widget_fluid span{width:100%}.fb_iframe_widget_loader iframe{min-height:32px;z-index:2;zoom:1}.fb_iframe_widget_loader .FB_Loader{background:url(http://static.ak.fbcdn.net/rsrc.php/v2/y9/r/jKEcVPZFk-2.gif) no-repeat;height:32px;width:32px;margin-left:-16px;position:absolute;left:50%;z-index:4}
+.fbpluginrecommendationsbarleft,.fbpluginrecommendationsbarright{position:fixed !important;bottom:0;z-index:999}.fbpluginrecommendationsbarleft{left:10px}.fbpluginrecommendationsbarright{right:10px}</style></head>
+
+
+
+<body class="backgr bg_lessons main_page" data-twttr-rendered="true">
+    <div id="fb-root" class=" fb_reset"><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div><iframe name="fb_xdm_frame_http" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_http" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/ZEbdHPQfV3x.htm" style="border: none;"></iframe><iframe name="fb_xdm_frame_https" frameborder="0" allowtransparency="true" scrolling="no" id="fb_xdm_frame_https" aria-hidden="true" title="Facebook Cross Domain Communication Frame" tabindex="-1" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/ZEbdHPQfV3x(1).htm" style="border: none;"></iframe></div></div><div style="position: absolute; top: -10000px; height: 0px; width: 0px;"><div></div></div></div>
+    
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.0";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+    
+    <div id="container">
+        <header role="banner"><div class="fixed_width_block clearfix">
+        <a href="http://www.render.ru/"><div id="header_logo" class="main_logo_back bg_lessons">βeta</div></a>
+        
+<script type="text/javascript">
+jQuery(function(){
+    jQuery('ul.sf-menu').superfish();
+});
+</script>
+
+
+<nav class="main_menu">
+    <ul class="sf-menu sf-js-enabled sf-shadow">
+        <li class="current limenu0">
+            <a href="http://www.render.ru/gallery/" class="sf-with-ul">Галерея<span class="sf-sub-indicator"> »</span></a>
+            <ul class="limenu1" style="display: none; visibility: hidden;">
+                <li class="limenudbl1 border_radius_top"><a href="http://www.render.ru/gallery/">Галерея</a></li>
+
+                                                <li class="limenu1 current mm_arrow">
+                    <a href="http://www.render.ru/gallery/?gal_rub=28" class="sf-with-ul">2D Арт<span class="sf-sub-indicator"> »</span></a>
+                    <ul class="limenu2" style="display: none; visibility: hidden;">
+                        <li class="limenu_gallery">
+                            <a class="no-sf-menu award" href="http://www.render.ru/gallery/?gal_rub=28&gal_add=award">Award</a>
+                            <a class="no-sf-menu" href="http://www.render.ru/forum/viewforum.php?forum_id=57" style="padding-bottom:20px;">W.I.P.</a>
+                            <a class="no-sf-menu discuss" href="http://www.render.ru/gallery/?gal_rub=28&gal_add=discuss">Основная</a>
+                            <a class="no-sf-menu new" href="http://www.render.ru/gallery/?gal_rub=28&gal_add=new">Отбор работ <sup>28</sup></a>
+                            
+                            <div style="border-bottom:1px #e9e9e9 solid;height:10px;margin-bottom:15px;"></div>
+
+                            <div style="float:left;width:150px;">
+                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=29">Абстракция</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=41">Аллегория</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=37">Анимализм</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=31">Аниме</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=42">Быт</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=54">Графика</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=51">Дизайн</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=33">Другое</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=40">История</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=46">Картун (Cartoon)</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=49">Комиксы</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=57">Концепт-арт</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=48">Мatte painting</a>
+                                                                </div><div style="margin-left:155px; width:150px;">
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=36">Марина</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=34">Натюрморт</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=44">Ню</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=35">Пейзаж</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=38">Портрет</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=39">Сказка</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=45">Техника</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=55">Традиционное искусство</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=47">Фантастика</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=74">Фотоманипуляции</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=30">Фэнтези</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=73">Хоррор</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=32">Эскизы, наброски</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=43">Юмор</a>
+                                                                                            </div>
+                                                        <div class="clearfix" style="height:1px;">&nbsp;</div>
+                        </li>
+                    </ul>
+                </li>
+                                                                <li class="limenu1 current mm_arrow">
+                    <a href="http://www.render.ru/gallery/?gal_rub=2" class="sf-with-ul">3D Архитектура<span class="sf-sub-indicator"> »</span></a>
+                    <ul class="limenu2" style="display: none; visibility: hidden;">
+                        <li class="limenu_gallery">
+                            <a class="no-sf-menu award" href="http://www.render.ru/gallery/?gal_rub=2&gal_add=award">Award</a>
+                            <a class="no-sf-menu" href="http://www.render.ru/forum/viewforum.php?forum_id=67" style="padding-bottom:20px;">W.I.P.</a>
+                            <a class="no-sf-menu discuss" href="http://www.render.ru/gallery/?gal_rub=2&gal_add=discuss">Основная</a>
+                            <a class="no-sf-menu new" href="http://www.render.ru/gallery/?gal_rub=2&gal_add=new">Отбор работ <sup>6</sup></a>
+                            
+                            <div style="border-bottom:1px #e9e9e9 solid;height:10px;margin-bottom:15px;"></div>
+
+                            <div style="float:left;width:150px;">
+                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=26">Интерьер</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=50">Креатив</a>
+                                                                </div><div style="margin-left:155px; width:150px;">
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=4">Малые архитектурные формы и предметы интерьера</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=27">Экстерьер</a>
+                                                                                            </div>
+                                                        <div class="clearfix" style="height:1px;">&nbsp;</div>
+                        </li>
+                    </ul>
+                </li>
+                                                                <li class="limenu1 current mm_arrow">
+                    <a href="http://www.render.ru/gallery/?gal_rub=1" class="sf-with-ul">3D Художественная<span class="sf-sub-indicator"> »</span></a>
+                    <ul class="limenu2" style="display: none; visibility: hidden;">
+                        <li class="limenu_gallery">
+                            <a class="no-sf-menu award" href="http://www.render.ru/gallery/?gal_rub=1&gal_add=award">Award</a>
+                            <a class="no-sf-menu" href="http://www.render.ru/forum/viewforum.php?forum_id=40" style="padding-bottom:20px;">W.I.P.</a>
+                            <a class="no-sf-menu discuss" href="http://www.render.ru/gallery/?gal_rub=1&gal_add=discuss">Основная</a>
+                            <a class="no-sf-menu new" href="http://www.render.ru/gallery/?gal_rub=1&gal_add=new">Отбор работ <sup>7</sup></a>
+                            
+                            <div style="border-bottom:1px #e9e9e9 solid;height:10px;margin-bottom:15px;"></div>
+
+                            <div style="float:left;width:150px;">
+                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=77">3D Эскизы</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=25">Game Low-poly</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=7">Абстракция</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=6">Авто / мото</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=8">Водный мир</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=3">Другое</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=9">Животные</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=13">Картун (Cartoon)</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=12">Концепт Арт</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=10">Корабли</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=11">Космос</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=14">Люди</a>
+                                                                </div><div style="margin-left:155px; width:150px;">
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=15">Монстры</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=16">Натюрморт</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=58">Персонажи</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=56">Предметная визуализация</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=17">Природа</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=18">Роботы</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=19">Самолёты</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=21">Танки</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=20">Техника</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=22">Фантастика</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=23">Фэнтези</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=24">Художественные произведения</a>
+                                                                                            </div>
+                                                        <div class="clearfix" style="height:1px;">&nbsp;</div>
+                        </li>
+                    </ul>
+                </li>
+                                                                <li class="limenu1 current mm_arrow">
+                    <a href="http://www.render.ru/gallery/?gal_rub=59" class="sf-with-ul">Видео<span class="sf-sub-indicator"> »</span></a>
+                    <ul class="limenu2" style="display: none; visibility: hidden;">
+                        <li class="limenu_gallery">
+                            <a class="no-sf-menu award" href="http://www.render.ru/gallery/?gal_rub=59&gal_add=award">Award</a>
+                            <a class="no-sf-menu" href="http://www.render.ru/forum/viewforum.php?forum_id=" style="padding-bottom:20px;">W.I.P.</a>
+                            <a class="no-sf-menu discuss" href="http://www.render.ru/gallery/?gal_rub=59&gal_add=discuss">Основная</a>
+                            <a class="no-sf-menu new" href="http://www.render.ru/gallery/?gal_rub=59&gal_add=new">Отбор работ <sup>2</sup></a>
+                            
+                            <div style="border-bottom:1px #e9e9e9 solid;height:10px;margin-bottom:15px;"></div>
+
+                            <div style="float:left;width:150px;">
+                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=62">2D классическая анимация</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=60">2D реклама</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=61">2D флэш</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=69">2D шоурил</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=65">3D making of</a>
+                                                                </div><div style="margin-left:155px; width:150px;">
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=63">3D архитектура</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=67">3D другое</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=66">3D композ</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=64">3D реклама</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/gallery/?gal_rub=70">3D шоурил</a>
+                                                                                            </div>
+                                                        <div class="clearfix" style="height:1px;">&nbsp;</div>
+                        </li>
+                    </ul>
+                </li>
+                                                                                <li class="limenu1 border_radius_bottom"><a href="http://www.render.ru/gallery/?action=gal_add_work" style="color:#74C2D9;">Добавить работу</a></li>
+                            </ul>
+        </li>
+
+
+
+        <li class="limenu0">
+            <a href="http://www.render.ru/contest/" class="sf-with-ul">Конкурсы<span class="sf-sub-indicator"> »</span></a>
+            <ul class="limenu1" style="display: none; visibility: hidden;">
+                <li class="limenudbl1 border_radius_top"><a href="http://www.render.ru/contest/">Конкурсы</a></li>
+                <li class="limenu1 border_radius_tr"><a href="http://www.render.ru/xen/index.php?forums/77/" class="border_radius_tr">CG Лига</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/xen/index.php?forums/83/">Анимационные конкурсы</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/xen/index.php?forums/78/">Рисунки на скорость</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/xen/index.php?forums/95/">Творческие дуэли</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/xen/index.php?forums/86/">Скульптинг на скорость</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/show_page.php?page_name=contest_faq">FAQ</a></li>
+                                                    <li class="limenu1"><a href="http://www.render.ru/contest/?contest_id=16">Летающий Макаронный Монстр</a></li>
+                                                    <li class="limenu1 mm_arrow" style="border-radius: 0 0 0 5px;">
+                    <a href="http://www.render.ru/contest/" class="sf-with-ul">Завершенные конкурсы<span class="sf-sub-indicator"> »</span></a>
+                    <ul class="limenu2" style="display: none; visibility: hidden;">
+                                                                                                                                                    <li class="limenu2 limenudbl2  border_radius_tr " style="width:220px;"><a href="http://www.render.ru/contest/?contest_id=15&action=contest_show_sb">Анимационный конкурс</a></li>
+                                                                                                                                <li class="limenu2 limenudbl2  " style="width:220px;"><a href="http://www.render.ru/contest/?contest_id=14&action=contest_show_sb">Конкурс НАЕМНИКИ</a></li>
+                                                                                                                                <li class="limenu2 limenudbl2  " style="width:220px;"><a href="http://www.render.ru/contest/?contest_id=13&action=contest_show_sb">Конкурс Башни магов</a></li>
+                                                                                                                                <li class="limenu2 limenudbl2  " style="width:220px;"><a href="http://www.render.ru/contest/?contest_id=12&action=contest_show_sb">Виртуальный авиасалон «МАКС-2011»</a></li>
+                                                                                                                                <li class="limenu2 limenudbl2  " style="width:220px;"><a href="http://www.render.ru/contest/?contest_id=11&action=contest_show_sb">МЫ ИЩЕМ СВОЙ ЛОГО!</a></li>
+                                                                                                                                <li class="limenu2 limenudbl2  " style="width:220px;"><a href="http://www.render.ru/contest/?contest_id=10&action=contest_show_sb">Архитектурный конкурс</a></li>
+                                                                                                                                <li class="limenu2 limenudbl2  " style="width:220px;"><a href="http://www.render.ru/contest/?contest_id=9&action=contest_show_sb">Оставь в дизайне свой след!</a></li>
+                                                                                                                                <li class="limenu2 limenudbl2  " style="width:220px;"><a href="http://www.render.ru/contest/?contest_id=8&action=contest_show_sb">Колыбель человечества</a></li>
+                                                                                                                                <li class="limenu2 limenudbl2  " style="width:220px;"><a href="http://www.render.ru/contest/?contest_id=7&action=contest_show_sb">Бумажная архитектура</a></li>
+                                                                                                                                <li class="limenu2 limenudbl2  " style="width:220px;"><a href="http://www.render.ru/contest/?contest_id=5&action=contest_show_sb">Красивое чудовище</a></li>
+                                                                                                                                <li class="limenu2 limenudbl2  " style="width:220px;"><a href="http://www.render.ru/contest/?contest_id=4&action=contest_show_sb">Заводная игрушка</a></li>
+                                                                                                                                <li class="limenu2 limenudbl2  " style="width:220px;"><a href="http://www.render.ru/contest/?contest_id=3&action=contest_show_sb">Часы 2005</a></li>
+                                                                                                                                <li class="limenu2 limenudbl2  " style="width:220px;"><a href="http://www.render.ru/contest/?contest_id=2&action=contest_show_sb">МЫШКА 2002</a></li>
+                                                                                                                                <li class="limenu2 limenudbl2   border_radius_bottom" style="width:220px;"><a href="http://www.render.ru/contest/?contest_id=1&action=contest_show_sb">ЛАМПОЧКА 2001</a></li>
+                                                                                                </ul>
+                </li>
+            </ul>
+        </li>
+
+
+
+        <li class="limenu0">
+            <a href="http://www.render.ru/books/index.php?book_cat=0" class="sf-with-ul">Уроки<span class="sf-sub-indicator"> »</span></a>
+            <ul class="limenu1" style="display: none; visibility: hidden;">
+                <li class="limenudbl1 border_radius_top"><a href="http://www.render.ru/books/index.php?book_cat=0">Уроки</a></li>
+                <li class="limenu1 border_radius_tr"><a href="http://www.render.ru/books/index.php?book_cat=13">Общие принципы</a></li>
+
+                                <li class="limenu1 current mm_arrow">
+                    <a class="sf-with-ul">3D<span class="sf-sub-indicator"> »</span></a>
+                    <ul class="limenu2" style="display: none; visibility: hidden;">
+                        <li class="limenu_gallery">
+                            <div style="float:left;width:150px;">
+                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=40" style="padding:6px 0;font-size:14px;">Smoke</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=39" style="padding:6px 0;font-size:14px;">Mudbox</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=42" style="padding:6px 0;font-size:14px;">Blender</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=43" style="padding:6px 0;font-size:14px;">ZBrush</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=45" style="padding:6px 0;font-size:14px;">Alias</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=46" style="padding:6px 0;font-size:14px;">Houdini</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=47" style="padding:6px 0;font-size:14px;">The Foundry Mari</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=4" style="padding:6px 0;font-size:14px;">Maya</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=5" style="padding:6px 0;font-size:14px;">3ds Max</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=6" style="padding:6px 0;font-size:14px;">Lightwave 3D</a>
+                                                                </div><div style="margin-left:155px; width:150px;">
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=9" style="padding:6px 0;font-size:14px;">Softimage|XSI</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=7" style="padding:6px 0;font-size:14px;">Rhinoceros 3D</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=8" style="padding:6px 0;font-size:14px;">Poser</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=10" style="padding:6px 0;font-size:14px;">Realsoft 3D</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=35" style="padding:6px 0;font-size:14px;">Vue</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=12" style="padding:6px 0;font-size:14px;">Bryce</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=14" style="padding:6px 0;font-size:14px;">Cinema4D</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=37" style="padding:6px 0;font-size:14px;">Modo</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=30" style="padding:6px 0;font-size:14px;">CAD системы</a>
+                                                                                            </div>
+                            <div class="clearfix" style="height:1px;">&nbsp;</div>
+                        </li>
+                    </ul>
+                </li>
+                                <li class="limenu1 current mm_arrow" style="border-radius: 0 0 0 5px;">
+                    <a style="border-radius: 0 0 0 5px;" class="sf-with-ul">2D<span class="sf-sub-indicator"> »</span></a>
+                    <ul class="limenu2" style="display: none; visibility: hidden;">
+                        <li class="limenu_gallery">
+                            <div style="float:left;width:150px;">
+                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=52" style="padding:6px 0;font-size:14px;">Eyeon Fusion</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=19" style="padding:6px 0;font-size:14px;">Adobe Photoshop</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=22" style="padding:6px 0;font-size:14px;">Corel Draw</a>
+                                                                </div><div style="margin-left:155px; width:150px;">
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=20" style="padding:6px 0;font-size:14px;">Adobe After Effects</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=21" style="padding:6px 0;font-size:14px;">Adobe Premiere</a>
+                                                                                                <a class="no-sf-menu" href="http://www.render.ru/books/index.php?book_cat=29" style="padding:6px 0;font-size:14px;">Adobe Illustrator</a>
+                                                                                            </div>
+                            <div class="clearfix" style="height:1px;">&nbsp;</div>
+                        </li>
+                    </ul>
+                </li>
+                            </ul>
+        </li>
+
+        <li class="limenu0">
+            <a href="http://www.render.ru/xen/">Форум</a>
+        </li>
+
+        <li class="limenu0">
+            <a href="http://www.render.ru/forum/persons.php" class="sf-with-ul">Сообщество<span class="sf-sub-indicator"> »</span></a>
+            <ul class="limenu1" style="display: none; visibility: hidden;">
+                <li class="limenudbl1 border_radius_top"><a href="http://www.render.ru/forum/persons.php">Сообщество</a></li>
+                                <li class="limenu1"><a href="http://www.render.ru/user/bloglist.php">Блоги</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/forum/persons.php">Наши лица</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/user/users_groups.php">Пользователи</a></li>
+                <li class="limenu1 border_radius_bottom"><a href="http://www.render.ru/files/">Файлы</a></li>
+            </ul>
+        </li>
+
+        <li class="limenu0">
+            <a href="http://www.render.ru/books/index.php?book_cat=31" class="sf-with-ul">Статьи<span class="sf-sub-indicator"> »</span></a>
+            <ul class="limenu1" style="display: none; visibility: hidden;">
+                <li class="limenudbl1 border_radius_top"><a href="http://www.render.ru/books/index.php?book_cat=31">Статьи</a></li>
+                <li class="limenu1 border_radius_tr"><a href="http://www.render.ru/books/index.php?book_cat=31">Эксклюзив</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/books/index.php?book_cat=3">Обзоры</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/books/index.php?book_cat=32">Переводы</a></li>
+                                <li class="limenu1"><a href="http://www.render.ru/download/">PDF-журнал</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/news/">Новости</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/news/?rub_id=3">Видео в сети</a></li>
+                <li class="limenu1 border_radius_bottom"><a href="http://www.render.ru/events/">События</a></li>
+            </ul>
+        </li>
+
+        <li class="limenu0">
+            <a href="http://www.render.ru/vacancy/vacancy.php" class="sf-with-ul">Работа<span class="sf-sub-indicator"> »</span></a>
+            <ul class="limenu1" style="display: none; visibility: hidden;">
+                <li class="limenudbl1 border_radius_top"><a>Работа</a></li>
+                <li class="limenu1 mm_arrow">
+                    <a href="http://www.render.ru/company/" class="sf-with-ul">Компании<span class="sf-sub-indicator"> »</span></a>
+                    <ul class="limenu2" style="display: none; visibility: hidden;">
+                        <li class="limenu2 limenudbl2 border_radius_right">
+                                                    <a href="http://www.render.ru/company/?action=company_reg">Зарегистрировать&nbsp;компанию</a>
+                                                </li>
+                    </ul>
+                </li>
+                <li class="limenu1"><a href="http://www.render.ru/vacancy/freelance.php">Фриланс</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/vacancy/vacancy.php">Вакансии</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/allresume/">Резюме</a></li>
+                                <li class="limenu1"><a href="http://www.render.ru/user/profile.php?prof_type=vacancy">Мои вакансии</a></li>
+                <li class="limenu1 border_radius_bottom"><a href="http://www.render.ru/user/profile.php?prof_type=anketa">Создать резюме</a></li>
+            </ul>
+        </li>
+
+        <li class="limenu0">
+            <a href="http://www.render.ru/center/center.php?mp=list" class="sf-with-ul">Курсы<span class="sf-sub-indicator"> »</span></a>
+            <ul class="limenu1" style="display: none; visibility: hidden;">
+                <li class="limenudbl1 border_radius_top"><a href="http://www.render.ru/center/center.php?mp=list">Курсы</a></li>
+                <li class="limenu1 border_radius_tr"><a href="http://www.render.ru/center/center.php?mp=about">О курсах RENDER.RU</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/center/center.php?mp=list">Список курсов</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/center/center.php?mp=price">Расписание и цены</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/center/center.php?mp=teachers">Преподаватели</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/center/center.php?mp=reviews">Отзывы слушателей</a></li>
+                <li class="limenu1"><a href="http://www.render.ru/center/reg.php">Записаться на курсы</a></li>
+                <li class="limenu1 border_radius_bottom"><a href="http://www.render.ru/center/center.php?mp=contacts">Контакты</a></li>
+            </ul>
+        </li>
+
+        <li class="limenu0">
+            <a href="http://www.render.ru/books/show_book.php?book_id=104#" class="sf-with-ul">Магазин CG<span class="sf-sub-indicator"> »</span></a>
+            <ul class="limenu1" style="display: none; visibility: hidden;">
+                <li class="limenudbl1 border_radius_top"><a href="http://shop.render.ru/">Магазин&nbsp;CG</a></li>
+                <li class="limenu1"><a href="http://shop.render.ru/ru/category/1003">Дистанционные курсы</a></li>
+                <li class="limenu1 border_radius_bottom"><a href="http://shop.render.ru/ru/category/1006">Корпоративные пакеты</a></li>
+            </ul>
+        </li>
+
+    </ul>
+</nav>    
+<div class="account_block">
+    Здравствуйте, Гость!
+    <div class="personal_menu">
+        <div class="personal_menu_body login-back">
+                        <div class="login-form-border">
+                <div class="auth-title">Авторизация:</div>
+                <form id="login" class="xenForm " method="post" action="http://www.render.ru/xen/index.php?login/login">
+                    <div class="grey_color">email:</div>
+                    <input type="hidden" tabindex="105" id="ctrl_not_registered" value="0" name="register">
+                    <div><input type="text" tabindex="101" class="textCtrl" id="LoginControl" name="login" size="20"></div>
+                    <div class="grey_color">пароль:</div>
+                    <div><input type="password" tabindex="102" id="ctrl_password" class="textCtrl" name="password" size="20"></div>
+                    <div>
+                        <input id="xf-submit" type="submit" data-signupphrase="Регистрация" data-loginphrase="Вход" tabindex="104" value="Вход" class="button primary btn">
+                        <label class="rememberPassword" for="ctrl_remember">
+                            <input id="ctrl_remember" type="checkbox" tabindex="103" value="1" name="remember" checked="">
+                            Запомнить меня
+                        </label>
+                    </div>
+                    <div class="forgot-pass-box">
+                        <a href="http://www.render.ru/user/remember.php" class="grey_color">Забыли пароль?</a><br>
+                        <a href="http://www.render.ru/user/reg.php" class="grey_color">Регистрация</a>
+                    </div>
+                    <input type="hidden" value="1" name="cookie_check">
+                    <input id="xf-redirect" type="hidden" value="http://www.render.ru/books/show_book.php?book_id=104" name="redirect">
+                    <input type="hidden" value="" name="_xfToken">
+                </form>
+            </div>
+                    </div>
+        <div class="bottom_tab grey">
+                            <a href="http://www.render.ru/books/show_book.php?book_id=104#"><span class=""></span></a>  <span class="arrows_wrap"><a href="http://www.render.ru/books/show_book.php?book_id=104#" class="tab_open_switch">Авторизация</a></span>  <a href="http://www.render.ru/books/show_book.php?action=logout"></a>
+                    </div>
+    </div>
+</div>        <div class="search">
+        <a href="http://www.render.ru/search/result.php">Поиск <span class="search_icon"></span></a>
+    </div>
+    <div class="language_select clearfix">
+        <a href="http://www.render.ru/books/show_book.php?book_id=104#" class="selected" title="В разработке">Рус.</a> <a href="http://www.render.ru/books/show_book.php?book_id=104#" title="В разработке">Eng.</a>
+    </div>
+</div><!--! end of .fixed_width_block --></header>
+
+        <div id="main" role="main">
+            <div class="fixed_width_block clearfix">
+                                
+                                    
+<script type="text/javascript">
+    jQuery(document).ready(function(){ 
+        
+        
+        $("#gallery_scroll_box li").css('height', 97).css('width', 170);
+        $("#gallery_scroll").css('width', 97).css('width', 1020).show();
+        $("#gallery_scroll_box .ul_scroll").css('width', 7140).css('left', -2040);
+        
+        //$("#gallery_scroll_box a").show();
+        //$("#gallery_scroll_box .image").show();
+        $("#gallery_scroll_box").show();
+        $("#gallery_scroll").jCarouselLite({
+            btnNext: ".scroll_next",
+            btnPrev: ".scroll_prev",
+            visible: 6,
+            scroll:6,
+            mouseWheel: true
+        }).css('z-index',0);
+    });
+    
+</script>
+
+<div id="gallery_scroll_back">
+<div id="gallery_scroll_box" style="max-height: 129px;">
+    <a href="http://www.render.ru/books/show_book.php?book_id=104#" class="scroll_prev"><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/spacer.gif" width="36" height="69" alt=""></a>
+    <a href="http://www.render.ru/books/show_book.php?book_id=104#" class="scroll_next"><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/spacer.gif" width="36" height="69" alt=""></a>
+    <div id="gallery_scroll" style="width: 1020px; visibility: visible; overflow: hidden; position: relative; z-index: 0; left: 0px;">
+        <ul class="ul_scroll" style="list-style-type: none; width: 7140px; left: -1020px; margin: 0px; padding: 0px; position: relative; z-index: 1;"><li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95346#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410174255294799_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li><li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95344#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/141017133796313_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_2d"></div>
+            </li><li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95342#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410170267704778_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type arch"></div>
+            </li><li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95338#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410169009808138_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type arch"></div>
+            </li><li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95334#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410159532935073_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li><li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95329#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410119170290606_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_2d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95435#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410518836916827_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_2d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95433#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/141051239661016_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type arch"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95432#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410509627918599_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95427#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/488104797_200x150.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type anim"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95423#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410455319804174_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95422#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410455038207414_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95421#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410452257167108_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_2d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95420#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410447148753950_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type arch"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95417#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410441945797884_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95411#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410427900298547_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_2d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95410#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410424643316443_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_2d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95402#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410375052998245_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95390#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410354074170467_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_2d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95389#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/141035308376732_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95387#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410343914931477_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type arch"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95383#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410356683571087_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_2d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95368#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410252066325914_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type arch"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95366#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410249148166721_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_2d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95363#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410205310256056_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type arch"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95360#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410201726380090_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95358#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410199351242267_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95357#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410196526447001_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_2d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95352#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410187794759400_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95351#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410186869453705_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type arch"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95346#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410174255294799_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95344#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/141017133796313_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_2d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95342#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410170267704778_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type arch"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95338#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410169009808138_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type arch"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95334#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410159532935073_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li>
+                    <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95329#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410119170290606_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_2d"></div>
+            </li>
+            <li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95435#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410518836916827_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_2d"></div>
+            </li><li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95433#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/141051239661016_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type arch"></div>
+            </li><li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95432#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410509627918599_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li><li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95427#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/488104797_200x150.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type anim"></div>
+            </li><li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95423#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410455319804174_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li><li style="height: 97px; width: 170px; overflow: hidden; float: left;">
+                <a href="http://www.render.ru/gallery/show_work.php?work_id=95422#work">
+                    <img class="image" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/1410455038207414_0.jpg" width="170" height="96" alt="">
+                </a>
+                <div class="preview_img_type main_3d"></div>
+            </li></ul>
+    </div>
+</div>
+</div>                                
+                <div class="home_main inner">
+                                        
+                                        
+                    <div class="main_content">
+                                                
+                                                <div align="center"><a href="http://www.render.ru/user/bloglist.php"><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/blog.jpg"></a></div>                                                
+                        <link href="http://www.render.ru/js/mylibs/lightbox/css/lightbox.css" rel="stylesheet">
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        links = $('#book-text a');
+        links.each(function() {
+            img = $(this).find('img');
+            if ($(img).length > 0) {
+                $(this).attr("data-lightbox", "image-1");
+            }
+        });
+    });
+</script>
+<script src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/light-box.js"></script>
+
+
+<section id="lessons"><article>
+    <header>
+    <h2>
+        <a href="http://www.render.ru/books/index.php?book_cat=5" style="font-size:18px">Уроки: 3ds Max</a> →
+                Моделирование гусеницы танка с последующей анимацией
+    </h2>
+    
+    </header>
+    <p>
+                                </p><div id="book-text">
+                <p><b>Моделирование гусеницы танка с последующей анимацией в 3dsmax 2.5</b><br>Создание гусеницы не простое дело. За два года ползания в интернете я не встречал туториалов по этому поводу. Видел, помню в FAQ предлагали, просто наложить avi на модель, это всё туфта смотрится ничего, но только из далека и не так эффектно. Этот способ я придумал сам, когда предстояла работа над рекламным роликом системы высокоточной ракетно-бомбовой стрельбы "Краснополь" по движущимся целям. Цели предстояло сделать танками. Долго я ломал голову с этими гусеницами и, наконец, придумал. Идея не идеальная и есть места, где нужно подгонять на глаз, но это не значительная помеха. Кто не знаком с таким способом может делать крутые вещи, просто немного фантазии. Этот урок не для профессионалов. Я не стану много выпендриваться, и постараюсь подробно пояснить, как всё делать. <br><br><b>Шаг 1: Создание модуля гусеницы.</b><br>Включите кнопки 3d Snap Toggle и Use Selection Center, <br><img height="22" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/3dst.gif" width="23" alt=""> <i>3d Snap Toggle</i><br><img height="22" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/usc.gif" width="23" alt=""> <i>Use Selection Center</i><br>последняя должна стоять в меню постоянно, иначе может, не получится. Зайдите в меню Create/Standard Primitives/. Нажмите кнопку Box. Создайте box с параметрами: lenght (90,0), width (30,0), height (5). Box готов. Конечно, можно смоделировать навороченный модуль гусеницы, с шарнирами, шипами, текстурой чтобы всё выглядело как в жизни. Не будем тратить время, главное принцип один и тот же. <br>Не забывайте сохранять ваш файл после каждого шага!<br><br><b>Шаг 2: Клонирование.</b><br>Перейдите в окно проекции Top и выделите готовый box. Перетащите этот box при помощи Select and Move вправо или влево примерно на одну клетку в сетке (grid), удерживая кнопку Shift на клавиатуре. Отпустите кнопку мыши и Shift на клавиатуре. У вас должен клонироваться второй box. Повторите так пять раз пока у вас не будет 5 объектов. Выделите эти пять объектов, и повторите клонирование, соблюдая одинаковую дистанцию между модулями (боксами). <br>Затем шансы на клонирование большего числа модулей увеличится. Так клонируйте дальше пока не получится 60 модулей. Может быть или больше или меньше. Я не знаю, сколько должно быть у танков. Просто создайте группу из модулей, которая и будет будущей гусеницей:<br><img height="109" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/clone.gif" width="309" alt=""><br><br><b>Шаг 3: Присоединение (Attach).</b><br>Выделите первый box из всей группы. Зайдите в меню Modify и нажмите кнопку Edit Mesh. В этом меню отключите активную жёлтую кнопку Sub-Object. Отключив ее, появится кнопка Attach (присоединение). Нажмите Attach и наведите курсором на соседний от первого модуль, появится крестик. Нажмите кнопку мыши и присоедините второй модуль к первому. Проделайте это с остальными модулями, пока у вас не получится один целый объект. Назовите его "track", гусеницей: <br><img height="90" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/moduls.gif" width="307" alt=""><br><br><b>Шаг 4: Создание профиля гусеницы при помощи сплайна.</b><br>Снова переходим в меню Create/Shapes/Splines. Нажмаем кнопку Rectangle (прямоугольник). Создайте Rectangle с параметрами: lenght (85,0), width (390,0), Corner Radius (0). Длина прямоугольника должна получится примерно в 6 раз меньше чем длина гусеницы. <br><br><b>Шаг 5: Закручивание гусеницы по периметру прямоугольника с применением Path Deform Binding.</b><br>Для начала нужно выровнять гусеницу с прямоугольником. Выделите прямоугольник, нажмите кнопку Align,<br><img height="22" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/align.gif" width="23" alt=""> <i>3d Snap Toggle</i><br>наведите курсор на прямоугольник и нажмите кнопку мыши. Появится окно Align Selection (Rectangle). В самом верху поставьте галочки на всех осях X, Y, Z. Всё, гусеница и прямоугольник выровнены. Выделите гусеницу и зайдите в меню Modify/More... (в случае если модификатор не установлен). В списке Modifiers установите Path Deform, не перепутайте с Patch Deform. В меню Path Deform Binding нажмите кнопку Pick Path и, наведя курсор, щёлкните левой кнопкой мыши на прямоугольнике. Гусеница примет причудливую форму, но нам надо, чтобы она располагалась по всему периметру прямоугольника. Сделайте такие настройки:<br><img height="366" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/path.gif" width="163" alt=""><br><br><b>Шаг 6: Редактируем профиль гусеницы.</b><br>Получилось подобие конвеера. Выделите прямоугольник, в меню Modify нажмите кнопку Edit Spline. Отредактируйте профиль гусеницы примерно так, как должно быть у танков, тракторов и т.д:<br><img height="78" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/spline.gif" width="271" alt=""><br><br>По-моему результат эффектный, тем более эту гусеницу можно редактировать и естественно анимировать! Назначите текстуру по вкусу.<b> Предупреждаю, текстуру назначайте на первый модуль сразу, пока не клонируете остальные!!! </b>Вставьте колёса, присоедините к соответствующему корпусу танка или трактора и наслаждайтесь. Далее мы сделаем анимацию гусеницы, и движение танка в примере с простым корпусом. <br><img height="240" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/track.jpg" width="320" alt=""><br><br><img height="240" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/track2.jpg" width="320" alt=""><br><br><b>Шаг 7: Настройка движения траков.</b><br>У нас должен сохранится сплайн, кривая профиля, по которой расположились траки. На картинке справа показан белым. Не торопитесь с клонированием гусениц. Выделите готовую гусеницу. Если кто уже догадался, в свитке Path Deform Binding, есть параметр Percent (процент). Прокрутив ползунком вверх или вниз, гусеницы должны пошевелиться. В этом и состоит суть работы траков. Включаем большую кнопку Animate, и переводим ползунок анимации в положение кадра 100. Параметр Percent ставим на 100. Отключим кнопку Animate. Проверим итог, нажав кнопку Play animation, гусеница должна работать самостоятельно. Если она крутится не в нужном направлении, измените Percent на -100. Отключите Animate, и переведите ползунок анимации в положение кадра 0, т. е в начало.<br><img height="346" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/patchdfbin.gif" width="165" alt=""><i> Path Deform Binding</i><br><br><b>Шаг 8: Клонирование второй гусеницы.</b><br>Если вы внимательно смотрели первую консультацию, то запомнили, как клонировать объекты. Просто создайте копию второй гусеницы. Так как это должно быть у танка, или возьмите расстояние на ваш вкус. Я расположил, так как на картинке. <br><img height="219" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/twotracks.gif" width="308" alt=""><br><br><b>Шаг 9: Движение в пространстве.</b><br>Гусеницы движутся, но нам нужно, что бы они ещё перемещались по горизонтальной плоскости. Для начала, положим, на них сверху нечто похожее на модель корпуса танка. <img height="219" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/model.gif" width="309" alt=""><br>Начнём связывать все части танка в одно целое. Основой связки будет корпус танка. Нажмите кнопку Select and Link, <br><img height="22" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/sellink.gif" width="23" alt=""><i> Select and Link</i><br>наведите на ствол и щёлкните по нему мышкой, не отпуская, подведите к башне. Когда серый кубик станет белым, отпустите кнопку. Теперь ствол стал, привязан к башне. Проверить это можно, потаскав башню в разных направлениях, ствол будет перемещаться вместе с башней. То же самое проделайте с остальными частями танка, учитывая связь к основе танка т. е корпус. Придерживайтесь схеме на картинке снизу. Башня связываются с корпусом, гусеницы со сплайном, сплайн с корпусом. При перетаскивании одного корпуса все части должны перемещаться вместе с ним.<br><img height="91" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/scheme.gif" width="100" alt=""><i> Схема</i><br><br><b>Шаг 10: Настройка движения гусениц в пространстве.</b><br>Нарисуйте в проекции Top кривую (spline), будущую траекторию движения танка. Постарайтесь нарисовать ее, так что бы вершины находились на равном расстоянии. <img height="67" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/splpath.gif" width="504" alt=""><br>Выделите корпус танка и зайдите в меню Motion.<br><img height="29" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/motion.gif" width="33" alt=""><i> Motion</i><br>Там будет настройка Assign Controller.<br><img height="148" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/assignctr.gif" width="165" alt=""><br>Выделяете Position: нажимаете зелёную кнопку вверху, в появившемся окне выбираете Path и жмите o'k. Затем, опускаемся ниже и видим настройки Path Parameters. <b>Теперь самое важное.</b> Перед тем как настроить эти параметры нужно нажать кнопку Animate и перевести ползунок кадров в конец на 100-й кадр. После этого перейдем к настройкам.<br><img height="312" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/pathpar.gif" width="165" alt=""><br>Выделите корпус, если он ещё не выделен, нажмите кнопку Pick Path, и наведите крестик курсора на сплайн. Корпус и всё остальное должно встать на путь вашего сплайна. Сделайте настройки как у меня на картинке. Поскольку танк это наземное средство передвижения внизу поставьте координату X, тогда танк будет двигаться параллельно горизонтальной плоскости. Поставьте Follow, обязательно (следование), тогда ваш танк будет точно двигаться по заданному сплайну. Bank (можно не ставить), эта функция отвечает за заносы танка на крутых поворотах, а если поставите, сделайте Bank Amount на 8. Если при установке Follow танк встал задом, поставьте галочку в окошке Flip. Отключите Animate. Нажмите Play animation, и посмотрите что получилось. Если всё готово можно отсчитывать анимацию.<br><br>Траекторию сплайна можно изменять на ваше усмотрение, самое главное, что бы расстояние между вершинами сплайна по возможности было одинаковое, иначе, танк будет двигаться не равномерно рывками. Скорость передвижения танка зависит от количества кадров анимации. Если хотите сделать медленное движение, перед началом всех настроек поставьте, больше кадров от 200 и выше..." Не бойтесь экспериментировать. Следующую консультацию я посвящу анимации данного танка со стрельбой из орудия в движении. А так же в будущем я сделаю консультацию по простым, но эффектным наземным взрывам.</p>
+            </div>
+            <p></p>
+
+    
+    <div class="book_options" style="text-align:right;padding-bottom:25px;">
+        <span class="icon_eye">35873</span>
+        <span class="date_icon"></span><time datetime="2000-04-03" pubdate="pubdate">03.04.2000</time>
+        <span style="margin-left:20px;">Автор:</span> Кузнецов Дмитрий
+    </div>
+
+    <script type="text/javascript" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.tipsy.js"> </script>
+<link rel="stylesheet" href="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/tipsy.css" type="text/css">
+
+<div id="vote-box">
+            
+        <script type="text/javascript">
+            jQuery(function(){
+                jQuery(".voteone input.rate-star").rating({
+                    callback: function(value, link){
+                        $.ajax({
+                            type: "POST",
+                            url: '/vote/setvote.php',
+                            data: 'vote_rub='+value+'&rating='+link.title,
+                            success: function (data, textStatus) {
+                                if (data) {
+                                    $('div.vote'+value+' span.rate').html(data/100);
+                                    $('#ballsum').html(parseFloat($('#ball1').html())+parseFloat($('#ball2').html()));
+                                    $('#votecount').html(parseFloat($('#votecount').html())+1);
+                                    $('div.vote'+value).addClass('alreadyvote');
+                                    $('div.vote'+value+' input').rating('disable');
+                                    $('div.vote'+value+' .del-vote, div.vote'+value+' .del-vote img').show();
+                                    $('div.alreadyvote .star-rating').click(function() {
+                                        alert("Вы уже уже отдали свой голос в этом голосовании.");
+                                    });
+                                }
+                            }
+                        });
+                        return false;
+                    }
+                });
+                $('div.nouser .star-rating').click(function() {
+                    alert("Голосовать могут только авторизованные пользователи.");
+                    return false;
+                });
+                $('div.alreadyvote .star-rating').click(function() {
+                    alert("Вы уже уже отдали свой голос в этом голосовании.");
+                    return false;
+                });
+                $('a.nouser').click(function() {
+                    alert("Оценки могут просматривать только зарегистрированные пользователи.");
+                    return false;
+                });
+                $("#show_vote").fancybox({
+                    minWidth	: 545,
+                    fitToView	: false,
+                    width	: '70%',
+                    height	: '70%',
+                    autoSize	: true,
+                    closeBtn    : true,
+                    closeClick	: false,
+                    openEffect	: 'none',
+                    closeEffect	: 'none',
+                    padding     : 6
+                });
+            });
+        </script>
+        
+
+        <div class="left-box">
+            <div class="vote-votes el-box vote-1 vote208">
+                <span class="small_text">Актуальность:</span>
+                <span id="ball1" class="rate">447</span>
+                            </div>
+            <div class="vote-votes el-box vote-2 vote207">
+                <span class="small_text">Качество:</span>
+                <span id="ball2" class="rate">447</span>
+                            </div>
+            <div class="el-box">
+                <span style="color:#686868">Суммарный балл:</span>
+                <span id="ballsum" class="crimson_color" style="font-size:18px;">894</span>
+            </div>
+                    </div>
+        <div class="right-box">
+            <div class="el-box vote-1 vote208 nouser is-author is-author">
+                <div class="voteone rate-form">
+                                            <span class="star-rating-control"><div class="rating-cancel" style="display: none;"><a title="Cancel Rating"></a></div><div class="star-rating rater-0 rate-star star-rating-applied star-rating-readonly"><a title="1">208</a></div><div class="star-rating rater-0 rate-star star-rating-applied star-rating-readonly"><a title="2">208</a></div><div class="star-rating rater-0 rate-star star-rating-applied star-rating-readonly"><a title="3">208</a></div><div class="star-rating rater-0 rate-star star-rating-applied star-rating-readonly"><a title="4">208</a></div><div class="star-rating rater-0 rate-star star-rating-applied star-rating-readonly"><a title="5">208</a></div><div class="star-rating rater-0 rate-star star-rating-applied star-rating-readonly"><a title="6">208</a></div><div class="star-rating rater-0 rate-star star-rating-applied star-rating-readonly"><a title="7">208</a></div><div class="star-rating rater-0 rate-star star-rating-applied star-rating-readonly"><a title="8">208</a></div><div class="star-rating rater-0 rate-star star-rating-applied star-rating-readonly"><a title="9">208</a></div><div class="star-rating rater-0 rate-star star-rating-applied star-rating-readonly"><a title="10">208</a></div></span><input name="star1" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="208" title="1" disabled="disabled" style="display: none;">
+                                            <input name="star1" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="208" title="2" disabled="disabled" style="display: none;">
+                                            <input name="star1" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="208" title="3" disabled="disabled" style="display: none;">
+                                            <input name="star1" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="208" title="4" disabled="disabled" style="display: none;">
+                                            <input name="star1" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="208" title="5" disabled="disabled" style="display: none;">
+                                            <input name="star1" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="208" title="6" disabled="disabled" style="display: none;">
+                                            <input name="star1" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="208" title="7" disabled="disabled" style="display: none;">
+                                            <input name="star1" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="208" title="8" disabled="disabled" style="display: none;">
+                                            <input name="star1" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="208" title="9" disabled="disabled" style="display: none;">
+                                            <input name="star1" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="208" title="10" disabled="disabled" style="display: none;">
+                                    </div>
+            </div>
+            <div class="el-box vote-2 vote207 nouser is-author is-author">
+                <div class="voteone rate-form">
+                                            <span class="star-rating-control"><div class="rating-cancel" style="display: none;"><a title="Cancel Rating"></a></div><div class="star-rating rater-1 rate-star star-rating-applied star-rating-readonly"><a title="1">207</a></div><div class="star-rating rater-1 rate-star star-rating-applied star-rating-readonly"><a title="2">207</a></div><div class="star-rating rater-1 rate-star star-rating-applied star-rating-readonly"><a title="3">207</a></div><div class="star-rating rater-1 rate-star star-rating-applied star-rating-readonly"><a title="4">207</a></div><div class="star-rating rater-1 rate-star star-rating-applied star-rating-readonly"><a title="5">207</a></div><div class="star-rating rater-1 rate-star star-rating-applied star-rating-readonly"><a title="6">207</a></div><div class="star-rating rater-1 rate-star star-rating-applied star-rating-readonly"><a title="7">207</a></div><div class="star-rating rater-1 rate-star star-rating-applied star-rating-readonly"><a title="8">207</a></div><div class="star-rating rater-1 rate-star star-rating-applied star-rating-readonly"><a title="9">207</a></div><div class="star-rating rater-1 rate-star star-rating-applied star-rating-readonly"><a title="10">207</a></div></span><input name="star2" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="207" title="1" disabled="disabled" style="display: none;">
+                                            <input name="star2" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="207" title="2" disabled="disabled" style="display: none;">
+                                            <input name="star2" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="207" title="3" disabled="disabled" style="display: none;">
+                                            <input name="star2" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="207" title="4" disabled="disabled" style="display: none;">
+                                            <input name="star2" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="207" title="5" disabled="disabled" style="display: none;">
+                                            <input name="star2" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="207" title="6" disabled="disabled" style="display: none;">
+                                            <input name="star2" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="207" title="7" disabled="disabled" style="display: none;">
+                                            <input name="star2" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="207" title="8" disabled="disabled" style="display: none;">
+                                            <input name="star2" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="207" title="9" disabled="disabled" style="display: none;">
+                                            <input name="star2" type="radio" class="rate-star star-rating-applied star-rating-readonly" value="207" title="10" disabled="disabled" style="display: none;">
+                                    </div>
+            </div>
+            <div class="el-box sum-ball">
+                <span class="vote_gray">Голосов:</span>
+                <span id="votecount" class="vote_gray" style="font-size:18px;">10</span>
+                <span class="pad_left"></span>
+                                    <a class="nouser vote_gray" href="http://www.render.ru/books/show_book.php?book_id=104#">оценки</a>
+                            </div>
+        </div>
+        
+        <div class="clearfix_"></div>
+</div>
+    <div class="social_battons">
+        
+    <div id="sb-r2-vk">
+        
+        <div id="vk_like" style="height: 22px; width: 100px; position: relative; clear: both; background: none;"><iframe name="fXD412f9" frameborder="0" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/widget_like.htm" width="100%" height="22" scrolling="no" id="vkwidget1" style="overflow: hidden; height: 22px; width: 100px; z-index: 150;"></iframe></div>
+        <script type="text/javascript">
+        VK.Widgets.Like("vk_like", {type: "mini"});
+        </script>
+        
+    </div>
+    
+    
+    <div id="sb-r2-tw">
+        <iframe id="twitter-widget-0" scrolling="no" frameborder="0" allowtransparency="true" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/tweet_button.1410542722.htm" class="twitter-share-button twitter-tweet-button twitter-share-button twitter-count-horizontal" title="Twitter Tweet Button" data-twttr-rendered="true" style="width: 139px; height: 20px;"></iframe>
+        <script type="text/javascript" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/widgets.js"></script>
+    </div>
+    
+    <div id="sb-r2-fb">
+        <div class="fb-like fb_iframe_widget" data-layout="button_count" data-action="like" data-show-faces="true" data-share="false" fb-xfbml-state="rendered" fb-iframe-plugin-query="action=like&amp;app_id=&amp;href=http%3A%2F%2Fwww.render.ru%2Fbooks%2Fshow_book.php%3Fbook_id%3D104&amp;layout=button_count&amp;locale=ru_RU&amp;sdk=joey&amp;share=false&amp;show_faces=true"><span style="vertical-align: bottom; width: 107px; height: 20px;"><iframe name="f2dc3baed8" width="1000px" height="1000px" frameborder="0" allowtransparency="true" scrolling="no" title="fb:like Facebook Social Plugin" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/like.htm" style="border: none; visibility: visible; width: 107px; height: 20px;" class=""></iframe></span></div>
+    </div>
+
+    <div id="sb-r2-gg">
+        <div id="___plusone_0" style="text-indent: 0px; margin: 0px; padding: 0px; border-style: none; float: none; line-height: normal; font-size: 1px; vertical-align: baseline; display: inline-block; width: 90px; height: 20px; background: transparent;"><iframe frameborder="0" hspace="0" marginheight="0" marginwidth="0" scrolling="no" style="position: static; top: 0px; width: 90px; margin: 0px; border-style: none; left: 0px; visibility: visible; height: 20px;" tabindex="0" vspace="0" width="100%" id="I0_1410599128710" name="I0_1410599128710" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/fastbutton.htm" data-gapiattached="true" title="+1"></iframe></div>
+    </div>
+
+        
+</div>
+        <div>
+        <b style="color:#686868;">Похожие статьи: </b><br>
+                    <time datetime="2013-06-25" pubdate="pubdate" style="color:#6E6F6F; font-size:12px;">2013-06-25</time>
+            <a style="font-size:12px;" href="http://www.render.ru/books/show_book.php?book_id=1643">Шлем для водолаза</a><br>
+                    <time datetime="2009-06-19" pubdate="pubdate" style="color:#6E6F6F; font-size:12px;">2009-06-19</time>
+            <a style="font-size:12px;" href="http://www.render.ru/books/show_book.php?book_id=807">Создание модели низкополигонального человека из цилиндра</a><br>
+                    <time datetime="2008-11-24" pubdate="pubdate" style="color:#6E6F6F; font-size:12px;">2008-11-24</time>
+            <a style="font-size:12px;" href="http://www.render.ru/books/show_book.php?book_id=738">По созданию реалистичной анимации дамской сумочки</a><br>
+                    <time datetime="2012-04-24" pubdate="pubdate" style="color:#6E6F6F; font-size:12px;">2012-04-24</time>
+            <a style="font-size:12px;" href="http://www.render.ru/books/show_book.php?book_id=1451">Видеоурок по Thinking Particles, исчезновение объекта</a><br>
+                    <time datetime="2013-01-24" pubdate="pubdate" style="color:#6E6F6F; font-size:12px;">2013-01-24</time>
+            <a style="font-size:12px;" href="http://www.render.ru/books/show_book.php?book_id=1745">Импорт и обработка модели персонажа от DAZ Studio в Максе.</a><br>
+            </div>
+    
+        <div style="padding:20px 0 0 0;">
+        <b style="color:#686868;">Категории: </b>
+                    <a href="http://www.render.ru/books/?book_cat=5&book_tag=47">урок</a>
+                    <a href="http://www.render.ru/books/?book_cat=5&book_tag=24">3D Studio Max</a>
+                    <a href="http://www.render.ru/books/?book_cat=5&book_tag=46">3D</a>
+                    <a href="http://www.render.ru/books/?book_cat=5&book_tag=52">Компьютерная графика/CG</a>
+            </div>
+        
+    <script defer="" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/jquery.render.comments.js"></script>
+<script type="text/javascript" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/redactor.js"></script>
+<link rel="stylesheet" href="http://www.render.ru/js/mylibs/Redactor/redactor.css">
+
+<script type="text/javascript">
+    areaName = "redactor_editor_doom_id";
+    function pasteCommentQuote(username, com_id){
+
+
+        function getSelection_(){
+            if (document.getSelection){
+                txt = document.getSelection()
+            } else if (document.selection) {
+                txt = document.selection.createRange().text;
+            }
+            if (txt == ""){
+                txt = document.getElementById(com_id + "_mes").innerHTML;
+            }
+                //jQuery(function(){
+                //    txt = $("#" + com_id + "_mes").text();
+                //});
+            
+            return txt;
+        }
+
+        function insertAtCaret_ (textObj, textFieldValue) {
+            //window.alert(textObj);
+            if(document.all){
+                if (textObj.createTextRange && textObj.caretPos && !window.opera) {
+                    var caretPos = textObj.caretPos;
+                    caretPos.text = caretPos.text.charAt(caretPos.text.length - 1) == ' ' ? textFieldValue + ' ' : textFieldValue;
+                }else{
+                    //textObj.value += textFieldValue;
+                    textObj.innerHTML += textFieldValue;
+                }
+            } else {
+                if(textObj.selectionStart){
+                    var rangeStart = textObj.selectionStart;
+                    var rangeEnd = textObj.selectionEnd;
+                    var tempStr1 = textObj.value.substring(0,rangeStart);
+                    var tempStr2 = textObj.value.substring(rangeEnd, textObj.value.length);
+
+                    textObj.innerHTML = tempStr1 + textFieldValue + tempStr2;
+                    textObj.selectionStart=textObj.selectionEnd = rangeStart + textFieldValue.length;
+                } else {
+                    textObj.innerHTML += textFieldValue;
+                }
+            }
+        }
+
+        cite = '[quote=' + username + ']\n';
+        cite_text = getSelection_();
+        cite += cite_text;
+        cite += '\n[/quote]';
+        //window.alert(cite_text);
+        if (cite_text != ""){
+            insertAtCaret_(document.getElementById('redactor_editor_doom_id'), cite);
+        }
+        return false;
+    }
+
+    $(document).ready(
+        function(){
+            var buttons = ['bold', 'italic', 'deleted', '|', 'unorderedlist', 'orderedlist', '|', 'link', '|', 'fontcolor', 'backcolor', '|', 'alignleft', 'aligncenter', 'alignright', 'justify' ];
+            $('#comment_input').redactor({id:"sas_id",buttons: buttons, imageUpload: '/js/mylibs/Redactor/upload.php' });
+        }
+    );
+    jQuery(function(){
+        
+
+
+        jQuery(".vote-plus, .vote-minus").click(function() {
+            ball = $(this).attr('title');
+            com_id = $(this).attr('com');
+            $.ajax({
+            type: "POST",
+            url: '/vote/setcomvote.php',
+            //data: 'com_id='+link.title+'&ball='+value,
+            data: 'com_id='+com_id+'&ball='+ball,
+            success: function (data, textStatus) {
+                if (data) {
+                    $('.num_'+com_id+' .coment-vote-res').html(data);
+                    return false;
+                }
+            }
+            });
+            return false;
+        });     
+    });
+</script>
+
+
+<section class="block_comments">
+    <div align="center" style="padding-top:16px;"><a href="http://www.render.ru/xen/index.php?threads/156816/"><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/skulpt80_u.jpg"></a></div>    
+    <h4 class="comment_title" id="comments">Отзывы посетителей:</h4>
+    
+    <div class="adm-comm-controls">
+        
+            </div>
+    <div class="clearfix"></div>
+
+
+        <div class="comments_list">
+                        <div id="com_407532" class="comments_container clearfix num_407532">
+            <div class="avatar" style="float:left; width:85px;">
+                <div class="avatar_img" style="padding-left:33px;">
+                <img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/140287.jpg" alt="аватар" class="avatar">
+                </div>&nbsp;
+                            </div>
+            <div class="message_block comment " style="margin-left:110px; float:none;">
+                <img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/comment_arrow.png" alt="" height="30" width="7" style="float:left; padding:0; margin:-10px 0 0 -17px">
+                <div>
+                    <a href="http://www.render.ru/books/show_book.php?book_id=104#" class="user_name"></a><a class=" fancybox.ajax userinfoform" href="http://www.render.ru/user/info.php?user_id=140287">ШКІПЕР</a>
+                    <span class="marks coment-vote-res">
+                        0
+                                            </span>
+                                        <time datetime="2011-09-24" pubdate="pubdate" class="grey_color date">22.07.2012 17:57</time>
+                </div>
+                <div class="user_status grey_color" style="padding-bottom: 10px;"></div>
+                <div class="messge" id="com_407532_mes">К сожалению, это самый быстрый и простой способ, но очень даже рабочий! А то все остальный танцы с бубнами меня как-то не вдохновили...</div>
+
+                                
+            </div>
+        </div>
+                                <div id="com_387285" class="comments_container clearfix num_387285">
+            <div class="avatar" style="float:left; width:85px;">
+                <div class="avatar_img" style="padding-left:33px;">
+                <img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/no-avatar.png" alt="аватар" class="avatar">
+                </div>&nbsp;
+                            </div>
+            <div class="message_block comment " style="margin-left:110px; float:none;">
+                <img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/comment_arrow.png" alt="" height="30" width="7" style="float:left; padding:0; margin:-10px 0 0 -17px">
+                <div>
+                    <a href="http://www.render.ru/books/show_book.php?book_id=104#" class="user_name"></a><a class=" fancybox.ajax userinfoform" href="http://www.render.ru/user/info.php?user_id=17947">yuliadeg</a>
+                    <span class="marks coment-vote-res">
+                        0
+                                            </span>
+                                        <time datetime="2011-09-24" pubdate="pubdate" class="grey_color date">04.01.2012 09:54</time>
+                </div>
+                <div class="user_status grey_color" style="padding-bottom: 10px;"></div>
+                <div class="messge" id="com_387285_mes">Urok xoroshi, tolko u menia voznikla proble posle modefaira Path Deform guseniza v prostranstve po y ( vpered ne dvigaetsa) prisoedinila ee k path , path k korpusu vse dvigaetsa krome gusinizi!
+<br>
+<br>Pomogite pojalusta kto znaet kak, o4en nujno, Ogromnoe Spasibo!
+<br>
+<br>Yulia.</div>
+
+                                
+            </div>
+        </div>
+                                <div id="com_237044" class="comments_container clearfix num_237044">
+            <div class="avatar" style="float:left; width:85px;">
+                <div class="avatar_img" style="padding-left:33px;">
+                <img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/no-avatar.png" alt="аватар" class="avatar">
+                </div>&nbsp;
+                            </div>
+            <div class="message_block comment " style="margin-left:110px; float:none;">
+                <img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/comment_arrow.png" alt="" height="30" width="7" style="float:left; padding:0; margin:-10px 0 0 -17px">
+                <div>
+                    <a href="http://www.render.ru/books/show_book.php?book_id=104#" class="user_name"></a><a class=" fancybox.ajax userinfoform" href="http://www.render.ru/user/info.php?user_id=26596">blade</a>
+                    <span class="marks coment-vote-res">
+                        0
+                                            </span>
+                                        <time datetime="2011-09-24" pubdate="pubdate" class="grey_color date">13.08.2008 17:54</time>
+                </div>
+                <div class="user_status grey_color" style="padding-bottom: 10px;"></div>
+                <div class="messge" id="com_237044_mes">Способ. Но PathDeform вызывает искажение объекта. в связи с чем собсна у меня по крайней мере получается не совсем то что я бы хотел видеть. Я сделал гусеницу из отдельных кусочков, каждому по позишену задал контроллер по пути получилось неплохо. Правда если бы макс не плющело так сильно. Было бы намного быстрее, а так он сбивает некоторые ключи и появляются артефакты. которые приходится руками исправлять, хотя все положения гусениц и так в принципе приходится вводить ручками. Ну и если надо 2 таких... приходится вторую заново делать. Клонированию вроде не поддаётся :(
+<br></div>
+
+                                
+            </div>
+        </div>
+                                <div id="com_236560" class="comments_container clearfix num_236560">
+            <div class="avatar" style="float:left; width:85px;">
+                <div class="avatar_img" style="padding-left:33px;">
+                <img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/no-avatar.png" alt="аватар" class="avatar">
+                </div>&nbsp;
+                            </div>
+            <div class="message_block comment " style="margin-left:110px; float:none;">
+                <img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/comment_arrow.png" alt="" height="30" width="7" style="float:left; padding:0; margin:-10px 0 0 -17px">
+                <div>
+                    <a href="http://www.render.ru/books/show_book.php?book_id=104#" class="user_name"></a><a class=" fancybox.ajax userinfoform" href="http://www.render.ru/user/info.php?user_id=74180">DEN3DS</a>
+                    <span class="marks coment-vote-res">
+                        0
+                                            </span>
+                                        <time datetime="2011-09-24" pubdate="pubdate" class="grey_color date">08.08.2008 11:21</time>
+                </div>
+                <div class="user_status grey_color" style="padding-bottom: 10px;"></div>
+                <div class="messge" id="com_236560_mes">соединять траки в один объект и попроще можно, зайдите во вкладку UTILITES, выделите все нужные обьекты для обьединения, нажмите COLLAPSE, далее COLLAPSE SELECTED, получаем edit mesh </div>
+
+                                
+            </div>
+        </div>
+                                <div id="com_228803" class="comments_container clearfix num_228803">
+            <div class="avatar" style="float:left; width:85px;">
+                <div class="avatar_img" style="padding-left:33px;">
+                <img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/no-avatar.png" alt="аватар" class="avatar">
+                </div>&nbsp;
+                            </div>
+            <div class="message_block comment " style="margin-left:110px; float:none;">
+                <img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/comment_arrow.png" alt="" height="30" width="7" style="float:left; padding:0; margin:-10px 0 0 -17px">
+                <div>
+                    <a href="http://www.render.ru/books/show_book.php?book_id=104#" class="user_name"></a><a class=" fancybox.ajax userinfoform" href="http://www.render.ru/user/info.php?user_id=41670">Руслан Осипов</a>
+                    <span class="marks coment-vote-res">
+                        0
+                                            </span>
+                                        <time datetime="2011-09-24" pubdate="pubdate" class="grey_color date">29.05.2008 13:21</time>
+                </div>
+                <div class="user_status grey_color" style="padding-bottom: 10px;"></div>
+                <div class="messge" id="com_228803_mes">спасибо...</div>
+
+                                
+            </div>
+        </div>
+                                <div id="com_213808" class="comments_container clearfix num_213808">
+            <div class="avatar" style="float:left; width:85px;">
+                <div class="avatar_img" style="padding-left:33px;">
+                <img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/no-avatar.png" alt="аватар" class="avatar">
+                </div>&nbsp;
+                            </div>
+            <div class="message_block comment " style="margin-left:110px; float:none;">
+                <img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/comment_arrow.png" alt="" height="30" width="7" style="float:left; padding:0; margin:-10px 0 0 -17px">
+                <div>
+                    <a href="http://www.render.ru/books/show_book.php?book_id=104#" class="user_name"></a><a class=" fancybox.ajax userinfoform" href="http://www.render.ru/user/info.php?user_id=60661">Азат Авазов</a>
+                    <span class="marks coment-vote-res">
+                        0
+                                            </span>
+                                        <time datetime="2011-09-24" pubdate="pubdate" class="grey_color date">07.01.2008 23:17</time>
+                </div>
+                <div class="user_status grey_color" style="padding-bottom: 10px;"></div>
+                <div class="messge" id="com_213808_mes">Большое спасибо! сама технология хорошая...</div>
+
+                                
+            </div>
+        </div>
+                                <div id="com_118098" class="comments_container clearfix num_118098">
+            <div class="avatar" style="float:left; width:85px;">
+                <div class="avatar_img" style="padding-left:33px;">
+                <img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/no-avatar.png" alt="аватар" class="avatar">
+                </div>&nbsp;
+                            </div>
+            <div class="message_block comment " style="margin-left:110px; float:none;">
+                <img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/comment_arrow.png" alt="" height="30" width="7" style="float:left; padding:0; margin:-10px 0 0 -17px">
+                <div>
+                    <a href="http://www.render.ru/books/show_book.php?book_id=104#" class="user_name"></a><a class=" fancybox.ajax userinfoform" href="http://www.render.ru/user/info.php?user_id=10827">Нубиец</a>
+                    <span class="marks coment-vote-res">
+                        0
+                                            </span>
+                                        <time datetime="2011-09-24" pubdate="pubdate" class="grey_color date">19.01.2006 14:33</time>
+                </div>
+                <div class="user_status grey_color" style="padding-bottom: 10px;"></div>
+                <div class="messge" id="com_118098_mes">спасибо старик! прочитаю в автономном режиме</div>
+
+                                
+            </div>
+        </div>
+                    </div>
+    
+    
+            <div class="clearfix" align="center" style="padding-top:30px;">
+            <div style=" width:309px; height:26px; border:1px solid #AEACAF; background-color:#D6D6D6; font-size:12px; padding-top:10px; -webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;">
+                <a href="http://www.render.ru/user/reg.php">Зарегистрируйтесь</a><span style="color:#747474">, чтобы добавить комментарий.</span>
+            </div>
+        </div>
+    </section>
+</article></section>                                                    <div style="clear:both;"><div class="side_tab_wrapper clearfix" align="center" style="padding: 30px 0 25px 0;"><a href="http://www.render.ru/books/show_book.php?book_id=2570"><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/b700x120_2570.jpg" width="700" height="120" alt=""></a></div></div>                                                                        <div align="right" class="clear-fix">
+                            <div class="stats-page">
+Эту страницу просмотрели:
+<b>35873</b> уникальных посетителей</div>
+                        </div>
+                                            </div><!--! end of .main_content -->
+                </div>
+
+                                    <aside class="right_column home_right_column">
+    <div class="second_border">
+                <div class="inner">
+                                    <div class="right_group_container clearfix" style="text-align:center; padding: 0 32px;">
+                 <section class="side_tab_wrapper" style="">
+                     <center>
+<a href="http://www.render.ru/download/"><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/04_14_big.jpg" border="0" class="border" alt="Скачать журнал"></a><br>
+<a href="http://www.render.ru/download/">Скачать журнал</a>
+</center>
+                                    </section>
+                
+                <div class="small_banners" style="text-align:center; padding: 0 32px; margin-left: 0px;padding: 0;">
+                    <a href="http://www.render.ru/show_page.php?page_name=social_selection"><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/social_selection.gif"></a>                </div>
+            </div><!--! end of .tab_and_banners_container -->
+
+            <section class="side_tab_wrapper">
+    <div class="tab_label vacancies">
+        <h4>Фриланс</h4>
+    </div>
+    <div class="main_tab vacancies">
+                    <div class="freelance_tab_description">
+                <span class="cost"><span class="crimson_color">Бюджет не указан</span></span>
+                <a href="http://www.render.ru/vacancy/freelance.php?act=view&id=1143">User Interface для игрового проекта</a><br>
+                <span class="grey_color">Ищем человека нарисовать юзер нитерфейс под демку для...</span>
+            </div>
+            <br>
+                    <div class="freelance_tab_description">
+                <span class="cost"><span class="crimson_color">Бюджет не указан</span></span>
+                <a href="http://www.render.ru/vacancy/freelance.php?act=view&id=1142">Иконка к игре</a><br>
+                <span class="grey_color">Необходимо нарисовать иконку для игры "Время драконов...</span>
+            </div>
+            <br>
+                    <div class="freelance_tab_description">
+                <span class="cost"><span class="crimson_color">Бюджет не указан</span></span>
+                <a href="http://www.render.ru/vacancy/freelance.php?act=view&id=1140">Архитектурная анимация</a><br>
+                <span class="grey_color">Ищем специалиста для пост обработки архитектурной анимации...</span>
+            </div>
+            <br>
+            </div>
+</section><section class="side_tab_wrapper">
+    <div class="tab_label articles">
+        <h4>Новые поступления</h4>
+    </div>
+    <div class="main_tab articles">
+        <ul>
+                                    <li>
+                <span class="articles_date_views"><time datetime="2010-09-15" pubdate="pubdate" class="grey1_color">12.09.2014</time> <span class="crimson_color">1356</span></span>
+                <span class="grey_color">Статьи → Переводы →</span>
+                <a href="http://www.render.ru/books/show_book.php?book_id=2609">Стиль города: Женщина ради которой стоит убивать</a>
+            </li>
+                                                <li>
+                <span class="articles_date_views"><time datetime="2010-09-15" pubdate="pubdate" class="grey1_color">12.09.2014</time> <span class="crimson_color">205</span></span>
+                <span class="grey_color">Уроки → Adobe After Effects →</span>
+                <a href="http://www.render.ru/books/show_book.php?book_id=2615">Шейпы.Как импортировать и анимировать векторный файл в After Effects?</a>
+            </li>
+                                                <li>
+                <span class="articles_date_views"><time datetime="2010-09-15" pubdate="pubdate" class="grey1_color">08.09.2014</time> <span class="crimson_color">1478</span></span>
+                <span class="grey_color">Статьи → Эксклюзив →</span>
+                <a href="http://www.render.ru/books/show_book.php?book_id=2570">Интервью с Павлом Спицыным "Zander"</a>
+            </li>
+                                                <li>
+                <span class="articles_date_views"><time datetime="2010-09-15" pubdate="pubdate" class="grey1_color">05.09.2014</time> <span class="crimson_color">848</span></span>
+                <span class="grey_color">Уроки → 3ds Max →</span>
+                <a href="http://www.render.ru/books/show_book.php?book_id=2600">Экспорт модели из 3ds Max в Unity3d</a>
+            </li>
+                                                <li>
+                <span class="articles_date_views"><time datetime="2010-09-15" pubdate="pubdate" class="grey1_color">04.09.2014</time> <span class="crimson_color">1419</span></span>
+                <span class="grey_color">Статьи → Эксклюзив →</span>
+                <a href="http://www.render.ru/books/show_book.php?book_id=2597">Интервью с Дмитрием Клюшкиным о проекте "Пепел"</a>
+            </li>
+                                                <li>
+                <span class="articles_date_views"><time datetime="2010-09-15" pubdate="pubdate" class="grey1_color">02.09.2014</time> <span class="crimson_color">1747</span></span>
+                <span class="grey_color">Статьи → Эксклюзив →</span>
+                <a href="http://www.render.ru/books/show_book.php?book_id=2552">Художник Alexandre Diboine (Zedig)</a>
+            </li>
+                                </ul>
+    </div>
+</section><section class="side_tab_wrapper"><div class="tab_label vacancies"><h4>Вакансии</h4></div><div class="main_tab vacancies"><ul><li><span class="grey_color"><a href="http://www.render.ru/books/show_book.php?book_id=104#">ТРЕХМЕР</a> → </span> <a href="http://www.render.ru/vacancy/show_vacancy.php?id=962">Data Wrangler (получение/конвертация/отправка видео)</a><br><span class="crimson_color">40-60</span> <span class="rub big">P</span><br><span class="grey_color"><small>Работа с рекламными видеороликами:
+- получение видеоматериала после этапа монтажа/цветокоррекции
+- сборка ролика по утвержд...</small></span></li><li><span class="grey_color"><a href="http://www.render.ru/books/show_book.php?book_id=104#">ТРЕХМЕР</a> → </span> <a href="http://www.render.ru/vacancy/show_vacancy.php?id=961">Workflow Supervisor</a><br><span class="crimson_color">70-100</span> <span class="rub big">P</span><br><span class="grey_color"><small>Работа в основном над рекламными роликами:
+- взаимодействие с продюсером, арт-директоорм, совместный анализ поставленной кли...</small></span></li><li><span class="grey_color"><a href="http://www.render.ru/books/show_book.php?book_id=104#">ТРЕХМЕР</a> → </span> <a href="http://www.render.ru/vacancy/show_vacancy.php?id=960">3D Generalist</a><br><span class="crimson_color">80-100</span> <span class="rub big">P</span><br><span class="grey_color"><small>Широкий круг занятий включает: 
+- моделинг
+- анимация камеры, создание аниматика по брифу.
+- постановку света, настройку м...</small></span></li><li><span class="grey_color"><a href="http://www.render.ru/books/show_book.php?book_id=104#">Dream Laser</a> → </span> <a href="http://www.render.ru/vacancy/show_vacancy.php?id=959">3D Дизайнер</a><br><span class="crimson_color">40 000-120 000</span> <span class="rub big">P</span><br><span class="grey_color"><small>Создание 3D VIDEO MAPPING, MOTION DESING, ГРАФИКА, АНИМАЦИЯ, СЪЁМКИ и многое другое.
+
+Производство презентационных роликов ...</small></span></li></ul></div></section><div class="side_tab_wrapper banner-box-510x120"><a href="http://render.ru/show_page.php?page_name=podelis_opitom"><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/4.2_podelis_opitom.gif"></a></div><section class="side_tab_wrapper">
+    <div class="tab_label render_center">
+        <h4>Render.ru Center</h4>
+    </div>
+    <div class="main_tab render_center">
+        <ul>
+                        <li>
+                <time datetime="2010-09-15" pubdate="pubdate" class="grey_color">01.09.2014</time>
+                <a href="http://www.render.ru/news/news.php?news_id=7286">Видео презентация курса "Adobe Photoshop для фотографов: Школа портретной ретуши"</a>
+            </li>
+                        <li>
+                <time datetime="2010-09-15" pubdate="pubdate" class="grey_color">22.08.2014</time>
+                <a href="http://www.render.ru/news/news.php?news_id=7271">Студентам 20% скидка на базовые курсы RENDER.RU</a>
+            </li>
+                        <li>
+                <time datetime="2010-09-15" pubdate="pubdate" class="grey_color">07.08.2014</time>
+                <a href="http://www.render.ru/news/news.php?news_id=7241">Презентация курса "Интерактивная Архитектура (Lightwave и Unity)"</a>
+            </li>
+                        <li>
+                <time datetime="2010-09-15" pubdate="pubdate" class="grey_color">05.08.2014</time>
+                <a href="http://www.render.ru/news/news.php?news_id=7233">Дистанционный курс. Adobe Photoshop для фотографов: "Школа портретной ретуши"</a>
+            </li>
+                    </ul>
+    </div>
+</section><section class="side_tab_wrapper">
+    <div class="tab_label forum">
+        <h4>Интересные темы</h4>
+    </div>
+    <div class="main_tab forum">
+        <ul>
+                        <li>
+                <span class="grey_color"><a href="http://www.render.ru/xen/index.php?forums/26/">ZBrush</a> →</span> <a href="http://www.render.ru/xen/index.php?threads/156870/">Ваша помощь в адаптации ZBrush 4R6  для всех пользователей Linux</a>
+            </li>
+                        <li>
+                <span class="grey_color"><a href="http://www.render.ru/xen/index.php?forums/86/">Скульптинг на скорость</a> →</span> <a href="http://www.render.ru/xen/index.php?threads/156816/">№80 — «Сексуальный пришелец»</a>
+            </li>
+                        <li>
+                <span class="grey_color"><a href="http://www.render.ru/xen/index.php?forums/26/">ZBrush</a> →</span> <a href="http://www.render.ru/xen/index.php?threads/156772/">Zbrush 4R7</a>
+            </li>
+                        <li>
+                <span class="grey_color"><a href="http://www.render.ru/xen/index.php?forums/95/">Творческие дуэли</a> →</span> <a href="http://www.render.ru/xen/index.php?threads/155904/">Творческие Дуэли ---- заявки на участие</a>
+            </li>
+                        <li>
+                <span class="grey_color"><a href="http://www.render.ru/xen/index.php?forums/1/">Обсуждение сайта</a> →</span> <a href="http://www.render.ru/xen/index.php?threads/155854/">Бета тестирование сайта (публикуем баги)</a>
+            </li>
+                        <li>
+                <span class="grey_color"><a href="http://www.render.ru/xen/index.php?forums/1/">Обсуждение сайта</a> →</span> <a href="http://www.render.ru/xen/index.php?threads/155853/">Новый RENDER.RU (инф. о обновлениях)</a>
+            </li>
+                        <li>
+                <span class="grey_color"><a href="http://www.render.ru/xen/index.php?forums/3/">Maya</a> →</span> <a href="http://www.render.ru/xen/index.php?threads/155405/">Вопросница 2. Сюда скидываются все вопросы 2</a>
+            </li>
+                        <li>
+                <span class="grey_color"><a href="http://www.render.ru/xen/index.php?forums/21/">Железо</a> →</span> <a href="http://www.render.ru/xen/index.php?threads/142013/">ПОКУПКА И ПРОДАЖА КОМПЛЕКТУЮЩИХ</a>
+            </li>
+                        <li>
+                <span class="grey_color"><a href="http://www.render.ru/xen/index.php?forums/37/">Blender3D</a> →</span> <a href="http://www.render.ru/xen/index.php?threads/138026/">Ваши работы</a>
+            </li>
+                        <li>
+                <span class="grey_color"><a href="http://www.render.ru/xen/index.php?forums/37/">Blender3D</a> →</span> <a href="http://www.render.ru/xen/index.php?threads/133837/">Ссылки на уроки, статьи, рендеры, сообщества</a>
+            </li>
+                    </ul>
+    </div>
+</section>
+
+            <div class="right_group_container clearfix">
+
+                <section class="side_tab_wrapper">
+    <h3>Статистика</h3>
+    <span class="color-gray-555">Всего зарегистрированных:</span> 129193<br>
+    Сейчас на сайте:
+    <ul>
+        <li>
+            <span class="color-gray-555">зарегистрированных:</span> 12
+        </li>
+        <li>
+            <span class="color-gray-555">незарегистрированных:</span> 106
+        </li>
+    </ul>
+</section>
+
+                <section class="side_tab_wrapper statics_info partner-news">
+                    <h3><a href="http://www.render.ru/knews" class="nooutlink">Новости партнеров</a></h3>
+                    <div id="banner_klinks">
+                        <div class="klinks">
+<a href="http://reg-ooo-ip.ru/uridicheskieuslugi/registraciya-firm/registracia-ooo.html" target="_blank">регистрация ооо в москве</a><!--check code--><!--3a9f6b4e--><!--9c7ec26b--><script async="async" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/zp.js" type="text/javascript"></script></div>                    </div>
+                    <div class="web_counters clearfix">
+                                            </div>
+                </section>
+
+            </div>
+        </div>
+    </div><!--! end of .second_border -->
+</aside>                               
+                
+            </div><!--! end of .fixed_width_block -->
+        </div><!--! end of #main -->
+        <div class="footer_push">
+        </div>
+    </div> <!--! end of #container -->
+
+    <footer role="contentinfo">            <div class="fixed_width_block clearfix">
+                <div class="footer-logo">
+                    <a href="http://www.render.ru/"><div id="footer_logo" class="main_logo_back bg_lessons"></div></a>
+                </div>
+                <div class="footer-link-1">
+                    <p><a href="http://www.render.ru/show_page.php?page_name=pr">Реклама</a></p>
+                    <p><a href="http://www.render.ru/show_page.php?page_name=purpose%20and%20mission">Миссия сайта</a></p>
+                    <p><a href="http://www.render.ru/xen/">Форум</a></p>
+                    <p><a href="http://www.render.ru/user/bloglist.php">Блоги</a></p>
+                </div>
+                <div class="footer-link-2">
+                    <p><a href="http://www.render.ru/center/center.php?mp=list">Курсы RENDER.RU</a></p>
+                    <p><a href="http://shop.render.ru/">Магазин CG</a></p>
+                    <p><a href="http://www.render.ru/download/">Журнал Render Magazine</a></p>
+                    <p><a href="http://www.render.ru/vacancy/vacancy.php">Вакансии</a></p>
+                    <p><a href="http://www.render.ru/vacancy/freelance.php">Фриланс</a></p>
+                </div>
+                <div class="footer-link-3">
+                    <p><a href="http://www.render.ru/gallery/">Галерея</a></p>
+                    <p><a href="http://www.render.ru/books/?book_cat=31">Статьи</a></p>
+                    <p><a href="http://www.render.ru/books/?book_cat=0">Уроки</a></p>
+                </div>
+                <div class="footer-link-4">
+                    <p><a href="http://www.render.ru/show_page.php?page_name=rules">Правила</a></p>
+                    <p><a href="http://www.render.ru/show_page.php?page_name=contacts">Контакты</a></p>
+                </div>
+                <div class="footer-contact">
+                    Вопросы и предложения, пожалуйста, отправляйте на адрес <a href="mailto:support@render.ru">support@render.ru</a><br><br>
+                    Присоединяйся к нам в соц. сетях:<br>
+                    <a rel="nofollow" target="_blank" href="https://www.facebook.com/home.php?sk=group_162889150426265"><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/soc_button_fb.png" alt=""></a>
+                    <a rel="nofollow" target="_blank" href="https://twitter.com/renderRu"><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/soc_button_twit.png" alt=""></a>
+                    <a rel="nofollow" target="_blank" href="http://vk.com/club8938191"><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/soc_button_vk.png" alt=""></a>
+                    <a rel="nofollow" target="_blank" href="https://plus.google.com/b/103334409369664867952/103334409369664867952/posts"><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/soc_button_goog.png" alt=""></a>
+                </div>
+                <div class="footer-copyright">
+                    Статьи, переводы, изображения и торговые марки принадлежат их авторам и владельцам.
+                    Articles, translations, images and trademarks belong to their respective authors and owners.<br>
+                    Copyright (c) render.ru , 1999-2014.
+                </div> 
+                <div style="text-align:right;color:#333;clear:both;">0,52662491798401</div>
+            </div><!--! end of .fixed_width_block --></footer>
+
+    
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+        (function (d, w, c) {
+            (w[c] = w[c] || []).push(function() {
+                try {
+                    w.yaCounter25114673 = new Ya.Metrika({id:25114673,
+                            clickmap:true,
+                            trackLinks:true,
+                            accurateTrackBounce:true});
+                } catch(e) { }
+            });
+
+            var n = d.getElementsByTagName("script")[0],
+                s = d.createElement("script"),
+                f = function () { n.parentNode.insertBefore(s, n); };
+            s.type = "text/javascript";
+            s.async = true;
+            s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+            if (w.opera == "[object Opera]") {
+                d.addEventListener("DOMContentLoaded", f, false);
+            } else { f(); }
+        })(document, window, "yandex_metrika_callbacks");
+        </script>
+        <noscript>&lt;div&gt;&lt;img src="//mc.yandex.ru/watch/25114673" style="position:absolute; left:-9999px;" alt="" /&gt;&lt;/div&gt;</noscript>
+        <!-- /Yandex.Metrika counter -->
+
+        <!-- Rating@Mail.ru counter -->
+        <script type="text/javascript">
+        var _tmr = _tmr || [];
+        _tmr.push({id: "43010", type: "pageView", start: (new Date()).getTime()});
+        (function (d, w) {
+           var ts = d.createElement("script"); ts.type = "text/javascript"; ts.async = true;
+           ts.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//top-fwz1.mail.ru/js/code.js";
+           var f = function () {var s = d.getElementsByTagName("script")[0]; s.parentNode.insertBefore(ts, s);};
+           if (w.opera == "[object Opera]") { d.addEventListener("DOMContentLoaded", f, false); } else { f(); }
+        })(document, window);
+        </script><noscript>&lt;div style="position:absolute;left:-10000px;"&gt;
+        &lt;img src="//top-fwz1.mail.ru/counter?id=43010;js=na" style="border:0;" height="1" width="1" alt="Рейтинг@Mail.ru" /&gt;
+        &lt;/div&gt;</noscript>
+        <!-- //Rating@Mail.ru counter -->
+    
+
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-container"><img class="lb-image" src=""><div class="lb-nav"><a class="lb-prev" href=""></a><a class="lb-next" href=""></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div><div class="lb-closeContainer"><a class="lb-close"></a></div></div></div></div><iframe name="oauth2relay347732814" id="oauth2relay347732814" src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/postmessageRelay.htm" tabindex="-1" style="width: 1px; height: 1px; position: absolute; top: -100px;"></iframe><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/imp" style="display: block; position: absolute; top: 0px; left: -100px; width: 1px; height: 1px; border: none;"><iframe src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/support.htm" style="width: 1px; height: 1px; left: -100px; top: -100px; position: absolute;"></iframe><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/watch" style="display: block; position: absolute; top: 0px; left: -100px; width: 1px; height: 1px; border: none;"><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/watch(1)" style="display: block; position: absolute; top: 0px; left: -100px; width: 1px; height: 1px; border: none;"><img src="./Моделирование гусеницы танка с последующей анимацией — Компьютерная графика и анимация — Render.ru_files/watch(2)" style="display: block; position: absolute; top: 0px; left: -100px; width: 1px; height: 1px; border: none;"></body></html>

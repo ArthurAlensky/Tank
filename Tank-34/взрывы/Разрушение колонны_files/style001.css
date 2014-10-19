@@ -1,0 +1,9 @@
+#thumb a img {
+  filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+ -moz-opacity: 0.50; opacity:0.5;
+}
+#thumb a:hover img {
+ filter: Alpha(opacity=100, finishopacity=100, style=1);
+ -moz-opacity: 1.00; opacity:1;
+}
+

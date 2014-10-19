@@ -12,6 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="3ds.h" />
+    <ClInclude Include="Brick.h" />
     <ClInclude Include="Camera.h" />
     <ClInclude Include="CollisionBox.h" />
     <ClInclude Include="CollisionBoxArray.h" />
@@ -30,11 +31,13 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="3ds.cpp" />
+    <ClCompile Include="Brick.cpp" />
     <ClCompile Include="Camera.cpp" />
     <ClCompile Include="CollisionBox.cpp" />
     <ClCompile Include="CollisionBoxArray.cpp" />
     <ClCompile Include="CollisionSquare.cpp" />
     <ClCompile Include="ControlWarObject.cpp" />
+    <ClCompile Include="Global.cpp" />
     <ClCompile Include="main_disabled.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="GameModel3Ds.cpp" />

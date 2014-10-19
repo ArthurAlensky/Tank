@@ -17,6 +17,7 @@
 #include "Texture.h"
 #include "Terrain.h"
 #include "Tank.h"
+#include"Brick.h"
 
 #include "CollisionSquare.h"
 #include "CollisionBox.h"
@@ -38,7 +39,7 @@ static int gWinHeight = 600;
 static unsigned int gViewMode = 0;
 static float gTimeStep = 0.6;
 static float gMoveDelta = 2.0;
-static float gAngleTankDelta = 2.0;
+static float gAngleTankDelta = 1.0;
 static float gAngleGunDelta = 5.0;
 static float gBombVelocityMagDelta = 0.4;
 static float gBombVelocityMag = 2.0;
@@ -59,6 +60,11 @@ CollisionBoxArray collisionBoxArray;
 Terrain myTerrain(true, 16);
 Tank myTank;
 
+#define NUM_BRICKS 100
+
+Brick bricks[NUM_BRICKS];
+
+#define SLOWDOWN 0.3
 
 Camera camera(gCenterPoint.X(), 30.0, gCenterPoint.Z(), gCenterPoint.X()+100.0, 10.0, gCenterPoint.Z(),0.0,1.0,0.0);
 
@@ -70,19 +76,34 @@ void mySetLight();
 void quit();
 void caculateCameraView(unsigned int viewMode);
 
+
+
 //=======================================
 void draw()
 {
-	glEnable(GL_DEPTH_TEST);
-	
+	glEnable(GL_TEXTURE_2D);							// Enable texture mapping
+	glEnable(GL_DEPTH_TEST);							// Enables depth testing
+
 	//draw terrain
 	glDisable(GL_LIGHTING);
 	myTerrain.drawTerrain();
 	glEnable(GL_LIGHTING);
+
 	
+
 	//draw tank
 	myTank.draw(g_ViewMod);
 
+	for(int i = 0; i < NUM_BRICKS; i++)
+	{
+		Brick *brick = bricks + i;
+		if(1)
+		{
+			brick->moveWhenCrash(SLOWDOWN);
+		}
+
+		brick->draw();
+	}
 
 	//collisionBoxArray.draw();
 
@@ -94,7 +115,7 @@ void myDisplay()
 	if(gViewMode == 2)
 	{
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-		
+
 		//viewport1
 		glViewport(0, 0, 2*gWinWidth/3, gWinHeight);
 		glMatrixMode(GL_PROJECTION);
@@ -102,7 +123,7 @@ void myDisplay()
 		gluPerspective(45.0, (double)(2*gWinWidth)/(double)(3*gWinHeight), 0.1, 1000.0);
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
-		
+
 		caculateCameraView(0);
 		camera.view();
 		draw();
@@ -139,7 +160,7 @@ void myDisplay()
 		gluPerspective(45.0, (double)gWinWidth/(double)gWinHeight, 0.1, 1000.0);
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
-		
+
 		caculateCameraView(gViewMode);
 		camera.view();
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -161,11 +182,12 @@ void myInit()
 	//make the background look like the sky
 	float blue[4] = {0.5,0.5,1.0,0.0};
 	glClearColor(0.5, 0.5, 1.0, 0.0);
-		
+
 	glShadeModel(GL_SMOOTH);
-	
+
 	//mqoInit();
 
+	
 	glEnable(GL_FOG);
 	glFogfv(GL_FOG_COLOR,blue);
 	glFogf(GL_FOG_MODE, GL_EXP2);
@@ -178,7 +200,7 @@ void myInit()
 
 	//initial ground collision square
 	groundCollSquare.setParameters(TVector(0.0, 1.0, 0.0), gCenterPoint);
-	
+
 
 	//initial tank
 	tankHeightPos = myTerrain.GetHeight(gCenterPoint.X()+100.0, gCenterPoint.Z());
@@ -186,6 +208,38 @@ void myInit()
 	myTank.setParameters("T-90.3DS", "E:/My_Tank/Work/Tank/TANK-T90/T-90/",TVector(gCenterPoint.X()+100.0, tankHeightPos + 9.0, gCenterPoint.Z()), 0.0, &myTerrain, &collisionBoxArray);
 	//myTank.setParameters("E:/My_Tank/Work/Tank/Tank-34/111.3DS", TVector(gCenterPoint.X()+100.0, tankHeightPos + 9.0, gCenterPoint.Z()), 0.0, &myTerrain, &collisionBoxArray);
 	myTank.initTank();	
+
+	unsigned int brickTexture;
+
+	createTexture("E:/My_Tank/Work/Tank/BSUIR.MG.Tanks/Data/Texture/Brick/brick.bmp", brickTexture);
+
+	for(int j = 0; j < sqrt(NUM_BRICKS); j++ )
+	{
+		for(int i = 0; i < sqrt(NUM_BRICKS); i++)
+		{
+			Brick *brick = &bricks[j * (int)sqrt(NUM_BRICKS) + i];
+
+			brick->setTexture(brickTexture);
+			brick->setTerrain(&myTerrain);
+
+			brick->setPosition(TVector(
+				myTank.getPosition().X(),
+				myTank.getPosition().Y() + brick->height * j, 
+				myTank.getPosition().Z() + brick->length * i ));
+
+			brick->setDirection(TVector(
+				float((rand()%50)-26.0f)*10.0f,	// Random Speed On X Axis
+				float((rand()%50)-25.0f)*10.0f,	// Random Speed On Y Axis
+				float((rand()%50)-25.0f)*10.0f	// Random Speed On Z Axis
+				));   
+
+			brick->setGravity(TVector(
+				0.0f,	// Set Horizontal Pull To Zero
+				-0.8f,	// Set Vertical Pull Downward
+				0.0f	// Set Pull On Z Axis To Zero
+				));              
+		}
+	}
 
 	/*gCameraPosition.setX(myTank.getPosition().X() + 150*cos(gRadViewAngle));
 	gCameraPosition.setY(myTank.getPosition().Y() + 30);
@@ -248,76 +302,76 @@ void myKeyboard(unsigned char key,int x,int y)
 {
 	switch (key)
 	{
-		case 'g':					//decrease gun angle
-			//myTank.plusGunAngle(-gAngleGunDelta);
-			break;
-		case 'G':					//increase gun angle
-			//myTank.plusGunAngle(gAngleGunDelta);
-			break;
+	case 'g':					//decrease gun angle
+		//myTank.plusGunAngle(-gAngleGunDelta);
+		break;
+	case 'G':					//increase gun angle
+		//myTank.plusGunAngle(gAngleGunDelta);
+		break;
 
-		case 's':					//shot generally bomb
-			//myTank.shot();
-			break;
-		case 'm':					//shot auto bomb
-			break;
-		case 'v':					//decrease generally bomb velocity
-			//myTank.plusBombVelocityMag(-gBombVelocityMagDelta);
-			break;
-		case 'V':					//increase generally bomb velocity
-			//myTank.plusBombVelocityMag(gBombVelocityMagDelta);
-			break;
-	
-		case 'f':					//decrease fog density
-			if(gFogDensity > 0.0005)
-			{
-				gFogDensity -= 0.0005;
-				glFogf(GL_FOG_DENSITY, gFogDensity);
-			}		
-			break;
-		case 'F':					//increase fog density
-			if(gFogDensity < 0.99)
-			{
-				gFogDensity += 0.001;
-				glFogf(GL_FOG_DENSITY, gFogDensity);
-			}
-			break;
-		
-		case 'r':					//reset game
-			myTank.startFight();
-			break;
-		case 27:					//exit game
-			exit(0);
-			break;
-		
-		default:
-			break;
+	case 's':					//shot generally bomb
+		//myTank.shot();
+		break;
+	case 'm':					//shot auto bomb
+		break;
+	case 'v':					//decrease generally bomb velocity
+		//myTank.plusBombVelocityMag(-gBombVelocityMagDelta);
+		break;
+	case 'V':					//increase generally bomb velocity
+		//myTank.plusBombVelocityMag(gBombVelocityMagDelta);
+		break;
+
+	case 'f':					//decrease fog density
+		if(gFogDensity > 0.0005)
+		{
+			gFogDensity -= 0.0005;
+			glFogf(GL_FOG_DENSITY, gFogDensity);
+		}		
+		break;
+	case 'F':					//increase fog density
+		if(gFogDensity < 0.99)
+		{
+			gFogDensity += 0.001;
+			glFogf(GL_FOG_DENSITY, gFogDensity);
+		}
+		break;
+
+	case 'r':					//reset game
+		myTank.startFight();
+		break;
+	case 27:					//exit game
+		exit(0);
+		break;
+
+	default:
+		break;
 	}
 }
 
 void mySpecialKeyboard(int key, int x, int y)
 {
 	switch (key) {
-		case GLUT_KEY_LEFT:				//move to left
-			myTank.plusAngleWithX(gAngleTankDelta);
-			break;
-		case GLUT_KEY_RIGHT:			//move to right
-			myTank.plusAngleWithX(-gAngleTankDelta);
-			break;
-		case GLUT_KEY_UP:				//move to up
-			myTank.move(gMoveDelta);
-			break;
-		case GLUT_KEY_DOWN:				//move to right
-			myTank.move(-gMoveDelta);
-			break;
-		case GLUT_KEY_F1:				//view 1
-			gViewMode = 0;
-			break;
-		case GLUT_KEY_F2:				//view 2
-			gViewMode = 1;
-			break;
-		case GLUT_KEY_F3:				//view 3
-			gViewMode = 2;
-			break;
+	case GLUT_KEY_LEFT:				//move to left
+		myTank.plusAngleWithX(gAngleTankDelta);
+		break;
+	case GLUT_KEY_RIGHT:			//move to right
+		myTank.plusAngleWithX(-gAngleTankDelta);
+		break;
+	case GLUT_KEY_UP:				//move to up
+		myTank.move(gMoveDelta);
+		break;
+	case GLUT_KEY_DOWN:				//move to right
+		myTank.move(-gMoveDelta);
+		break;
+	case GLUT_KEY_F1:				//view 1
+		gViewMode = 0;
+		break;
+	case GLUT_KEY_F2:				//view 2
+		gViewMode = 1;
+		break;
+	case GLUT_KEY_F3:				//view 3
+		gViewMode = 2;
+		break;
 	}
 }
 
@@ -326,7 +380,7 @@ void mouseMotion(int x, int y)
 	static float lastX = 0.0;
 	static float lastY = 0.0;
 
-	angleWithX += lastX - x > 0 ? gAngleTankDelta : -gAngleTankDelta;
+	angleWithX += (lastX - x) * gAngleTankDelta / 2;
 	if(angleWithX>= 360)
 		angleWithX = 0;
 	if(angleWithX < 0)
@@ -343,9 +397,9 @@ int main (int argc, char ** const argv)
 	glutInitWindowSize(gWinWidth, gWinHeight);
 	glutInitWindowPosition(0, 0);
 	glutCreateWindow("MyGame");
-	
+
 	myInit();
-		 
+
 	glutDisplayFunc(myDisplay);
 	glutReshapeFunc(myReshape);
 	glutIdleFunc(myIdle);
@@ -353,7 +407,7 @@ int main (int argc, char ** const argv)
 	glutSpecialFunc(mySpecialKeyboard);
 	glutPassiveMotionFunc(mouseMotion);
 	glutMainLoop();
-	
+
 	quit();
 	return 0;	
 }
@@ -364,7 +418,7 @@ void mySetLight()
 	GLfloat specular[]={1.0, 1.0, 1.0, 1.0};
 	GLfloat ambient[]={0.3, 0.3, 0.3, 0.1};
 	GLfloat position[]= {100.0, 200.0, 200.0, 0.0};
-	
+
 	glLightfv(GL_LIGHT0,GL_DIFFUSE, diffuse);
 	glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
 	glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
@@ -383,12 +437,12 @@ void myReshape(int width, int height)
 {
 	gWinWidth=width;
 	gWinHeight=height;
-	
+
 	glViewport(0, 0, width, height);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluPerspective(45.0, (GLfloat)width/(GLfloat)height, 0.1, 1000.0);
-	
+
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 }

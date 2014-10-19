@@ -22,9 +22,6 @@ private:
 	t3DModel g_3DModel;										// This holds the 3D Model info that we load in
 	UINT g_Texture[MAX_TEXTURES];						// This holds the texture info, referenced by an ID
 
-
-	bool createTexture(LPTSTR szFileName, GLuint &textureID);
-
 public:
 	GameModel3Ds();
 	GameModel3Ds(const char *filename, float scale);

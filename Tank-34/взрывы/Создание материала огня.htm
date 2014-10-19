@@ -1,0 +1,2333 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html dir="ltr" lang="ru">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" />
+<meta name="generator" content="vBulletin 3.6.2" />
+
+<meta name="keywords" content="Создание материала огня, форум, общение, обсужение" />
+<meta name="description" content="Создание материала огня Уроки 3D Studio Max" />
+
+
+<script type="text/javascript">
+<!--
+function MM_preloadImages() { //v3.0
+  var d=document; if(d.images){ if(!d.MM_p) d.MM_p=new Array();
+    var i,j=d.MM_p.length,a=MM_preloadImages.arguments; for(i=0; i<a.length; i++)
+    if (a[i].indexOf("#")!=0){ d.MM_p[j]=new Image; d.MM_p[j++].src=a[i];}}
+}
+function MM_swapImgRestore() { //v3.0
+  var i,x,a=document.MM_sr; for(i=0;a&&i<a.length&&(x=a[i])&&x.oSrc;i++) x.src=x.oSrc;
+}
+function MM_findObj(n, d) { //v4.01
+  var p,i,x;  if(!d) d=document; if((p=n.indexOf("?"))>0&&parent.frames.length) {
+    d=parent.frames[n.substring(p+1)].document; n=n.substring(0,p);}
+  if(!(x=d[n])&&d.all) x=d.all[n]; for (i=0;!x&&i<d.forms.length;i++) x=d.forms[i][n];
+  for(i=0;!x&&d.layers&&i<d.layers.length;i++) x=MM_findObj(n,d.layers[i].document);
+  if(!x && d.getElementById) x=d.getElementById(n); return x;
+}
+
+function MM_swapImage() { //v3.0
+  var i,j=0,x,a=MM_swapImage.arguments; document.MM_sr=new Array; for(i=0;i<(a.length-2);i+=3)
+   if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
+}
+//-->
+</script>
+<script src="Создание материала огня_files/AC_RunAc.js" type="text/javascript"></script>
+<script type="text/javascript" src="Создание материала огня_files/swfobjec.js"></script>
+<SCRIPT src="Создание материала огня_files/reflecti.htm" type=text/javascript></SCRIPT>
+
+<!-- CSS Stylesheet -->
+<style type="text/css" id="vbulletin_css">
+<!--
+/* vBulletin 3 CSS For Style 'Обычный стиль' (styleid: 1) */
+body
+{
+	background: #000000;
+	color: #999999;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	margin: 5px 10px 10px 10px;
+	padding: 0px;
+}
+a:link, body_alink
+{
+	color: #CCCCCC;
+}
+a:visited, body_avisited
+{
+	color: #CCCCCC;
+}
+a:hover, a:active, body_ahover
+{
+	color: #dedec4;
+}
+.page
+{
+	background: #000000;
+	color: #FFFFFF;
+}
+td, th, p, li
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tborder
+{
+	background: #000000;
+	color: #000000;
+}
+.tcat
+{
+	background: #212121;
+	color: #FFFFFF;
+	font: bold 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.tcat a:link, .tcat_alink
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+.tcat a:visited, .tcat_avisited
+{
+	color: #ffffff;
+	text-decoration: none;
+}
+.tcat a:hover, .tcat a:active, .tcat_ahover
+{
+	color: #dedec4;
+	text-decoration: underline;
+}
+.thead
+{
+	background: #212121;
+	color: #FFFFFF;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.thead a:link, .thead_alink
+{
+	color: #FFFFFF;
+}
+.thead a:visited, .thead_avisited
+{
+	color: #FFFFFF;
+}
+.thead a:hover, .thead a:active, .thead_ahover
+{
+	color: #FFFF00;
+}
+.tfoot
+{
+	background: #000000;
+	color: #CCCCCC;
+}
+.tfoot a:link, .tfoot_alink
+{
+	color: #FFFFFF;
+}
+.tfoot a:visited, .tfoot_avisited
+{
+	color: #FFFFFF;
+}
+.tfoot a:hover, .tfoot a:active, .tfoot_ahover
+{
+	color: #CCCCCC;
+}
+.alt1, .alt1Active
+{
+	background: #373737;
+	color: #FFFFFF;
+}
+.alt2, .alt2Active
+{
+	background: #4a4a4a;
+	color: #FFFFFF;
+}
+td.inlinemod
+{
+	background: #FFFFCC;
+	color: #000000;
+}
+.wysiwyg
+{
+	background: #666666;
+	color: #FFFFFF;
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+textarea, .bginput
+{
+	font: 10pt verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.button
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+select
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+option, optgroup
+{
+	font-size: 11px;
+	font-family: verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.smallfont
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.time
+{
+	color: #CCCCCC;
+}
+.navbar
+{
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.highlight
+{
+	color: #FF0000;
+	font-weight: bold;
+}
+.fjsel
+{
+	background: #000000;
+	color: #E0E0F6;
+}
+.fjdpth0
+{
+	background: #F7F7F7;
+	color: #000000;
+}
+.panel
+{
+	background: #666666;
+	color: #FFFFFF;
+	padding: 10px;
+	border: 2px outset;
+}
+.panelsurround
+{
+	background: #D1D4E0 url(Создание\ материала\ огня_files/gradient.gif) repeat-x top left;
+	color: #000000;
+}
+legend
+{
+	color: #CCCCCC;
+	font: 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.vbmenu_control
+{
+	background: #333333;
+	color: #FFFFFF;
+	font: bold 11px tahoma, verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	padding: 3px 6px 3px 6px;
+	white-space: nowrap;
+}
+.vbmenu_control a:link, .vbmenu_control_alink
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_control a:visited, .vbmenu_control_avisited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_control a:hover, .vbmenu_control a:active, .vbmenu_control_ahover
+{
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+.vbmenu_popup
+{
+	background: #333333;
+	color: #FFFFFF;
+	border: 1px solid #000000;
+}
+.vbmenu_option
+{
+	background: #666666;
+	color: #FFFFFF;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_option a:link, .vbmenu_option_alink
+{
+	color: #CCCCCC;
+	text-decoration: none;
+}
+.vbmenu_option a:visited, .vbmenu_option_avisited
+{
+	color: #CCCCCC;
+	text-decoration: none;
+}
+.vbmenu_option a:hover, .vbmenu_option a:active, .vbmenu_option_ahover
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite
+{
+	background: #8A949E;
+	color: #FFFFFF;
+	font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+	white-space: nowrap;
+	cursor: pointer;
+}
+.vbmenu_hilite a:link, .vbmenu_hilite_alink
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite a:visited, .vbmenu_hilite_avisited
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+.vbmenu_hilite a:hover, .vbmenu_hilite a:active, .vbmenu_hilite_ahover
+{
+	color: #FFFFFF;
+	text-decoration: none;
+}
+/* ***** styling for 'big' usernames on postbit etc. ***** */
+.bigusername { font-size: 14pt; }
+
+/* ***** small padding on 'thead' elements ***** */
+td.thead, div.thead { padding: 4px; }
+
+/* ***** basic styles for multi-page nav elements */
+.pagenav a { text-decoration: none; }
+.pagenav td { padding: 2px 4px 2px 4px; }
+.li_text_dark {FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: tahoma, Arial}
+
+/* ***** define margin and font-size for elements inside panels ***** */
+.fieldset { margin-bottom: 6px; }
+.fieldset, .fieldset td, .fieldset p, .fieldset li { font-size: 11px; }
+
+/* ***** don't change the following ***** */
+form { display: inline; }
+label { cursor: default; }
+.normal { font-weight: normal; }
+.inlineimg { vertical-align: middle; }
+
+.li_text_white {
+	FONT-SIZE: 11px; COLOR: #ffffff; FONT-FAMILY: tahoma, Arial
+}
+
+/* Search OnMouseOver */
+.krbutton { 
+background: #FFFFFF;
+border: 1px solid #316AC5;
+border-left: 0px;
+font: 9px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+color: #316AC5; 
+}
+.krinputop { 
+background: #FFFFFF;
+border: 1px solid #316AC5;
+border-right: 0px;
+font: 10px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+}
+.krinputie { 
+background: #FFFFFF;
+border: 1px solid #316AC5;
+border-right: 0px;
+font: 11px verdana, geneva, lucida, 'lucida grande', arial, helvetica, sans-serif;
+} 
+.forum_title_or {
+	FONT-SIZE: 11px;
+	COLOR: #FFCC00;
+	FONT-FAMILY: tahoma, Arial;
+	font-weight: bold;
+}
+
+.altsticky { background-color: #813d3d;}
+
+#block_footer {
+clear:both;
+margin:0 auto;
+width:900px;
+color:#666666;
+font-family: "Lucida Sans Unicode",Tahoma, Arial, Helvetica, sans-serif;
+font-size: 11px;
+border-top:#333333 1px solid; 
+}
+
+#left_block {
+padding-top:10px;
+padding-bottom:20px;
+float:left;
+}
+
+#left_block A {
+color:#666666;
+text-decoration:underline;
+}
+#left_block A:hover {
+color:#999999;
+text-decoration:none;
+}
+
+#right_block {
+padding-top:10px;
+padding-bottom:20px;
+float:right;
+text-align:right;
+}
+
+#right_block A {
+color:#666666;
+text-decoration:underline;
+}
+#right_block A:hover {
+color:#999999;
+text-decoration:none;
+}
+
+#navigator {
+margin: 0 auto;
+width:900px;
+height:20px;
+font-size:10px;
+padding-top:5px;
+font-family: "Lucida Sans Unicode",Tahoma, Arial, Helvetica, sans-serif;
+}
+
+#navigator A {
+color:#CCCCCC;
+}
+
+#navigator A:hover {
+color:#999999;
+text-decoration:none;
+}
+
+#logo_line {
+margin: 0 auto;
+width:900px;
+clear:both;
+}
+
+#logo {
+float:left;
+}
+
+#singin  {
+font-size:11px;
+color:#FFFFFF;
+padding-top:25px;
+font-family: "Lucida Sans Unicode",Tahoma, Arial, Helvetica, sans-serif;
+}
+
+#singin A{
+color:#FFFFFF;
+text-decoration:underline;
+}
+
+#singin A:hover {
+color:#CCCCCC;
+text-decoration:none;
+}
+
+#menu_bottom {
+clear:both;
+margin: 0 auto;
+width:900px;
+height:31px;
+background:url(Создание\ материала\ огня_files/menu_bot.gif);
+}
+
+#menu {
+clear:both;
+margin: 0 auto;
+width:832px;
+height:26px;
+}
+.menu_items {
+float:left;
+margin-right:3px;
+}
+
+body {
+	margin-left: 0px;
+	margin-top: 0px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	background:url(Создание\ материала\ огня_files/bg_line0.gif) repeat-x top center #000000;
+         font-family: "Lucida Sans Unicode",Tahoma, Arial, Helvetica, sans-serif;
+}
+
+#topban {
+padding-top:0px;
+width:900px;
+margin: 0 auto;
+}
+-->
+</style>
+
+<!-- / CSS Stylesheet -->
+
+<script type="text/javascript">
+<!--
+var SESSIONURL = "";
+var IMGDIR_MISC = "http://www.3dtotal.ru/forum/images/misc";
+var vb_disable_ajax = parseInt("0", 10);
+// -->
+</script>
+
+<script type="text/javascript" src="Создание материала огня_files/vbulleti.js"></script>
+<script type="text/javascript" src="Создание материала огня_files/vbulletj.js"></script>
+
+<link rel="alternate" type="application/rss+xml" title="VFXWorld RSS Feed" href="external.php?type=RSS2" />
+
+<link rel="alternate" type="application/rss+xml" title="VFXWorld - Уроки 3D Studio Max - RSS Feed" href="external.php?type=RSS2&amp;forumids=58" />
+
+<!-- 
+  nCode Image Resizer
+  (c) nCode
+  http://www.ncode.nl/
+-->
+<script type="text/javascript" src="Создание материала огня_files/ncode_im.js"></script>
+<style type="text/css">
+<!--
+table.ncode_imageresizer_warning {
+	background: #FFFFE1;
+	color: #000000;
+	border: 1px solid #CCC;
+	cursor: pointer;
+}
+
+table.ncode_imageresizer_warning td {
+	font-size: 10px;
+	vertical-align: middle;
+	text-decoration: none;
+}
+
+table.ncode_imageresizer_warning td.td1 {
+	padding: 5px;
+}
+
+table.ncode_imageresizer_warning td.td1 {
+	padding: 2px;
+}
+-->
+</style>
+<script type="text/javascript">
+<!--
+NcodeImageResizer.MODE = 'newwindow';
+NcodeImageResizer.MAXWIDTH = 640;
+NcodeImageResizer.MAXHEIGHT = 0;
+
+vbphrase['ncode_imageresizer_warning_small'] = 'Click this bar to view the full image.';
+vbphrase['ncode_imageresizer_warning_filesize'] = 'This image has been resized. Click this bar to view the full image. The original image is sized %1$sx%2$s and weights %3$sKB.';
+vbphrase['ncode_imageresizer_warning_no_filesize'] = 'This image has been resized. Click this bar to view the full image. The original image is sized %1$sx%2$s.';
+vbphrase['ncode_imageresizer_warning_fullsize'] = 'Click this bar to view the small image.';
+//-->
+</script>
+	<title>Создание материала огня - VFXWorld</title>
+	<script type="text/javascript" src="Создание материала огня_files/vbulletk.js"></script>
+</head>
+<body onload="">
+<!--Begin Nav-->
+ <div id="navigator">
+   <div align="right">
+     <a onclick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.3dtotal.ru/');"  href="#">сделать стартовой</a> | 
+     <a onclick="window.external.AddFavorite('http://www.3dtotal.ru/','3D Total - портал о 3D-графике');return false" href="#">добавить в избранное</a> |
+<a href="http://www.3dtotal.ru/forum/showthread.php?t=19995">партнеры</a> |  
+     <a href="http://www.3dtotal.ru/forum/showthread.php?t=5018">реклама на сайте</a> | 
+     <a href="http://www.3dtotal.ru/forum/sendmessage.php">связь с редакцией</a>   
+   </div>
+</div>
+<!--End Nav-->
+
+<!--Begin Header-->
+<div id="logo_line">
+   <div id="logo"><a href="http://www.3dtotal.ru/"><img src="Создание материала огня_files/vfxworld.jpg" width="284" height="70" border="0"></a></div>
+  <div id="singin"><div align="right"><a href="http://www.3dtotal.ru/forum/">Войти</a> | <a href="http://www.3dtotal.ru/forum/register.php">Регистрация</a></div></div>
+</div>  
+ 
+ <div id="menu">
+ 
+ 
+  <div class="menu_items">
+   <a href="http://www.3dtotal.ru/forum/forumdisplay.php?f=47" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image2','','http://www.3dtotal.ru/img2/menu/bt_news_f.gif',1)">
+   <img src="Создание материала огня_files/bt_news0.gif" name="Image2" width="101" height="26" border="0">   </a>  </div>
+  
+  <div class="menu_items">
+   <a href="http://www.3dtotal.ru/forum/forumdisplay.php?f=56" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image3','','http://www.3dtotal.ru/img2/menu/bt_lesson_f.gif',1)">
+   <img src="Создание материала огня_files/bt_lesso.gif" name="Image3" width="101" height="26" border="0">   </a>  </div>
+  
+  <div class="menu_items">
+   <a href="http://www.3dtotal.ru/pgallery/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image4','','http://www.3dtotal.ru/img2/menu/bt_gallery_f.gif',1)">
+   <img src="Создание материала огня_files/bt_galle.gif" name="Image4" width="101" height="26" border="0">   </a>  </div>
+  
+   <div class="menu_items">
+     <a href="http://www.3dtotal.ru/pgallery/browseimages.php?c=27" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image7','','http://www.3dtotal.ru/img2/menu/bt_award_f.gif',1)">
+     <img src="Создание материала огня_files/bt_award.gif" name="Image7" width="101" height="26" border="0">     </a>   </div>
+  
+  <div class="menu_items">
+    <a href="http://www.3dtotal.ru/forum/" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image5','','http://www.3dtotal.ru/img2/menu/bt_forum_f.gif',1)">
+    <img src="Создание материала огня_files/bt_forum.gif" name="Image5" width="101" height="26" border="0">    </a>  </div>
+  
+   <div class="menu_items">
+    <a href="http://www.3dtotal.ru/index.php?cat=236" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image6','','http://www.3dtotal.ru/img2/menu/bt_blueprints_f.gif',1)">
+    <img src="Создание материала огня_files/bt_bluep.gif" name="Image6" width="101" height="26" border="0">    </a>   </div>
+   
+   
+    
+   <div class="menu_items">
+      <a href="http://www.3dtotal.ru/forum/downloads.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('Image8','','http://www.3dtotal.ru/img2/menu/bt_files_f.gif',1)">
+      <img src="Создание материала огня_files/bt_files.gif" name="Image8" width="101" height="26" border="0">      </a>   </div>
+     
+   <div class="menu_items">
+     <a href="http://www.3dtotal.ru/forum/showgroups.php" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('editor','','http://www.3dtotal.ru/img2/menu/bt_editor_f.gif',1)">
+     <img src="Создание материала огня_files/bt_edito.gif" name="editor" width="101" height="26" border="0">     </a>   </div>
+      
+</div>
+ <div id="menu_bottom">
+</div>
+
+<!--Promo--><div id="topban">
+  <script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0','width','900','height','90','src','xml/900_top','quality','high','pluginspage','http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash','movie','xml/900_top' ); //end AC code
+</script><noscript><object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=9,0,28,0" width="900" height="90">
+    <param name="movie" value="xml/900_top.swf">
+    <param name="quality" value="high">
+    <embed src="Создание материала огня_files/900_top0.swf" quality="high" pluginspage="http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash" type="application/x-shockwave-flash" width="900" height="90"></embed>
+  </object>
+</noscript></div>
+<!--Promo-->
+<!--End Header-->
+
+
+<!-- logo -->               
+<a name="top"></a>
+<table border="0" width="900" cellpadding="0" cellspacing="0" align="center">
+<tr>
+	<td align="left"></td>
+	<td align="right">
+		&nbsp;
+	</td>
+</tr>
+</table>
+<!-- /logo -->
+
+<!-- content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:900px; text-align:left">
+		<div style="padding:0px 5px 0px 5px">
+
+
+<div id="GALBox" style="text-align: left;position: absolute; z-index: 100; visibility: hidden;" onmouseover="this.style.visibility='visible';" onmouseout="this.style.visibility='hidden';"></div><script type="text/javascript" src="Создание материала огня_files/gal_popu.js"></script>
+<!-- vBLightbox by jdsinclair -->
+<script type="text/javascript" src="Создание материала огня_files/prototyp.js"></script>
+<script type="text/javascript" src="Создание материала огня_files/scriptac.js"></script>
+<script type="text/javascript" src="Создание материала огня_files/lightbox.js"></script>
+<link rel="stylesheet" href="Создание материала огня_files/lightbox.css" type="text/css" media="screen" />
+<!-- end of vBLightbox --><script type="text/javascript">
+<!--
+function log_out()
+{
+	ht = document.getElementsByTagName("html");
+	ht[0].style.filter = "progid:DXImageTransform.Microsoft.BasicImage(grayscale=1)";
+	if (confirm('Вы действительно хотите выйти?'))
+	{
+		return true;
+	}
+	else
+	{
+		ht[0].style.filter = "";
+		return false;
+	}
+}
+//-->
+</script>
+
+<br />
+
+<!-- breadcrumb, login, pm info -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<tr>
+	<td class="alt1" width="100%">
+		
+			<table cellpadding="0" cellspacing="0" border="0">
+			<tr valign="bottom">
+				<td><a href="#" onclick="history.back(1); return false;"><img src="Создание материала огня_files/navbits_.gif" alt="Вернуться" border="0" /></a></td>
+				<td>&nbsp;</td>
+				<td width="100%"><span class="navbar"><a href="http://www.3dtotal.ru/forum/index.php" accesskey="1">VFXWorld</a></span> 
+	<span class="navbar">&gt; <a href="http://www.3dtotal.ru/forum/forumdisplay.php?f=56">Уроки</a></span>
+
+
+	<span class="navbar">&gt; <a href="http://www.3dtotal.ru/forum/forumdisplay.php?f=58">Уроки 3D Studio Max</a></span>
+
+</td>
+			</tr>
+			<tr>
+				<td class="navbar" style="font-size:10pt; padding-top:1px" colspan="3"><a href=""><img class="inlineimg" src="Создание материала огня_files/navbits0.gif" alt="Перезагрузить страницу" border="0" /></a> <strong>
+	Создание материала огня
+
+</strong></td>
+			</tr>
+			</table>			
+		
+	</td>	
+	
+	
+		
+		<td class="alt2" nowrap="nowrap" style="padding:0px">
+			
+		<!-- login form -->
+		<form action="http://www.3dtotal.ru/forum/login.php?do=login" method="post" onsubmit="md5hash(vb_login_password, vb_login_md5password, vb_login_md5password_utf, 0)">
+		<script type="text/javascript" src="Создание материала огня_files/vbulletl.js"></script>
+		<table cellpadding="0" cellspacing="3" border="0">
+		<tr>
+			<td class="smallfont"><label for="navbar_username">Имя</label></td>
+			<td><input type="text" class="bginput" style="font-size: 11px" name="vb_login_username" id="navbar_username" size="10" accesskey="u" tabindex="101" value="Имя" onfocus="if (this.value == 'Имя') this.value = '';" /></td>
+			<td class="smallfont" colspan="2" nowrap="nowrap"><label for="cb_cookieuser_navbar"><input type="checkbox" name="cookieuser" value="1" tabindex="103" id="cb_cookieuser_navbar" accesskey="c" />Запомнить?</label></td>
+		</tr>
+		<tr>
+			<td class="smallfont"><label for="navbar_password">Пароль</label></td>
+			<td><input type="password" class="bginput" style="font-size: 11px" name="vb_login_password" id="navbar_password" size="10" tabindex="102" /></td>
+			<td><input type="submit" class="button" value="Вход" tabindex="104" title="Введите ваше имя пользователя и пароль, чтобы войти, или нажмите кнопку 'регистрация', чтобы зарегистрироваться." accesskey="s" /></td>
+		</tr>
+		</table>
+		<input type="hidden" name="s" value="" />
+		<input type="hidden" name="do" value="login" />		
+		<input type="hidden" name="vb_login_md5password" />
+		<input type="hidden" name="vb_login_md5password_utf" />
+		</form>
+		<!-- / login form -->
+			
+		</td>
+		
+		
+	
+</tr>
+</table>
+<!-- / breadcrumb, login, pm info -->
+
+<!-- nav buttons bar -->
+<div align="center">
+	<table class="tborder" cellpadding="6" cellspacing="0" border="0" width="100%" align="center" style="border-top-width:0px">
+	<tr align="center">
+		
+		
+			<td class="vbmenu_control"><a href="http://www.3dtotal.ru/forum/register.php" rel="nofollow">Регистрация</a></td>
+		
+		<td class="vbmenu_control"><a href="http://www.3dtotal.ru/forum/faq.php" accesskey="5">Справка</a></td>
+
+<td id="vbimghost" class="vbmenu_control"><a href="#vbimghost" >VB Image Host</a>
+<script type="text/javascript"> vbmenu_register("vbimghost");</script></td>
+
+
+		<td class="vbmenu_control"><a href="http://www.3dtotal.ru/forum/memberlist.php">Пользователи</a></td>
+		
+
+
+
+<td class="vbmenu_control"><a href="http://www.3dtotal.ru/forum/downloads.php?">Файлы</a></td>
+				
+			
+				
+				<td class="vbmenu_control"><a href="http://www.3dtotal.ru/forum/search.php?do=getdaily" accesskey="2">Сообщения за день</a></td>
+				
+				<td id="navbar_search" class="vbmenu_control"><a href="http://www.3dtotal.ru/forum/search.php" accesskey="4" rel="nofollow">Поиск</a> </td>
+<td id="journalnavbar" class="vbmenu_control"><a href="#journalnavbar">Мой Журнал</a> <script type="text/javascript"> vbmenu_register("journalnavbar"); </script></td>
+
+			
+			
+		
+		
+	</tr>
+	</table>
+</div>
+<!-- / nav buttons bar -->
+
+<br />
+
+
+
+<!-- NAVBAR POPUP MENUS -->
+	
+	
+	<!-- header quick search form -->
+	<div class="vbmenu_popup" id="navbar_search_menu" style="display:none">
+		<form action="http://www.3dtotal.ru/forum/search.php?do=process" method="post">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr>
+			<td class="thead">Поиск по форуму</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+				<input type="hidden" name="do" value="process" />
+				<input type="hidden" name="quicksearch" value="1" />
+				<input type="hidden" name="childforums" value="1" />
+				<input type="hidden" name="exactname" value="1" />
+				<input type="hidden" name="s" value="" />
+				<div><input type="text" class="bginput" name="query" size="25" tabindex="1001" /><input type="submit" class="button" value="Вперед" tabindex="1004" /></div>
+			</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+				<label for="rb_nb_sp0"><input type="radio" name="showposts" value="0" id="rb_nb_sp0" tabindex="1002" checked="checked" />Show Tutorials</label>
+				&nbsp;
+				<label for="rb_nb_sp1"><input type="radio" name="showposts" value="1" id="rb_nb_sp1" tabindex="1003" />Отображать сообщения</label>
+			</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option"><a href="http://www.3dtotal.ru/forum/search.php" accesskey="4" rel="nofollow">Расширенный поиск</a></td>
+
+<!-- Начало Хак Спасибо за Сообщение -->
+</tr>
+<tr>
+<td class="vbmenu_option"><a href="http://www.3dtotal.ru/forum/search.php?do=findallthanks">Найти все хорошие сообщения</a></td>
+<!-- Конец Хак Спасибо за Сообщение -->
+		</tr>
+		</table>
+		</form>
+	</div>
+	<!-- / header quick search form -->
+	
+
+	
+<!-- / NAVBAR POPUP MENUS -->
+
+<div class="vbmenu_popup" id="journalnavbar_menu" style="display:none">
+	 <table cellpadding="4" cellspacing="1" border="0">
+	 <tr><td class="thead" align="center">Ссылки журнала</td></tr>
+	 <tr><td class="vbmenu_option"><a href="http://www.3dtotal.ru/forum/journal.php">Стартовая</a></td></tr>
+	 
+	 <tr><td class="vbmenu_option"><a href="http://www.3dtotal.ru/forum/journal.php?do=gotomyjournal">Мой журнал</a></td></tr>
+	 
+	</table>
+   </div>
+
+<!-- Image Host Popup -->
+<div class="vbmenu_popup" id="vbimghost_menu" style="display:none">
+<table cellpadding="4" cellspacing="1" border="0">
+
+<tr><td class="thead">VB Image Host</td></tr> 
+<tr><td class="vbmenu_option"><a href="http://www.3dtotal.ru/forum/vbimghost.php?do=myimages">My images</a></td></tr>
+<tr><td class="vbmenu_option"><a href="http://www.3dtotal.ru/forum/vbimghost.php?do=upload">Upload an image</a></td></tr>
+<tr><td class="vbmenu_option"><a href="http://www.3dtotal.ru/forum/vbimghost.php?do=userlist">View all users images</a></td></tr>
+</table>
+</div>
+<!-- / Image Host Popup -->
+
+<!-- PAGENAV POPUP -->
+
+	<div class="vbmenu_popup" id="pagenav_menu" style="display:none">
+		<table cellpadding="4" cellspacing="1" border="0">
+		<tr>
+			<td class="thead" nowrap="nowrap">К странице...</td>
+		</tr>
+		<tr>
+			<td class="vbmenu_option" title="nohilite">
+			<form action="http://www.3dtotal.ru/forum/index.php" method="get" onsubmit="return this.gotopage()" id="pagenav_form">
+				<input type="text" class="bginput" id="pagenav_itxt" style="font-size:11px" size="4" />
+				<input type="button" class="button" id="pagenav_ibtn" value="Вперед" />
+			</form>
+			</td>
+		</tr>
+		</table>
+	</div>
+
+<!-- / PAGENAV POPUP -->
+
+
+
+
+
+
+<a name="poststop" id="poststop"></a>
+
+<!-- controls above postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" style="margin-bottom:3px">
+<tr valign="bottom">
+	
+		<td class="smallfont"><a href="http://www.3dtotal.ru/forum/newreply.php?do=newreply&amp;noquote=1&amp;p=8597" rel="nofollow"><img src="Создание материала огня_files/comment0.png" alt="Comment" border="0" /></a></td>
+	
+	
+</tr>
+</table>
+<!-- / controls above postbits -->
+
+<!-- toolbar -->
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center" style="border-bottom-width:0px">
+<tr>
+	<td class="tcat" width="100%">
+		<div class="smallfont">
+		
+			<a href="#post29487"><img class="inlineimg" src="Создание материала огня_files/firstnew.gif" alt="Перейти к новому" border="0" /></a>
+			<a href="#post29487"><strong>Перейти к новому</strong></a>
+		
+		&nbsp;
+		</div>
+	</td>
+	<td class="vbmenu_control" id="threadtools" nowrap="nowrap">
+		<a href="http://www.3dtotal.ru/forum/showthread.php?t=5121&amp;nojs=1#goto_threadtools">Настройки</a>
+		<script type="text/javascript"> vbmenu_register("threadtools"); </script>
+	</td>
+	
+	
+	
+	<td class="vbmenu_control" id="displaymodes" nowrap="nowrap">
+		<a href="http://www.3dtotal.ru/forum/showthread.php?t=5121&amp;nojs=1#goto_displaymodes">Опции просмотра</a>
+		<script type="text/javascript"> vbmenu_register("displaymodes"); </script>
+	</td>
+	
+	
+	
+	
+</tr>
+</table>
+<!-- / toolbar -->
+
+
+
+<!-- end content table -->
+
+		</div>	
+	</div>
+</div>
+
+<!-- / close content container -->
+<!-- / end content table -->
+
+
+
+
+
+<div id="posts"><!-- post #8597 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:900px; text-align:left">
+		<div style="padding:0px 5px 0px 5px">
+
+	<div id="edit8597" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->	
+
+
+<!-- Article #8597 -->
+
+
+
+<!-- Header -->
+<table class="tborder" cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tr>
+        <td class="alt2" valign="top" width="100%" colspan="2" style="padding:10px;" >
+        
+            <div style="float:left;">
+                <img src="Создание материала огня_files/46000000.jpg" border="0" alt="Создание материала огня" />
+                </div>
+        
+                
+        <strong>Создание материала огня</strong>
+        <div class="smallfont">
+                Привет... Вот моё новое творение - Создаем материал огня<br />
+            Published by <a href="http://www.3dtotal.ru/forum/member.php?u=3"><b><font color="#FF6600">3DTotal</font></b></a><br />
+             05.02.2007
+       </div>
+    </td>
+    
+</tr>
+
+<tr>
+        <td class="alt2" valign="top"  style="padding: 0px 10px 0px 10px;">
+        <table id="post8597" cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+                <tr>
+                
+                    <td class="alt1" valign="top" width="100%" style="padding:10px;" colspan="3">
+                   
+                        <div class="smallfont">
+                                
+                                <strong>Создание материала огня</strong>
+                        </div>
+                        <hr size="1" style="color:#000000" />
+                                        
+                        <div id="post_message_8597" align="justify">Привет... Вот моё новое творение - Создаем материал огня. <br />
+Вот, что мы получим: <br />
+ <br />
+ <br />
+<div align="center"><img src="Создание материала огня_files/10000000.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></div> <br />
+ <br />
+ <br />
+ <br />
+Итак, начнём с того, что создадим шар со следующими параметрами: <br />
+ <br />
+ <br />
+Radius: 40 <br />
+Segments: 100 <br />
+Затем откроем Material Editor клавишей M (Eng). Нажмите на первый материал... Затем нажмите на кнопку Get Material () и выберите в появившемся окне Standart. <br />
+ <br />
+Теперь нам надо сделать середину прозрачной, а край огненного цвета. Для этого, нажимаем на квадратную кнопку рядом с Opacity и выбираем в появившемся окне Fallof. Теперь для того, чтобы видеть правильно ли все идет, активизируйте фон у метериала. нажав кнопку Background на левой панели того же окна - Material Editor. Если прозрачным стал край, то нажмите кнопку Swap Colors/Map. Вот, теперь прозрачным должно быть в середине вот так: <br />
+ <br />
+ <br />
+<div align="center"><img src="Создание материала огня_files/20000000.jpg" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></div> <br />
+ <br />
+ <br />
+ <br />
+Ещё можно настроить резкость перехода от краёв к середине. Для этого сверните свиток Falloff Parameters и разверните Mix Curve и сделайте примерно так: <br />
+ <br />
+<br />
+<div align="center"><img src="Создание материала огня_files/30000000.gif" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></div><br />
+ <br />
+ <br />
+ <br />
+ <br />
+Теперь поднимитесь на одну ступень вверх и напротив Diffuse и Self-Illumonation выберите оранжевый цвет как тут: <br />
+ <br />
+<br />
+<div align="center"><img src="Создание материала огня_files/40000000.gif" border="0" alt="" onload="NcodeImageResizer.createOn(this);" /></div><br />
+ <br />
+ <br />
+ <br />
+Затем можете добавить блик... <br />
+ <br />
+Вот и закончили с материалом. Дело осталось за малым... Теперь, чтобы увидеть шар во всей красе, нужно применить к нему модифер Noise c параметрами: <br />
+Seed: 0 <br />
+Scale: 8 <br />
+Fractal - x <br />
+X: 6,0 <br />
+Y: 6,0 <br />
+Z: 6,0 <br />
+ <br />
+ <br />
+Остольное на выбор... <br />
+ <br />
+Для полного эффекта огня, можно применить Video Post < Glow... <br />
+Ну, удачи при рендеринге <img src="Создание материала огня_files/jy020000.gif" border="0" alt="" title="Smile" class="inlineimg" /> <br />
+ <br />
+ <br />
+Урок взят с сайта 3dzms.com<br />
+Источник: 3dmir.ru</div>
+                        
+                    </td>
+                
+                </tr>
+        </table>
+        </td>
+</tr>
+
+<tr>
+        <td class="alt2" >
+        <table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%">
+        <thead>
+        <tr>
+                        <td class="tcat" style="white-space:nowrap;" ><div>
+                        <a style="float:right" href="#top" onclick="return toggle_collapse('gar_3')"><img src="Создание материала огня_files/collapse.gif" alt="" border="0" /></a>похожее</div></td>
+                </tr>
+    </thead>
+        <tbody style="" id="collapseobj_gar_3">
+        <tr>
+                <td class="panelsurround">
+                <div class="panel" align="left">
+                                <div class="fieldset">
+                                                                <table cellpadding="6" cellspacing="1" border="0" width="100%" id="gars_container_3" name="gars_container_3">
+                                                                        <tr><td align='center'><a href='http://www.3dtotal.ru/forum/showthread.php?t=19998' title='Read more' style='text-decoration:none;'><img src='Создание материала огня_files/default0.jpg' style='border-style: solid;border-color: #000000;padding:2px;' /><br /><strong>Massive software: теперь в России</strong></a><br />Massive software: теперь в России</td></tr>
+                                                                </table>
+                        </div>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+</table>
+    </td>
+</tr>
+
+<tr>
+        <td class="alt2" valign="top" style="padding:10px;" >
+        <div style="font:bold;" align="center">
+        
+        </div>
+        <div align="right" style="float:bottom-right;">
+            <!-- controls -->
+            
+            
+                <a href="http://www.3dtotal.ru/forum/newreply.php?do=newreply&amp;p=8597&amp;noquote=1"><img src="Создание материала огня_files/reply_sm.gif" alt="" border="0" /></a>
+            
+            
+            <!-- / controls -->
+        </div>
+        </td>
+</tr>
+</table>
+
+<!-- / Article #8597 -->
+
+
+
+
+	</div>
+	
+		</div>	
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #8597 --><!-- post #9787 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:900px; text-align:left">
+		<div style="padding:0px 5px 0px 5px">
+
+	<div id="edit9787" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->	
+
+
+<!-- comment #9787 -->
+
+<table class="tborder" id="post9787" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+        <tr>
+            <td class="thead" colspan="2">
+                    <div class="normal" style="float:right">
+                        &nbsp;
+                        #<a href="http://www.3dtotal.ru/forum/showpost.php?p=9787&amp;postcount=2" target="new"><strong>1</strong></a> &nbsp;
+                        
+                                            
+                                
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <div class="normal">
+                        By 
+                                <a href="http://www.3dtotal.ru/forum/member.php?u=6266">Goodvin</a>
+                            
+                        <!-- status icon and date -->
+                        on
+                        
+                            28.02.2007, 12:25
+                        
+                        
+                        <!-- / status icon and date -->
+                    </div>
+            </td>
+        </tr>
+        <tr>
+        <td class="alt2" valign="top" rowspan="2"><table border="0" cellpadding="2" cellspacing="2"><tr><td colspan="3" align="center"><strong>Member reviews</strong></td></tr>
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Graphics</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar2-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar20000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar2-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Sound</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar3-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar30000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar3-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Replay value</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar4-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar40000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar4-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Value</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar5-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar50000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar5-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+<tr>
+        <td align="center" class="tcat" colspan="3">
+                <strong>
+                        
+                                Average 20%
+                        
+                </strong>
+        </td>
+</tr></table></td>
+        <td class="alt1" id="td_post_9787" width="100%" valign="top">
+            <!-- message, attachments, sig -->
+            
+                <!-- icon and title -->
+                <div class="smallfont">
+                    
+                    <strong>Нюансы</strong>
+                </div>
+                <hr size="1" style="color:#000000" />
+                <!-- / icon and title -->
+            
+
+            <!-- message -->
+            <div>Для полного эффекта огня, можно применить Video Post < Glow...<br />
+ <br />
+а где этот "Video Post < Glow..." ?</div>
+            <!-- / message -->
+        </tr>
+    <tr>
+            <td class="alt1">
+            
+            
+            <div align="right">
+                <!-- controls -->
+                
+                
+                
+                    <a href="http://www.3dtotal.ru/forum/newreply.php?do=newreply&amp;p=9787"><img src="Создание материала огня_files/quote000.gif" alt="Ответить с цитированием" border="0" /></a>
+                
+                
+                <!-- / controls -->
+            </div>
+        </td>
+        </tr>
+        </tr>
+</table>
+
+<!-- / comment #9787 -->
+
+
+	</div>
+	
+		</div>	
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #9787 --><!-- post #9952 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:900px; text-align:left">
+		<div style="padding:0px 5px 0px 5px">
+
+	<div id="edit9952" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->	
+
+
+<!-- comment #9952 -->
+
+<table class="tborder" id="post9952" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+        <tr>
+            <td class="thead" colspan="2">
+                    <div class="normal" style="float:right">
+                        &nbsp;
+                        #<a href="http://www.3dtotal.ru/forum/showpost.php?p=9952&amp;postcount=3" target="new"><strong>2</strong></a> &nbsp;
+                        
+                                            
+                                
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <div class="normal">
+                        By 
+                                <a href="http://www.3dtotal.ru/forum/member.php?u=6847">Ezingard</a>
+                            
+                        <!-- status icon and date -->
+                        on
+                        
+                            05.03.2007, 18:54
+                        
+                        
+                        <!-- / status icon and date -->
+                    </div>
+            </td>
+        </tr>
+        <tr>
+        <td class="alt2" valign="top" rowspan="2"><table border="0" cellpadding="2" cellspacing="2"><tr><td colspan="3" align="center"><strong>Member reviews</strong></td></tr>
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Graphics</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar2-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar20000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar2-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Sound</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar3-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar30000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar3-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Replay value</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar4-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar40000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar4-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Value</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar5-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar50000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar5-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+<tr>
+        <td align="center" class="tcat" colspan="3">
+                <strong>
+                        
+                                Average 20%
+                        
+                </strong>
+        </td>
+</tr></table></td>
+        <td class="alt1" id="td_post_9952" width="100%" valign="top">
+            <!-- message, attachments, sig -->
+            
+
+            <!-- message -->
+            <div>Пока только так</div>
+            <!-- / message -->
+        </tr>
+    <tr>
+            <td class="alt1">
+            
+            <!-- attachments -->
+                <div style="padding:6px">
+
+                    
+
+                    
+
+                    
+                        <fieldset class="fieldset">
+                            <legend>Изображения</legend>
+                            <table cellpadding="0" cellspacing="3" border="0">
+                            <tr>
+	<td><img class="inlineimg" src="Создание материала огня_files/jpg00000.gif" alt="Тип файла: jpg" width="16" height="16" border="0" style="vertical-align:baseline" /></td>
+	<td><a href="http://www.3dtotal.ru/forum/attachment.php?attachmentid=251&amp;d=1173113617">Частица огня.jpg</a> (10.2 Кбайт, 106 просмотров)</td>
+</tr>
+                            </table>
+                            </fieldset>
+                    
+
+                    
+
+                    
+                </div>
+            <!-- / attachments -->
+            
+            
+            <div align="right">
+                <!-- controls -->
+                
+                
+                
+                    <a href="http://www.3dtotal.ru/forum/newreply.php?do=newreply&amp;p=9952"><img src="Создание материала огня_files/quote000.gif" alt="Ответить с цитированием" border="0" /></a>
+                
+                
+                <!-- / controls -->
+            </div>
+        </td>
+        </tr>
+        </tr>
+</table>
+
+<!-- / comment #9952 -->
+
+
+	</div>
+	
+		</div>	
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #9952 --><!-- post #10155 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:900px; text-align:left">
+		<div style="padding:0px 5px 0px 5px">
+
+	<div id="edit10155" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->	
+
+
+<!-- comment #10155 -->
+
+<table class="tborder" id="post10155" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+        <tr>
+            <td class="thead" >
+                    <div class="normal" style="float:right">
+                        &nbsp;
+                        #<a href="http://www.3dtotal.ru/forum/showpost.php?p=10155&amp;postcount=4" target="new"><strong>3</strong></a> &nbsp;
+                        
+                                            
+                                
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <div class="normal">
+                        By 
+                                <a href="http://www.3dtotal.ru/forum/member.php?u=7044">Tito</a>
+                            
+                        <!-- status icon and date -->
+                        on
+                        
+                            09.03.2007, 16:17
+                        
+                        
+                        <!-- / status icon and date -->
+                    </div>
+            </td>
+        </tr>
+        <tr>
+        
+        <td class="alt1" id="td_post_10155" width="100%" valign="top">
+            <!-- message, attachments, sig -->
+            
+
+            <!-- message -->
+            <div><a href="http://www.3dtotal.ru/forum/showthread.php?t=5656" target="_blank">http://www.3dtotal.ru/forum/showthread.php?t=5656</a></div>
+            <!-- / message -->
+        </tr>
+    <tr>
+            <td class="alt1">
+            
+            
+            <div align="right">
+                <!-- controls -->
+                
+                
+                
+                    <a href="http://www.3dtotal.ru/forum/newreply.php?do=newreply&amp;p=10155"><img src="Создание материала огня_files/quote000.gif" alt="Ответить с цитированием" border="0" /></a>
+                
+                
+                <!-- / controls -->
+            </div>
+        </td>
+        
+        </tr>
+</table>
+
+<!-- / comment #10155 -->
+
+
+	</div>
+	
+		</div>	
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #10155 --><!-- post #10364 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:900px; text-align:left">
+		<div style="padding:0px 5px 0px 5px">
+
+	<div id="edit10364" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->	
+
+
+<!-- comment #10364 -->
+
+<table class="tborder" id="post10364" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+        <tr>
+            <td class="thead" colspan="2">
+                    <div class="normal" style="float:right">
+                        &nbsp;
+                        #<a href="http://www.3dtotal.ru/forum/showpost.php?p=10364&amp;postcount=5" target="new"><strong>4</strong></a> &nbsp;
+                        
+                                            
+                                
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <div class="normal">
+                        By 
+                                <a href="http://www.3dtotal.ru/forum/member.php?u=7210">kre_vetka</a>
+                            
+                        <!-- status icon and date -->
+                        on
+                        
+                            15.03.2007, 15:21
+                        
+                        
+                        <!-- / status icon and date -->
+                    </div>
+            </td>
+        </tr>
+        <tr>
+        <td class="alt2" valign="top" rowspan="2"><table border="0" cellpadding="2" cellspacing="2"><tr><td colspan="3" align="center"><strong>Member reviews</strong></td></tr>
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Graphics</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar2-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar20000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar2-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Sound</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar3-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar30000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar3-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Replay value</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar4-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar40000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar4-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Value</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar5-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar50000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar5-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+<tr>
+        <td align="center" class="tcat" colspan="3">
+                <strong>
+                        
+                                Average 20%
+                        
+                </strong>
+        </td>
+</tr></table></td>
+        <td class="alt1" id="td_post_10364" width="100%" valign="top">
+            <!-- message, attachments, sig -->
+            
+                <!-- icon and title -->
+                <div class="smallfont">
+                    
+                    <strong>вот что я натворила)))))</strong>
+                </div>
+                <hr size="1" style="color:#000000" />
+                <!-- / icon and title -->
+            
+
+            <!-- message -->
+            <div><img src="Создание материала огня_files/p0500000.gif" border="0" alt="" title="Very Happy" class="inlineimg" /> <br />
+ <br />
+<a href="http://www.3dtotal.ru/forum/attachment.php?attachmentid=274&amp;d=1173964573" target="_blank">http://www.3dtotal.ru/forum/attachme...4&amp;d=1173964573</a></div>
+            <!-- / message -->
+        </tr>
+    <tr>
+            <td class="alt1">
+            
+            
+            <div align="right">
+                <!-- controls -->
+                
+                
+                
+                    <a href="http://www.3dtotal.ru/forum/newreply.php?do=newreply&amp;p=10364"><img src="Создание материала огня_files/quote000.gif" alt="Ответить с цитированием" border="0" /></a>
+                
+                
+                <!-- / controls -->
+            </div>
+        </td>
+        </tr>
+        </tr>
+</table>
+
+<!-- / comment #10364 -->
+
+
+	</div>
+	
+		</div>	
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #10364 --><!-- post #20369 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:900px; text-align:left">
+		<div style="padding:0px 5px 0px 5px">
+
+	<div id="edit20369" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->	
+
+
+<!-- comment #20369 -->
+
+<table class="tborder" id="post20369" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+        <tr>
+            <td class="thead" colspan="2">
+                    <div class="normal" style="float:right">
+                        &nbsp;
+                        #<a href="http://www.3dtotal.ru/forum/showpost.php?p=20369&amp;postcount=6" target="new"><strong>5</strong></a> &nbsp;
+                        
+                                            
+                                
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <div class="normal">
+                        By 
+                                <a href="http://www.3dtotal.ru/forum/member.php?u=22204">Ichtiandr</a>
+                            
+                        <!-- status icon and date -->
+                        on
+                        
+                            02.12.2007, 17:43
+                        
+                        
+                        <!-- / status icon and date -->
+                    </div>
+            </td>
+        </tr>
+        <tr>
+        <td class="alt2" valign="top" rowspan="2"><table border="0" cellpadding="2" cellspacing="2"><tr><td colspan="3" align="center"><strong>Member reviews</strong></td></tr>
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Graphics</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar2-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar20000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar2-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Sound</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar3-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar30000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar3-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Replay value</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar4-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar40000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar4-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Value</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar5-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar50000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar5-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+<tr>
+        <td align="center" class="tcat" colspan="3">
+                <strong>
+                        
+                                Average 20%
+                        
+                </strong>
+        </td>
+</tr></table></td>
+        <td class="alt1" id="td_post_20369" width="100%" valign="top">
+            <!-- message, attachments, sig -->
+            
+                <!-- icon and title -->
+                <div class="smallfont">
+                    <img class="inlineimg" src="Создание материала огня_files/icon3000.gif" alt="Лампочка" border="0" />
+                    <strong>КАК????</strong>
+                </div>
+                <hr size="1" style="color:#000000" />
+                <!-- / icon and title -->
+            
+
+            <!-- message -->
+            <div><img src="Создание материала огня_files/y0400000.gif" border="0" alt="" title="Neutral" class="inlineimg" />Я не понял поскольку только начял, КАК ТУТ НАНЕСТИ РАСЦВЕТКУ НА МОДЭЛЬ!!!<img src="Создание материала огня_files/icon_que.gif" border="0" alt="" title="Question" class="inlineimg" /> <img src="Создание материала огня_files/icon_que.gif" border="0" alt="" title="Question" class="inlineimg" /></div>
+            <!-- / message -->
+        </tr>
+    <tr>
+            <td class="alt1">
+            
+            
+            <div align="right">
+                <!-- controls -->
+                
+                
+                
+                    <a href="http://www.3dtotal.ru/forum/newreply.php?do=newreply&amp;p=20369"><img src="Создание материала огня_files/quote000.gif" alt="Ответить с цитированием" border="0" /></a>
+                
+                
+                <!-- / controls -->
+            </div>
+        </td>
+        </tr>
+        </tr>
+</table>
+
+<!-- / comment #20369 -->
+
+
+	</div>
+	
+		</div>	
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #20369 --><!-- post #20425 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:900px; text-align:left">
+		<div style="padding:0px 5px 0px 5px">
+
+	<div id="edit20425" style="padding:0px 0px 6px 0px">
+	<!-- this is not the last post shown on the page -->	
+
+
+<!-- comment #20425 -->
+
+<table class="tborder" id="post20425" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+        <tr>
+            <td class="thead" colspan="2">
+                    <div class="normal" style="float:right">
+                        &nbsp;
+                        #<a href="http://www.3dtotal.ru/forum/showpost.php?p=20425&amp;postcount=7" target="new"><strong>6</strong></a> &nbsp;
+                        
+                                            
+                                
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <div class="normal">
+                        By 
+                                <a href="http://www.3dtotal.ru/forum/member.php?u=22274">Kukusien</a>
+                            
+                        <!-- status icon and date -->
+                        on
+                        
+                            04.12.2007, 13:11
+                        
+                        
+                        <!-- / status icon and date -->
+                    </div>
+            </td>
+        </tr>
+        <tr>
+        <td class="alt2" valign="top" rowspan="2"><table border="0" cellpadding="2" cellspacing="2"><tr><td colspan="3" align="center"><strong>Member reviews</strong></td></tr>
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Graphics</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar2-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar20000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar2-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Sound</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar3-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar30000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar3-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Replay value</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar4-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar40000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar4-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Value</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar5-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar50000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar5-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+<tr>
+        <td align="center" class="tcat" colspan="3">
+                <strong>
+                        
+                                Average 20%
+                        
+                </strong>
+        </td>
+</tr></table></td>
+        <td class="alt1" id="td_post_20425" width="100%" valign="top">
+            <!-- message, attachments, sig -->
+            
+                <!-- icon and title -->
+                <div class="smallfont">
+                    <img class="inlineimg" src="Создание материала огня_files/icon1400.gif" alt="Хорошо" border="0" />
+                    <strong>Предложение</strong>
+                </div>
+                <hr size="1" style="color:#000000" />
+                <!-- / icon and title -->
+            
+
+            <!-- message -->
+            <div>В серцевине, пламе огня темнее чем на кончиках поэтому на селф илюминэйшн цвете лутше поставить оранжевый ближе к красному, а на дифузе ближе к желтому. Если есть желание можешь проверить, а так просто супер! Спасибо за крок</div>
+            <!-- / message -->
+        </tr>
+    <tr>
+            <td class="alt1">
+            
+            
+            <div align="right">
+                <!-- controls -->
+                
+                
+                
+                    <a href="http://www.3dtotal.ru/forum/newreply.php?do=newreply&amp;p=20425"><img src="Создание материала огня_files/quote000.gif" alt="Ответить с цитированием" border="0" /></a>
+                
+                
+                <!-- / controls -->
+            </div>
+        </td>
+        </tr>
+        </tr>
+</table>
+
+<!-- / comment #20425 -->
+
+
+	</div>
+	
+		</div>	
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #20425 --><!-- post #29487 -->
+
+	<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:900px; text-align:left">
+		<div style="padding:0px 5px 0px 5px">
+
+	<div id="edit29487" style="padding:0px 0px 6px 0px">
+		
+
+
+<!-- comment #29487 -->
+
+<table class="tborder" id="post29487" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+        <tr>
+            <td class="thead" colspan="2">
+                    <div class="normal" style="float:right">
+                        &nbsp;
+                        #<a href="http://www.3dtotal.ru/forum/showpost.php?p=29487&amp;postcount=8" target="new"><strong>7</strong></a> &nbsp;
+                        
+                                            
+                                
+                        
+                        
+                        
+                        
+                    </div>
+
+                    <div class="normal">
+                        By 
+                                <a href="http://www.3dtotal.ru/forum/member.php?u=32744">Evgeniy_Onegin</a>
+                            
+                        <!-- status icon and date -->
+                        on
+                        
+                            Вчера, 14:53
+                        
+                        <a name="newpost"></a>
+                        <!-- / status icon and date -->
+                    </div>
+            </td>
+        </tr>
+        <tr>
+        <td class="alt2" valign="top" rowspan="2"><table border="0" cellpadding="2" cellspacing="2"><tr><td colspan="3" align="center"><strong>Member reviews</strong></td></tr>
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Graphics</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar2-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar20000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar2-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Sound</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar3-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar30000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar3-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Replay value</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar4-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar40000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar4-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+
+<tr><td align="left" class="alt1active" style="white-space: nowrap;">Value</td><td  class="alt1active" align="left"><div style="white-space: nowrap;"><img src="Создание материала огня_files/bar5-l00.gif" title="20%" alt="20%" width="3" height="10" /><img src="Создание материала огня_files/bar50000.gif" title="20%" alt="20%" width="15" height="10" /><img src="Создание материала огня_files/bar5-r00.gif" title="20%" alt="20%" width="3" height="10" /></div></td><td  class="alt1active" align="right">1</td></tr>
+<tr>
+        <td align="center" class="tcat" colspan="3">
+                <strong>
+                        
+                                Average 20%
+                        
+                </strong>
+        </td>
+</tr></table></td>
+        <td class="alt1" id="td_post_29487" width="100%" valign="top">
+            <!-- message, attachments, sig -->
+            
+                <!-- icon and title -->
+                <div class="smallfont">
+                    <img class="inlineimg" src="Создание материала огня_files/icon3000.gif" alt="Лампочка" border="0" />
+                    
+                </div>
+                <hr size="1" style="color:#000000" />
+                <!-- / icon and title -->
+            
+
+            <!-- message -->
+            <div>однако если поменять цвета, то можно добиться прикольного эффкта льда...<img src="Создание материала огня_files/jy290000.gif" border="0" alt="" title="Razz" class="inlineimg" /></div>
+            <!-- / message -->
+        </tr>
+    <tr>
+            <td class="alt1">
+            
+            <!-- attachments -->
+                <div style="padding:6px">
+
+                    
+
+                    
+
+                    
+                        <fieldset class="fieldset">
+                            <legend>Изображения</legend>
+                            <table cellpadding="0" cellspacing="3" border="0">
+                            <tr>
+	<td><img class="inlineimg" src="Создание материала огня_files/jpg00000.gif" alt="Тип файла: jpg" width="16" height="16" border="0" style="vertical-align:baseline" /></td>
+	<td><a href="http://www.3dtotal.ru/forum/attachment.php?attachmentid=19508&amp;d=1220356347">лёд.jpg</a> (158.2 Кбайт, 3 просмотров)</td>
+</tr>
+                            </table>
+                            </fieldset>
+                    
+
+                    
+
+                    
+                </div>
+            <!-- / attachments -->
+            
+            
+            <div align="right">
+                <!-- controls -->
+                
+                
+                
+                    <a href="http://www.3dtotal.ru/forum/newreply.php?do=newreply&amp;p=29487"><img src="Создание материала огня_files/quote000.gif" alt="Ответить с цитированием" border="0" /></a>
+                
+                
+                <!-- / controls -->
+            </div>
+        </td>
+        </tr>
+        </tr>
+</table>
+
+<!-- / comment #29487 -->
+
+
+	</div>
+	
+		</div>	
+	</div>
+</div>
+
+<!-- / close content container -->
+
+<!-- / post #29487 --><div id="lastpost"></div></div>
+
+<!-- start content table -->
+<!-- open content container -->
+
+<div align="center">
+	<div class="page" style="width:900px; text-align:left">
+		<div style="padding:0px 5px 0px 5px">
+
+<!-- / start content table -->
+
+<!-- controls below postbits -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%">
+<tr valign="top">
+	
+		<td class="smallfont"><a href="http://www.3dtotal.ru/forum/newreply.php?do=newreply&amp;noquote=1&amp;p=29487" rel="nofollow"><img src="Создание материала огня_files/comment0.png" alt="Comment" border="0" /></a></td>
+		
+	
+</tr>
+</table>
+<!-- / controls below postbits -->
+
+
+
+
+<br />
+
+<div class="smallfont" align="center">
+	<strong>&laquo;</strong>
+		<a href="http://www.3dtotal.ru/forum/showthread.php?t=5121&amp;goto=nextoldest" rel="nofollow">предыдущий урок</a>
+		|
+		<a href="http://www.3dtotal.ru/forum/showthread.php?t=5121&amp;goto=nextnewest" rel="nofollow">следующий урок</a>
+	<strong>&raquo;</strong>
+</div>
+
+
+<br />
+
+
+
+
+<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="100%" align="center">
+<thead>
+	<tr>
+		<td class="tcat" width="100%" colspan="5">
+			<a style="float:right" href="#top" onclick="return toggle_collapse('similarthreads')"><img id="collapseimg_similarthreads" src="Создание материала огня_files/collapse.gif" alt="" border="0" /></a>
+			Похожие темы<a name="similarthreads"></a>
+		</td>
+	</tr>
+</thead>
+<tbody id="collapseobj_similarthreads" style="">
+<tr class="thead" align="center">
+	<td class="thead" width="40%">Tutorial</td>
+	<td class="thead" width="15%" nowrap="nowrap">Tutorial Starter</td>
+	<td class="thead" width="20%">Category</td>
+	<td class="thead" width="5%">Comments</td>
+	<td class="thead" width="20%">Последнее сообщение</td>
+</tr>
+<tr>
+	<td class="alt1" align="left"><span class="smallfont"><a href="http://www.3dtotal.ru/forum/showthread.php?t=19585" title="Подскажите, есть ли возможность увидеть хотя бы три уровня карты в окне Перспектива (это когда накладываешь Cellular, затем на белый (черный) цвет -...">Просмотр материала в окне Перспектива</a></span></td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">Adventure</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Материаловедение и текстурирование</span></td>
+	<td class="alt2" align="center"><span class="smallfont">2</span></td>
+	<td class="alt1" align="right"><span class="smallfont">13.03.2008 <span class="time">08:31</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left"><span class="smallfont"><a href="http://www.3dtotal.ru/forum/showthread.php?t=5623" title="Как сделать что б со временем на предмете материал другой становился">Анимация материала</a></span></td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">rim</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Материаловедение и текстурирование</span></td>
+	<td class="alt2" align="center"><span class="smallfont">5</span></td>
+	<td class="alt1" align="right"><span class="smallfont">17.03.2007 <span class="time">21:32</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left"><span class="smallfont"><a href="http://www.3dtotal.ru/forum/showthread.php?t=5170" title="http://www.3dmir.ru/3dsmax/steel/tut5_1.jpg
+ 
+ 
+Изложенные в этом уроке принципы создания материала нержавеющей стали основаны на наблюдениях...">Создание материала нержавеющей стали.</a></span></td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">3DTotal</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Уроки 3D Studio Max</span></td>
+	<td class="alt2" align="center"><span class="smallfont">0</span></td>
+	<td class="alt1" align="right"><span class="smallfont">09.02.2007 <span class="time">23:44</span></span></td>
+</tr>
+<tr>
+	<td class="alt1" align="left"><span class="smallfont"><a href="http://www.3dtotal.ru/forum/showthread.php?t=5021" title="Как можно создать абослютно зеркальную поверхность (зеркало)">Создание материала - зеркало</a></span></td>
+	<td class="alt2" nowrap="nowrap"><span class="smallfont">Nevsky309</span></td>
+	<td class="alt1" nowrap="nowrap"><span class="smallfont">Материаловедение и текстурирование</span></td>
+	<td class="alt2" align="center"><span class="smallfont">2</span></td>
+	<td class="alt1" align="right"><span class="smallfont">01.02.2007 <span class="time">21:49</span></span></td>
+</tr>
+
+</tbody>
+</table>
+
+<br />
+
+
+
+<!-- currently active users -->
+
+<!-- end currently active users -->
+
+
+<!-- popup menu contents -->
+<br />
+
+<!-- thread tools menu -->
+<div class="vbmenu_popup" id="threadtools_menu" style="display:none">
+<form action="http://www.3dtotal.ru/forum/postings.php?t=5121&amp;pollid=" method="post" name="threadadminform">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Настройки<a name="goto_threadtools"></a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="http://www.3dtotal.ru/forum/images/buttons/printer.gif" alt="Версия для печати" /> <a href="http://www.3dtotal.ru/forum/printthread.php?t=5121" accesskey="3" rel="nofollow">Версия для печати</a></td>
+	</tr>
+	<tr>
+		<td class="vbmenu_option"><img class="inlineimg" src="http://www.3dtotal.ru/forum/images/buttons/sendtofriend.gif" alt="Отправить на email" /> <a href="http://www.3dtotal.ru/forum/sendmessage.php?do=sendtofriend&amp;t=5121" rel="nofollow">Отправить на email</a></td>
+	</tr>
+	
+	
+	
+	</table>
+</form>
+</div>
+<!-- / thread tools menu -->
+
+<!-- **************************************************** -->
+
+<!-- thread display mode menu -->
+<div class="vbmenu_popup" id="displaymodes_menu" style="display:none">
+	<table cellpadding="4" cellspacing="1" border="0">
+	<tr>
+		<td class="thead">Опции просмотра<a name="goto_displaymodes"></a></td>
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option" title="nohilite"><img class="inlineimg" src="http://www.3dtotal.ru/forum/images/buttons/mode_linear.gif" alt="Линейный вид" /> <strong>Линейный вид</strong></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="http://www.3dtotal.ru/forum/images/buttons/mode_hybrid.gif" alt="Комбинированный вид" /> <a href="http://www.3dtotal.ru/forum/showthread.php?mode=hybrid&amp;t=5121">Комбинированный вид</a></td>
+	
+	</tr>
+	<tr>
+	
+		<td class="vbmenu_option"><img class="inlineimg" src="http://www.3dtotal.ru/forum/images/buttons/mode_threaded.gif" alt="Древовидный вид" /> <a href="http://www.3dtotal.ru/forum/showthread.php?p=8597&amp;mode=threaded#post8597">Древовидный вид</a></td>
+	
+	</tr>
+	</table>
+</div>
+<!-- / thread display mode menu -->
+
+<!-- **************************************************** -->
+
+
+
+<!-- **************************************************** -->
+
+
+
+<!-- / popup menu contents -->
+
+
+<!-- forum rules and admin links -->
+<table cellpadding="0" cellspacing="0" border="0" width="100%" align="center">
+<tr valign="bottom">
+	<td class="smallfont" align="left">
+		<table class="tborder" cellpadding="6" cellspacing="1" border="0" width="180">
+<thead>
+<tr>
+	<td class="thead">
+		<a style="float:right" href="#top" onclick="return toggle_collapse('forumrules')"><img id="collapseimg_forumrules" src="Создание материала огня_files/collapsf.gif" alt="" border="0" /></a>
+		Ваши права в разделе
+	</td>
+</tr>
+</thead>
+<tbody id="collapseobj_forumrules" style="">
+<tr>
+	<td class="alt1" nowrap="nowrap"><div class="smallfont">
+		
+		<div>You <strong>may не</strong> post new tutorials</div>
+		<div>You <strong>may не</strong> post comments</div>
+		<div>Вы <strong>не можете</strong> прикреплять файлы</div>
+		<div>Вы <strong>не можете</strong> редактировать сообщения</div>
+		<hr />
+		
+		<div><a href="http://www.3dtotal.ru/forum/misc.php?do=bbcode" target="_blank">BB коды</a> <strong>Вкл.</strong></div>
+		<div><a href="http://www.3dtotal.ru/forum/misc.php?do=showsmilies" target="_blank">Смайлы</a> <strong>Вкл.</strong></div>
+		<div><a href="http://www.3dtotal.ru/forum/misc.php?do=bbcode#imgcode" target="_blank">[IMG]</a> код <strong>Вкл.</strong></div>
+		<div>HTML код <strong>Вкл.</strong></div>
+	</div></td>
+</tr>
+</tbody>
+</table>
+	</td>
+	<td class="smallfont" align="right">
+		<table cellpadding="0" cellspacing="0" border="0">
+		
+		<tr>
+			<td>
+			<div class="smallfont" style="text-align:left; white-space:nowrap">
+	<form action="http://www.3dtotal.ru/forum/forumdisplay.php" method="get">
+	<input type="hidden" name="s" value="" />
+	<input type="hidden" name="daysprune" value="" />
+	<strong>Быстрый переход</strong><br />
+	<select name="f" onchange="this.form.submit();">
+		<optgroup label="Навигация по форуму">
+			<option value="cp" >Мой кабинет</option>
+			<option value="pm" >Личные сообщения</option>
+			<option value="subs" >Подписки</option>
+			<option value="wol" >Кто на форуме</option>
+			<option value="search" >Поиск по форуму</option>
+			<option value="home" >Главная страница форума</option>
+		</optgroup>
+		<optgroup label="Разделы">
+		<option value="89" class="fjdpth0" > Жизнь сайта</option>
+<option value="90" class="fjdpth1" >&nbsp; &nbsp;  Анонсы</option>
+<option value="24" class="fjdpth1" >&nbsp; &nbsp;  Предложения по сайту</option>
+<option value="9" class="fjdpth0" > Новостная лента</option>
+<option value="87" class="fjdpth1" >&nbsp; &nbsp;  Новости на 2DTotal</option>
+<option value="47" class="fjdpth1" >&nbsp; &nbsp;  Новости на 3DTotal</option>
+<option value="88" class="fjdpth1" >&nbsp; &nbsp;  Новости на VFXworld</option>
+<option value="94" class="fjdpth1" >&nbsp; &nbsp;  Видео, Трейлеры, Showreel</option>
+<option value="1" class="fjdpth0" > Общие рассуждения</option>
+<option value="12" class="fjdpth1" >&nbsp; &nbsp;  Просто поговорить</option>
+<option value="160" class="fjdpth1" >&nbsp; &nbsp;  Общие вопросы по графике и программам</option>
+<option value="79" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Текстуры</option>
+<option value="92" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Библиотека 3D моделей</option>
+<option value="18" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Demo и Trial версии программ</option>
+<option value="23" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Чертежи</option>
+<option value="19" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Журналы и книги</option>
+<option value="29" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Полезные ресурсы, ссылки</option>
+<option value="2" class="fjdpth0" > Программные комплексы</option>
+<option value="13" class="fjdpth1" >&nbsp; &nbsp;  3D Studio Max</option>
+<option value="161" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Вопросы начинающих</option>
+<option value="41" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Моделирование</option>
+<option value="42" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Освещение</option>
+<option value="43" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Рендеринг</option>
+<option value="84" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  3DMax Plugins</option>
+<option value="106" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Анимация</option>
+<option value="162" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Материаловедение и текстурирование</option>
+<option value="14" class="fjdpth1" >&nbsp; &nbsp;  Maya</option>
+<option value="44" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Моделирование</option>
+<option value="45" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Освещение</option>
+<option value="46" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Рендеринг</option>
+<option value="85" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Maya Plugins</option>
+<option value="107" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Анимация</option>
+<option value="15" class="fjdpth1" >&nbsp; &nbsp;  Softimage|XSI</option>
+<option value="16" class="fjdpth1" >&nbsp; &nbsp;  Cinema 4D</option>
+<option value="17" class="fjdpth1" >&nbsp; &nbsp;  E-onsoftware Vue</option>
+<option value="22" class="fjdpth1" >&nbsp; &nbsp;  Mudbox</option>
+<option value="25" class="fjdpth1" >&nbsp; &nbsp;  RealFlow</option>
+<option value="28" class="fjdpth1" >&nbsp; &nbsp;  ZBrush</option>
+<option value="91" class="fjdpth1" >&nbsp; &nbsp;  3D Brush</option>
+<option value="157" class="fjdpth1" >&nbsp; &nbsp;  Blender</option>
+<option value="4" class="fjdpth0" > Системы рендеринга</option>
+<option value="37" class="fjdpth1" >&nbsp; &nbsp;  RenderMan</option>
+<option value="38" class="fjdpth1" >&nbsp; &nbsp;  Brazil r/s</option>
+<option value="39" class="fjdpth1" >&nbsp; &nbsp;  MentalRay</option>
+<option value="40" class="fjdpth1" >&nbsp; &nbsp;  Maxwell render</option>
+<option value="111" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Материалы Maxwell</option>
+<option value="112" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Architecture</option>
+<option value="113" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Artificial</option>
+<option value="114" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Automotive</option>
+<option value="115" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Cloth</option>
+<option value="116" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Coating</option>
+<option value="117" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Complex IOR</option>
+<option value="118" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Emitter</option>
+<option value="119" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Food</option>
+<option value="120" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Gem Stone</option>
+<option value="121" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Glass</option>
+<option value="122" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Includes Bump Map</option>
+<option value="123" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Includes Normal Map</option>
+<option value="124" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Liquid</option>
+<option value="125" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Metal</option>
+<option value="126" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Multichannel</option>
+<option value="127" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Organic</option>
+<option value="128" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Other</option>
+<option value="129" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Plastics</option>
+<option value="130" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Product Viz</option>
+<option value="131" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  PANTONE Solid Coated</option>
+<option value="132" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Rough</option>
+<option value="133" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Shiny</option>
+<option value="134" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SSS</option>
+<option value="135" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Stone</option>
+<option value="136" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Transperant</option>
+<option value="137" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Unreal</option>
+<option value="138" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Wood</option>
+<option value="20" class="fjdpth1" >&nbsp; &nbsp;  Vray</option>
+<option value="109" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Материалы</option>
+<option value="139" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Архитектура</option>
+<option value="140" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Авто</option>
+<option value="141" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Дерево</option>
+<option value="142" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Другое</option>
+<option value="143" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Еда</option>
+<option value="144" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Жидкость</option>
+<option value="145" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Камень</option>
+<option value="146" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Метал</option>
+<option value="147" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Мех</option>
+<option value="148" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Нереальное</option>
+<option value="149" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Органика</option>
+<option value="150" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Одежда</option>
+<option value="151" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Пластик</option>
+<option value="152" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Прозрачные</option>
+<option value="153" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Стекло</option>
+<option value="154" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  Спец. эффекты</option>
+<option value="155" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  SSS Special</option>
+<option value="156" class="fjdpth3" >&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  vray 1.5 спец.</option>
+<option value="21" class="fjdpth1" >&nbsp; &nbsp;  Final Render</option>
+<option value="159" class="fjdpth1" >&nbsp; &nbsp;  fryrender</option>
+<option value="158" class="fjdpth1" >&nbsp; &nbsp;  Turtle</option>
+<option value="163" class="fjdpth1" >&nbsp; &nbsp;  YafRay</option>
+<option value="80" class="fjdpth0" > 2D растровая и векторная графика</option>
+<option value="81" class="fjdpth1" >&nbsp; &nbsp;  Adobe Photoshop</option>
+<option value="108" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  Кисти</option>
+<option value="82" class="fjdpth1" >&nbsp; &nbsp;  Adobe Illustrator</option>
+<option value="83" class="fjdpth1" >&nbsp; &nbsp;  CorelDraw</option>
+<option value="95" class="fjdpth0" > Видеомонтаж</option>
+<option value="99" class="fjdpth1" >&nbsp; &nbsp;  Общие вопросы по видеомонтажу</option>
+<option value="96" class="fjdpth1" >&nbsp; &nbsp;  Adobe Premiere</option>
+<option value="97" class="fjdpth1" >&nbsp; &nbsp;  AVID/Pinnacle Liquid</option>
+<option value="98" class="fjdpth1" >&nbsp; &nbsp;  Canopus EDIUS</option>
+<option value="100" class="fjdpth0" > Композитинг</option>
+<option value="105" class="fjdpth1" >&nbsp; &nbsp;  Общие вопросы по композингу</option>
+<option value="101" class="fjdpth1" >&nbsp; &nbsp;  Adobe After Effects</option>
+<option value="102" class="fjdpth1" >&nbsp; &nbsp;  Digital Fusion</option>
+<option value="103" class="fjdpth1" >&nbsp; &nbsp;  Discreet Combustion</option>
+<option value="104" class="fjdpth1" >&nbsp; &nbsp;  Shake</option>
+<option value="6" class="fjdpth0" > WIP</option>
+<option value="26" class="fjdpth1" >&nbsp; &nbsp;  Work in Progress 3D</option>
+<option value="64" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  WIP: Персонажи</option>
+<option value="65" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  WIP: Транспорт</option>
+<option value="66" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  WIP: Архитектура</option>
+<option value="67" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  WIP: Пейзажи</option>
+<option value="68" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  WIP: Кибернетика</option>
+<option value="69" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  WIP: Объекты</option>
+<option value="70" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  WIP: Оружие</option>
+<option value="71" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  WIP: Сюриализм</option>
+<option value="72" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  WIP: Фантастика</option>
+<option value="73" class="fjdpth2" >&nbsp; &nbsp; &nbsp; &nbsp;  WIP: Game art</option>
+<option value="27" class="fjdpth1" >&nbsp; &nbsp;  Work in Progress 2D</option>
+<option value="7" class="fjdpth0" > 3D в играх</option>
+<option value="30" class="fjdpth1" >&nbsp; &nbsp;  Обзоры игр</option>
+<option value="31" class="fjdpth1" >&nbsp; &nbsp;  GameDev</option>
+<option value="10" class="fjdpth0" > eBook</option>
+<option value="49" class="fjdpth1" >&nbsp; &nbsp;  eBook RenderMan</option>
+<option value="75" class="fjdpth1" >&nbsp; &nbsp;  CG eBook</option>
+<option value="34" class="fjdpth1" >&nbsp; &nbsp;  eBook 3d max</option>
+<option value="35" class="fjdpth1" >&nbsp; &nbsp;  eBook Maya</option>
+<option value="36" class="fjdpth1" >&nbsp; &nbsp;  eBook AutoCad</option>
+<option value="50" class="fjdpth0" > Работа</option>
+<option value="51" class="fjdpth1" >&nbsp; &nbsp;  Резюме /Вакансии</option>
+<option value="8" class="fjdpth0" > Конкурсы на 3D Total</option>
+<option value="93" class="fjdpth1" >&nbsp; &nbsp;  Конкурс &quot;Бетмобиль!&quot;</option>
+<option value="32" class="fjdpth1" >&nbsp; &nbsp;  Конкурс №1 (1 ноября - 15 декабря)</option>
+<option value="53" class="fjdpth0" > Закрытые разделы</option>
+
+		</optgroup>
+	</select><input type="submit" class="button" value="Вперед"  />
+	</form>
+</div>
+			</td>
+		</tr>		
+		</table>
+	</td>
+</tr>
+</table>
+<!-- /forum rules and admin links -->
+
+<br />
+
+
+<form action="http://www.3dtotal.ru/forum/index.php" method="get">
+	
+<table cellpadding="6" cellspacing="0" border="0" width="900" class="page" align="center">
+<tr>
+	
+	
+	<td class="tfoot" align="right" width="100%">
+		<div class="smallfont">
+			<strong>
+				<a href="http://www.3dtotal.ru/forum/sendmessage.php" rel="nofollow">Обратная связь</a> -
+				<a href="http://www.3dtotal.ru/">VFXWorld</a> -
+				
+				
+				<a href="http://www.3dtotal.ru/forum/archive/index.php">Архив</a> -
+				
+				<a href="#top" onclick="self.scrollTo(0, 0); return false;">Вверх</a>
+			</strong>
+		</div>
+	</td>
+</tr>
+</table>
+
+<br />
+
+<div align="center">
+		</div>
+	
+	<div class="smallfont" align="center">
+	<!-- Do not remove  or your scheduled tasks will cease to function -->
+	
+	<!-- Do not remove  or your scheduled tasks will cease to function -->
+	
+	
+	</div>
+</div>
+
+</form>
+
+
+<script type="text/javascript">
+<!--
+	// Main vBulletin Javascript Initialization
+	vBulletin_init();
+//-->
+</script>
+
+<!--Begin Footer-->
+
+<div id="block_footer">
+
+<div id="left_block">
+Статьи, переводы, изображения и торговые марки принадлежат их авторам и владельцам. <br>
+Мнение авторов может не совпадать с мнением редакции. <br>
+© VFXWorld Ltd, 2006-2008 <br>
+<a href="http://www.3dtotal.ru/forum/showthread.php?t=5018">Реклама на сайте</a></div>
+
+<div id="right_block">
+
+<!--Rating@Mail.ru COUNTEr--><script language="JavaScript" type="text/javascript"><!--
+d=document;var a='';a+=';r='+escape(d.referrer)
+js=10//--></script><script language="JavaScript1.1" type="text/javascript"><!--
+a+=';j='+navigator.javaEnabled()
+js=11//--></script><script language="JavaScript1.2" type="text/javascript"><!--
+s=screen;a+=';s='+s.width+'*'+s.height
+a+=';d='+(s.colorDepth?s.colorDepth:s.pixelDepth)
+js=12//--></script><script language="JavaScript1.3" type="text/javascript"><!--
+js=13//--></script><script language="JavaScript" type="text/javascript"><!--
+d.write('<a href="http://top.mail.ru/jump?from=1102823"'+
+' target=_top><img src="http://d3.cd.b0.a1.top.list.ru/counter'+
+'?id=1102823;t=50;js='+js+a+';rand='+Math.random()+
+'" alt="Рейтинг@Mail.ru"'+' border=0 height=31 width=88/><\/a>')
+if(11<js)d.write('<'+'!-- ')//--></script><noscript><a
+target=_top href="http://top.mail.ru/jump?from=1102823"><img
+src="http://d3.cd.b0.a1.top.list.ru/counter?js=na;id=1102823;t=50"
+border=0 height=31 width=88
+alt="Рейтинг@Mail.ru"/></a></noscript><script language="JavaScript" type="text/javascript"><!--
+if(11<js)d.write('--'+'>')//--></script><!--/COUNTER-->
+
+
+<!--LiveInternet counter-->
+<script type="text/javascript"><!--
+document.write("<a href='http://www.liveinternet.ru/click' "+
+"target=_blank><img src='http://counter.yadro.ru/hit?t18.5;r"+
+escape(document.referrer)+((typeof(screen)=="undefined")?"":
+";s"+screen.width+"*"+screen.height+"*"+(screen.colorDepth?
+screen.colorDepth:screen.pixelDepth))+";u"+escape(document.URL)+
+";"+Math.random()+
+"' alt='' title='LiveInternet: показано число просмотров за 24"+
+" часа, посетителей за 24 часа и за сегодня' "+
+"border=0 width=88 height=31><\/a>")//--></script>
+<!--/LiveInternet-->
+
+<!--begin of Rambler's Top100 code -->
+<a href="http://top100.rambler.ru/top100/">
+<img src="Создание материала огня_files/top10000.gif" alt="" width=1 height=1 border=0></a>
+<!--end of Top100 code-->
+<!--begin of Top100 logo-->
+<a href="http://top100.rambler.ru/top100/">
+<img src="Создание материала огня_files/banner-8.gif" alt="Rambler's Top100" width=88 height=31 border=0></a>
+<!--end of Top100 logo -->
+
+</div>
+ 
+</div>
+
+<!--End Footer-->
+
+<!-- temp -->
+<div style="display:none">
+	<!-- thread rate -->
+	
+		
+	
+	<!-- / thread rate -->
+</div>
+
+</body>
+</html>
+<!-- This document saved from http://www.3dtotal.ru/forum/showthread.php?t=5121 -->
