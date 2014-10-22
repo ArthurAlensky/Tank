@@ -18,6 +18,7 @@
 #include "Terrain.h"
 #include "Tank.h"
 #include"Brick.h"
+#include"Wall.h"
 
 #include "CollisionSquare.h"
 #include "CollisionBox.h"
@@ -59,10 +60,9 @@ CollisionSquare groundCollSquare;
 CollisionBoxArray collisionBoxArray;
 Terrain myTerrain(true, 16);
 Tank myTank;
+Wall wall;
 
 #define NUM_BRICKS 100
-
-Brick bricks[NUM_BRICKS];
 
 #define SLOWDOWN 0.3
 
@@ -94,16 +94,7 @@ void draw()
 	//draw tank
 	myTank.draw(g_ViewMod);
 
-	for(int i = 0; i < NUM_BRICKS; i++)
-	{
-		Brick *brick = bricks + i;
-		if(1)
-		{
-			brick->moveWhenCrash(SLOWDOWN);
-		}
-
-		brick->draw();
-	}
+	wall.draw(SLOWDOWN);
 
 	//collisionBoxArray.draw();
 
@@ -205,7 +196,7 @@ void myInit()
 	//initial tank
 	tankHeightPos = myTerrain.GetHeight(gCenterPoint.X()+100.0, gCenterPoint.Z());
 
-	myTank.setParameters("T-90.3DS", "E:/My_Tank/Work/Tank/TANK-T90/T-90/",TVector(gCenterPoint.X()+100.0, tankHeightPos + 9.0, gCenterPoint.Z()), 0.0, &myTerrain, &collisionBoxArray);
+	myTank.setParameters("T-90.3DS", "E:/My_Tank/Work/Tank/TANK-T90/T-90/",TVector(gCenterPoint.X()+100.0, tankHeightPos + 9.0, gCenterPoint.Z()), 0.0, &myTerrain, &collisionBoxArray, &wall);
 	//myTank.setParameters("E:/My_Tank/Work/Tank/Tank-34/111.3DS", TVector(gCenterPoint.X()+100.0, tankHeightPos + 9.0, gCenterPoint.Z()), 0.0, &myTerrain, &collisionBoxArray);
 	myTank.initTank();	
 
@@ -213,34 +204,7 @@ void myInit()
 
 	createTexture("E:/My_Tank/Work/Tank/BSUIR.MG.Tanks/Data/Texture/Brick/brick.bmp", brickTexture);
 
-	for(int j = 0; j < sqrt(NUM_BRICKS); j++ )
-	{
-		for(int i = 0; i < sqrt(NUM_BRICKS); i++)
-		{
-			Brick *brick = &bricks[j * (int)sqrt(NUM_BRICKS) + i];
-
-			brick->setTexture(brickTexture);
-			brick->setTerrain(&myTerrain);
-
-			brick->setPosition(TVector(
-				myTank.getPosition().X(),
-				myTank.getPosition().Y() + brick->height * j, 
-				myTank.getPosition().Z() + brick->length * i ));
-
-			brick->setDirection(TVector(
-				float((rand()%50)-26.0f)*10.0f,	// Random Speed On X Axis
-				float((rand()%50)-25.0f)*10.0f,	// Random Speed On Y Axis
-				float((rand()%50)-25.0f)*10.0f	// Random Speed On Z Axis
-				));   
-
-			brick->setGravity(TVector(
-				0.0f,	// Set Horizontal Pull To Zero
-				-0.8f,	// Set Vertical Pull Downward
-				0.0f	// Set Pull On Z Axis To Zero
-				));              
-		}
-	}
-
+	wall.Init(myTank.getPosition().X() + 50, myTank.getPosition().Y(), myTank.getPosition().Z() + 20, NUM_BRICKS, brickTexture, &myTerrain);
 	/*gCameraPosition.setX(myTank.getPosition().X() + 150*cos(gRadViewAngle));
 	gCameraPosition.setY(myTank.getPosition().Y() + 30);
 	gCameraPosition.setZ(myTank.getPosition().Z() - 150*sin(gRadViewAngle));*/

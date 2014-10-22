@@ -12,6 +12,7 @@
 #include "ControlWarObject.h"
 #include "Terrain.h"
 #include "TVector.h"
+#include "Wall.h"
 
 class Tank: public ControlWarObject
 {
@@ -19,12 +20,12 @@ private:
 	GameModel3Ds bodyModel;
 	float radTankAngle;
 	Terrain *terrain;
-
+	Wall *wall;
 public:
 	Tank();
 	~Tank();
 	
-	void setParameters(const char *bodyFile, const char *rootFolder,TVector position, float angleWithX, Terrain *terrain, CollisionBoxArray *collisionBoxArray);
+	void setParameters(const char *bodyFile, const char *rootFolder,TVector position, float angleWithX, Terrain *terrain, CollisionBoxArray *collisionBoxArray, Wall *wall);
 	void plusAngleWithX(float deltaAngle);
 	void move(float deltaTranslate);
 	void initTank();

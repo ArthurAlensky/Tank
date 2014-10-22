@@ -9,13 +9,14 @@ Tank::~Tank()
 {
 }
 
-void Tank::setParameters(const char *bodyFile, const char *rootFolder,TVector position, float angleWithX, Terrain *terrain, CollisionBoxArray *collisionBoxArray)
+void Tank::setParameters(const char *bodyFile, const char *rootFolder,TVector position, float angleWithX, Terrain *terrain, CollisionBoxArray *collisionBoxArray, Wall *wall)
 {
 	bodyModel.setParameters(bodyFile, 0.2, rootFolder);
 	this->position = position;
 	this->angleWithX = angleWithX;
 	this->terrain = terrain;
 	this->collisionBoxArray = collisionBoxArray;
+	this->wall = wall;
 }
 
 void Tank::plusAngleWithX(float deltaAngle)
