@@ -37,11 +37,22 @@ void Tank::move(float deltaTranslate)
 	if(!life)
 		return;
 
+	if(Collision())
+	{
+		wall->Destroy();
+	}
+
 	radTankAngle = M_PI*angleWithX/180.0;
 
 	position += TVector(deltaTranslate*cos(radTankAngle), 0.0, -deltaTranslate*sin(radTankAngle));	// realitive moving
 	position.setY(terrain->GetHeight((float)position.X(), (float)position.Z()) +9.0);
 	collisionBox.updateCollisionBoxPos(TVector(position.X()-2.2*cos(radTankAngle), position.Y()-2.1, position.Z()));
+}
+
+bool Tank::Collision()
+{
+	TVector wallPosition = wall->GetPosition();
+	return position.X() + 35 >= wallPosition.X();
 }
 
 void Tank::initTank()

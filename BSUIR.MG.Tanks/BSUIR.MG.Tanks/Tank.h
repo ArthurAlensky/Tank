@@ -21,6 +21,9 @@ private:
 	float radTankAngle;
 	Terrain *terrain;
 	Wall *wall;
+
+	bool Collision();
+
 public:
 	Tank();
 	~Tank();

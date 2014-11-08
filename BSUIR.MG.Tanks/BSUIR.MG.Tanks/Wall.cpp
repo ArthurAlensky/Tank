@@ -12,6 +12,11 @@ void Wall::SetPosition(TVector vector )
 	position = vector;
 }
 
+void Wall::Destroy()
+{
+	destroied = true;
+}
+
 void Wall::Init(float x, float y, float z, int numOfBricks, int brickTexture, Terrain * terrain)
 {
 	SetPosition(TVector(x,y,z));

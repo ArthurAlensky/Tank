@@ -17,5 +17,6 @@ public:
 	void draw(float slowdown);
 	TVector GetPosition();
 	void SetPosition(TVector vector );
+	void Destroy();
 };
 
