@@ -411,3 +411,15 @@ void myReshape(int width, int height)
 	glLoadIdentity();
 }
 
+const mat4 OrthoProjection(float left, float right,
+        float bottom, float top, float zNear, float zFar)
+{
+        const float tx = - (right + left) / (right - left),
+                    ty = - (top + bottom) / (top - bottom),
+                    tz = - (zFar + zNear) / (zFar - zNear);
+
+        return mat4(2 / (right - left), 0, 0, tx,
+                    0, 2 / (top - bottom), 0, ty,
+                    0, 0, -2 / (zFar - zNear), tz,
+                    0, 0, 0, 1);
+}
