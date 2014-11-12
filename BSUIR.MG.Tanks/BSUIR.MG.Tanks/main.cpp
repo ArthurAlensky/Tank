@@ -13,12 +13,13 @@
 #include <cstdlib>
 #include <time.h>
 
+#include "common.h"
 #include "Camera.h"
 #include "Texture.h"
 #include "Terrain.h"
 #include "Tank.h"
-#include"Brick.h"
-#include"Wall.h"
+#include "Brick.h"
+#include "Wall.h"
 
 #include "CollisionSquare.h"
 #include "CollisionBox.h"
@@ -185,6 +186,44 @@ void myInit()
 	glFogf(GL_FOG_START, 200);
 	glFogf(GL_FOG_END, 1000);
 	glFogf(GL_FOG_DENSITY, gFogDensity);
+
+	// The framebuffer, which regroups 0, 1, or more textures, and 0 or 1 depth buffer.
+	 GLuint FramebufferName = 0;
+	 glGenFramebuffers(1, &FramebufferName);
+	 glBindFramebuffer(GL_FRAMEBUFFER, FramebufferName);
+ 
+	 // Depth texture. Slower than a depth buffer, but you can sample it later in your shader
+	 GLuint depthTexture;
+	 glGenTextures(1, &depthTexture);
+	 glBindTexture(GL_TEXTURE_2D, depthTexture);
+	 glTexImage2D(GL_TEXTURE_2D, 0,GL_DEPTH_COMPONENT16, 1024, 1024, 0,GL_DEPTH_COMPONENT, GL_FLOAT, 0);
+	 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
+	 glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
+ 
+	 glFramebufferTexture(GL_FRAMEBUFFER, GL_DEPTH_ATTACHMENT, depthTexture, 0);
+ 
+	 glDrawBuffer(GL_NONE); // No color buffer is drawn to.
+ 
+	 // Always check that our framebuffer is ok
+	 if(glCheckFramebufferStatus(GL_FRAMEBUFFER) != GL_FRAMEBUFFER_COMPLETE)
+		exit(0);
+
+	 vec3 lightInvDir = vec3(0.5f,2,2);
+ 
+	 // Compute the MVP matrix from the light's point of view
+	 mat4 depthProjectionMatrix = GLOrthographic(-10,10,-10,10,-10,20);
+	 mat4 depthViewMatrix = GLLookAt(lightInvDir, vec3(0,0,0), vec3(0,1,0));
+	 mat4 depthModelMatrix = mat4(1.0,1.0,1.0,1.0,
+									1.0,1.0,1.0,1.0,
+									1.0,1.0,1.0,1.0,
+									1.0,1.0,1.0,1.0);
+	 mat4 depthMVP = depthProjectionMatrix * depthViewMatrix * depthModelMatrix;
+ 
+	 // Send our transformation to the currently bound shader,
+	 // in the "MVP" uniform
+	 glUniformMatrix4fv(depthMatrixID, 1, GL_FALSE, &depthMVP[0][0])
 
 	//initial terrain
 	myTerrain.initializeTerrain("E:/My_Tank/Work/Tank/BSUIR.MG.Tanks/Data/Texture/Terrain/sand.tga", "E:/My_Tank/Work/Tank/BSUIR.MG.Tanks/Data/Texture/Terrain/cactus.tga");
@@ -409,17 +448,4 @@ void myReshape(int width, int height)
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-}
-
-const mat4 OrthoProjection(float left, float right,
-        float bottom, float top, float zNear, float zFar)
-{
-        const float tx = - (right + left) / (right - left),
-                    ty = - (top + bottom) / (top - bottom),
-                    tz = - (zFar + zNear) / (zFar - zNear);
-
-        return mat4(2 / (right - left), 0, 0, tx,
-                    0, 2 / (top - bottom), 0, ty,
-                    0, 0, -2 / (zFar - zNear), tz,
-                    0, 0, 0, 1);
 }
