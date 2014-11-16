@@ -7,5 +7,11 @@ layout(location = 0) in vec3 vertexPosition_modelspace;
 uniform mat4 depthMVP;
  
 void main(){
- gl_Position =  depthMVP * vec4(vertexPosition_modelspace,1);
+	gl_Position =  depthMVP * vec4(vertexPosition_modelspace,1);
+ 
+	 // Output position of the vertex, in clip space : MVP * position
+	gl_Position =  MVP * vec4(vertexPosition_modelspace,1);
+	 
+	// Same, but with the light's view matrix
+	ShadowCoord = DepthBiasMVP * vec4(vertexPosition_modelspace,1);
 }

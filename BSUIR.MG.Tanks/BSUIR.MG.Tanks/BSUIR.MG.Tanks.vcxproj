@@ -20,6 +20,7 @@
     <ClInclude Include="CollisionSquare.h" />
     <ClInclude Include="common.h" />
     <ClInclude Include="ControlWarObject.h" />
+    <ClInclude Include="GLTools.h" />
     <ClInclude Include="IncludeS.h" />
     <ClInclude Include="Global.h" />
     <ClInclude Include="Light.h" />
@@ -45,6 +46,7 @@
     <ClCompile Include="common.cpp" />
     <ClCompile Include="ControlWarObject.cpp" />
     <ClCompile Include="Global.cpp" />
+    <ClCompile Include="GLTools.cpp" />
     <ClCompile Include="Light.cpp" />
     <ClCompile Include="main_disabled.cpp" />
     <ClCompile Include="main.cpp" />

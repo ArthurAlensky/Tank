@@ -174,8 +174,13 @@ void Terrain::drawTree()
 
 void Terrain::drawTerrain()
 {
-	drawSand();
-	drawTree();
+	glPushMatrix();
+		drawSand();
+	glPopMatrix();
+
+	/*glPushMatrix();
+		drawTree();
+	glPopMatrix();*/
 }
 
 float Terrain::GetHeight(float x, float z)

@@ -13,6 +13,8 @@
 #include <cstdlib>
 #include <time.h>
 
+//#include "GLTools.h"
+#include "Global.h"
 #include "common.h"
 #include "Camera.h"
 #include "Texture.h"
@@ -68,6 +70,8 @@ Wall wall;
 #define SLOWDOWN 0.3
 
 Camera camera(gCenterPoint.X(), 30.0, gCenterPoint.Z(), gCenterPoint.X()+100.0, 10.0, gCenterPoint.Z(),0.0,1.0,0.0);
+GLfloat lightPosition[]= {gCenterPoint.X(), 70, gCenterPoint.Z(), 1.0f };
+GLint shadowSize = 512;
 
 
 //prototype funciton
@@ -82,71 +86,89 @@ void caculateCameraView(unsigned int viewMode);
 //=======================================
 void draw()
 {
-	glEnable(GL_TEXTURE_2D);							// Enable texture mapping
+	//glActiveTexture(GL_TEXTURE0);
+	//glEnable(GL_TEXTURE_2D);							// Enable texture mapping
 	glEnable(GL_DEPTH_TEST);							// Enables depth testing
 
 	//draw terrain
-	glDisable(GL_LIGHTING);
-	myTerrain.drawTerrain();
-	glEnable(GL_LIGHTING);
-
-	
+	//glDisable(GL_LIGHTING);
+	glPushMatrix();
+		myTerrain.drawTerrain();
+	glPopMatrix();
+	//glEnable(GL_LIGHTING);
 
 	//draw tank
-	myTank.draw(g_ViewMod);
+	glPushMatrix();
+		myTank.draw(g_ViewMod);
+	glPopMatrix();
 
-	wall.draw(SLOWDOWN);
-
+	glPushMatrix();
+		wall.draw(SLOWDOWN);
+	glPopMatrix();
 	//collisionBoxArray.draw();
 
 	glDisable(GL_DEPTH_TEST);
 }
 
-void myDisplay()
-{	
-	if(gViewMode == 2)
-	{
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+// Called to regenerate the shadow map
+void RegenerateShadowMap(void)
+{
+	GLfloat lightModelview[16], lightProjection[16];
 
-		//viewport1
-		glViewport(0, 0, 2*gWinWidth/3, gWinHeight);
-		glMatrixMode(GL_PROJECTION);
-		glLoadIdentity();
-		gluPerspective(45.0, (double)(2*gWinWidth)/(double)(3*gWinHeight), 0.1, 1000.0);
-		glMatrixMode(GL_MODELVIEW);
-		glLoadIdentity();
+    glMatrixMode(GL_PROJECTION);
+    glGetFloatv(GL_PROJECTION_MATRIX, lightProjection);
 
-		caculateCameraView(0);
-		camera.view();
-		draw();
+    // Switch to light's point of view
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    gluLookAt(lightPosition[0], lightPosition[1], lightPosition[2], 
+			0.0f, 0.0f, 0.0f, 0.0f, 1.0f, 0.0f);
+    glGetFloatv(GL_MODELVIEW_MATRIX, lightModelview);
 
-		//viewport2
-		glViewport(2*gWinWidth/3, gWinHeight/2, gWinWidth/3, gWinHeight/2);
-		glMatrixMode(GL_PROJECTION);
-		glLoadIdentity();
-		gluPerspective(45.0, (double)(2*gWinWidth)/(double)(3*gWinHeight), 0.1, 1000.0);
-		glMatrixMode(GL_MODELVIEW);
-		glLoadIdentity();
+    glViewport(0, 0, shadowSize, shadowSize);
 
-		caculateCameraView(2);
-		camera.view();
-		draw();
+    // Clear the window with current clearing color
+    glClear(GL_DEPTH_BUFFER_BIT);
 
-		//viewport3
-		glViewport(2*gWinWidth/3, 0, gWinWidth/3, gWinHeight/2);
-		glMatrixMode(GL_PROJECTION);
-		glLoadIdentity();
-		gluPerspective(45.0, (double)(2*gWinWidth)/(double)(3*gWinHeight), 0.1, 1000.0);
-		glMatrixMode(GL_MODELVIEW);
-		glLoadIdentity();
+    // All we care about here is resulting depth values
+    glShadeModel(GL_FLAT);
+    glDisable(GL_LIGHTING);
+    glDisable(GL_COLOR_MATERIAL);
+    glDisable(GL_NORMALIZE);
+    glColorMask(0, 0, 0, 0);
 
-		caculateCameraView(3);
-		camera.view();
-		draw();
-	}
-	else
-	{
-		glViewport(0, 0, gWinWidth, gWinHeight);
+    // Overcome imprecision
+    glEnable(GL_POLYGON_OFFSET_FILL);
+
+    // Draw objects in the scene
+	draw();
+
+    // Copy depth values into depth texture
+    glCopyTexImage2D(GL_TEXTURE_2D, 0, GL_DEPTH_COMPONENT, 
+                     0, 0, shadowSize, shadowSize, 0);
+
+    // Restore normal drawing state
+    glShadeModel(GL_SMOOTH);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_COLOR_MATERIAL);
+    glEnable(GL_NORMALIZE);
+    glColorMask(1, 1, 1, 1);
+    glDisable(GL_POLYGON_OFFSET_FILL);
+
+    // Set up texture matrix for shadow map projection
+    glMatrixMode(GL_TEXTURE);
+    glLoadIdentity();
+
+    glTranslatef(0.5f, 0.5f, 0.5f);
+    glScalef(0.5f, 0.5f, 0.5f);
+
+    glMultMatrixf(lightProjection);
+    glMultMatrixf(lightModelview);
+}
+
+void RenderScene1()
+{
+	glViewport(0, 0, gWinWidth, gWinHeight);
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
 		gluPerspective(45.0, (double)gWinWidth/(double)gWinHeight, 0.1, 1000.0);
@@ -158,7 +180,95 @@ void myDisplay()
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		draw();
-	}
+}
+
+//*********************************************************
+GLfloat sPlane[4] = {1.0f, 0.0f, 0.0f, 0.0f};
+GLfloat tPlane[4] = {0.0f, 1.0f, 0.0f, 0.0f};
+GLfloat rPlane[4] = {0.0f, 0.0f, 1.0f, 0.0f};
+GLfloat qPlane[4] = {0.0f, 0.0f, 0.0f, 1.0f};
+
+GLfloat ambientLight[] = { 0.7f, 0.7f, 0.7f, 1.0f};
+GLfloat diffuseLight[] = { 0.4f, 0.4f, 0.4f, 1.0f};
+
+GLfloat lowAmbient[4] = {0.1f, 0.1f, 0.1f, 1.0f};
+GLfloat lowDiffuse[4] = {0.1f, 0.1f, 0.1f, 1.0f};
+//*********************************************************
+
+void myDisplay()
+{	
+	RegenerateShadowMap();
+
+	glViewport(0, 0, gWinWidth, gWinHeight);
+		glMatrixMode(GL_PROJECTION);
+		glLoadIdentity();
+		gluPerspective(45.0, (double)gWinWidth/(double)gWinHeight, 0.1, 1000.0);
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+
+		caculateCameraView(gViewMode);
+		camera.view();
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+
+	glPushMatrix();
+		glTranslatef(lightPosition[0], lightPosition[1], lightPosition[2]);
+		glColor3ub(255, 255, 40);
+		gluSphere(gluNewQuadric(), 1.0, 60, 60);
+	glPopMatrix();
+
+	//------------------------------------------------------------------
+
+	// Track light position
+	glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
+	
+	// Because there is no support for an "ambient"
+	// shadow compare fail value, we'll have to
+	// draw an ambient pass first...
+	glLightfv(GL_LIGHT0, GL_AMBIENT, lowAmbient);
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, lowDiffuse);
+
+	// Draw objects in the scene
+	draw();
+
+	glLightfv(GL_LIGHT0, GL_AMBIENT, ambientLight);
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, diffuseLight);
+
+	// Set up shadow comparison
+	glEnable(GL_TEXTURE_2D);
+	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_COMPARE_MODE, GL_COMPARE_R_TO_TEXTURE);
+
+	// Enable alpha test so that shadowed fragments are discarded
+	glAlphaFunc(GL_GREATER, 0.9f);
+	glEnable(GL_ALPHA_TEST);	
+
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+	//glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
+	// Set up the eye plane for projecting the shadow map on the scene
+	glEnable(GL_TEXTURE_GEN_S);
+	glEnable(GL_TEXTURE_GEN_T);
+	glEnable(GL_TEXTURE_GEN_R);
+	glEnable(GL_TEXTURE_GEN_Q);
+	glTexGenfv(GL_S, GL_EYE_PLANE, sPlane);
+	glTexGenfv(GL_T, GL_EYE_PLANE, tPlane);
+	glTexGenfv(GL_R, GL_EYE_PLANE, rPlane);
+	glTexGenfv(GL_Q, GL_EYE_PLANE, qPlane);
+
+	// Draw objects in the scene
+	draw();
+
+	glDisable(GL_ALPHA_TEST);
+	glDisable(GL_TEXTURE_2D);
+	glDisable(GL_TEXTURE_GEN_S);
+	glDisable(GL_TEXTURE_GEN_T);
+	glDisable(GL_TEXTURE_GEN_R);
+	glDisable(GL_TEXTURE_GEN_Q);
+
+	// Flush drawing commands
 
 	glutSwapBuffers();
 }
@@ -167,6 +277,44 @@ void myIdle()
 {
 	//caculateCameraView(gViewMode);
 	glutPostRedisplay();
+}
+
+void initGL()
+{
+	//glActiveTexture = (PFNGLACTIVETEXTUREPROC)gltGetExtensionPointer("glActiveTexture");
+	
+	// Black background
+    glClearColor(0.0f, 0.0f, 0.0f, 1.0f );
+
+    // Hidden surface removal
+	glClearDepth(1.0f);
+    glEnable(GL_DEPTH_TEST);
+    glDepthFunc(GL_LEQUAL);
+    glPolygonOffset(4.0f, 0.0f);
+	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST); 
+
+    // Set up some lighting state that never changes
+    glShadeModel(GL_SMOOTH);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_COLOR_MATERIAL);
+    glEnable(GL_NORMALIZE);
+    glEnable(GL_LIGHT0);
+	glLightModelf(GL_LIGHT_MODEL_TWO_SIDE, GL_TRUE);
+
+	GLuint shadowTextureID;
+
+    // Set up some texture state that never changes
+	//glActiveTexture(GL_TEXTURE1);
+    glGenTextures(1, &shadowTextureID);
+    glBindTexture(GL_TEXTURE_2D, shadowTextureID);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP);
+    glTexParameteri(GL_TEXTURE_2D, GL_DEPTH_TEXTURE_MODE, GL_INTENSITY);
+
+    glTexGeni(GL_S, GL_TEXTURE_GEN_MODE, GL_EYE_LINEAR);
+    glTexGeni(GL_T, GL_TEXTURE_GEN_MODE, GL_EYE_LINEAR);
+    glTexGeni(GL_R, GL_TEXTURE_GEN_MODE, GL_EYE_LINEAR);
+    glTexGeni(GL_Q, GL_TEXTURE_GEN_MODE, GL_EYE_LINEAR);
 }
 
 void myInit()
@@ -207,7 +355,7 @@ void myInit()
 	wall.Init(myTank.getPosition().X() + 50, myTank.getPosition().Y(), myTank.getPosition().Z() + 20, NUM_BRICKS, brickTexture, &myTerrain);
 
 	myTank.startFight();
-	mySetLight();
+	//mySetLight();
 }
 
 
@@ -359,6 +507,7 @@ int main (int argc, char ** const argv)
 	glutInitWindowPosition(0, 0);
 	glutCreateWindow("MyGame");
 
+	//initGL();
 	myInit();
 
 	glutDisplayFunc(myDisplay);
@@ -378,12 +527,12 @@ void mySetLight()
 	GLfloat diffuse[]={0.9, 0.9, 0.9, 1.0};
 	GLfloat specular[]={1.0, 1.0, 1.0, 1.0};
 	GLfloat ambient[]={0.3, 0.3, 0.3, 0.1};
-	GLfloat position[]= {100.0, 200.0, 200.0, 0.0};
+	
 
-	glLightfv(GL_LIGHT0,GL_DIFFUSE, diffuse);
+	glLightfv(GL_LIGHT0,GL_DIFFUSE, diffuseLight);
 	glLightfv(GL_LIGHT0, GL_SPECULAR, specular);
-	glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
-	glLightfv(GL_LIGHT0, GL_POSITION, position);
+	glLightfv(GL_LIGHT0, GL_AMBIENT, ambientLight);
+	glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
 	glShadeModel(GL_SMOOTH);
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
