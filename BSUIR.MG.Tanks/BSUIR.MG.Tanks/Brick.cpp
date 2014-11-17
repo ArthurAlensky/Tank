@@ -57,6 +57,8 @@ void Brick::draw()
 	int y = position.Y();
 	int z = position.Z();
 
+	glPushAttrib(GL_ENABLE_BIT);
+    glEnable(GL_TEXTURE_2D);
 	glPushMatrix();
 	glBegin(GL_QUADS);		
 		
@@ -151,4 +153,6 @@ void Brick::draw()
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
 
 	glPopMatrix();
+	glPopMatrix();
+    glPopAttrib();
 }

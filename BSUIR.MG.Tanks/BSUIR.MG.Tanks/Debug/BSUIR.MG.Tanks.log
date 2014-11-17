@@ -1,161 +1,36 @@
-﻿Построение начато 16.11.2014 17:51:13.
-     1>Проект "E:\My_Tank\Work\Tank\BSUIR.MG.Tanks\BSUIR.MG.Tanks\BSUIR.MG.Tanks.vcxproj" в узле 2 (целевые объекты Build).
+﻿Build started 11/17/2014 5:29:02 PM.
+     1>Project "D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\BSUIR.MG.Tanks\BSUIR.MG.Tanks.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Visual 2012\VC\bin\CL.exe /c /IE:\My_Tank\Work\Tank\BSUIR.MG.Tanks\/common/inc /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt 3ds.cpp Brick.cpp Camera.cpp Camera2.cpp CollisionBox.cpp CollisionBoxArray.cpp CollisionSquare.cpp common.cpp ControlWarObject.cpp Global.cpp GLTools.cpp Light.cpp main_disabled.cpp main.cpp GameModel3Ds.cpp OpenGL.cpp Tank.cpp Terrain.cpp Texture.cpp Tray.cpp Tvector.cpp Wall.cpp
-         Wall.cpp
-         Tvector.cpp
-         Tray.cpp
-         Texture.cpp
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\texture.cpp(27): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\visual 2012\vc\include\stdio.h(218): см. объявление "fopen"
-         Terrain.cpp
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\terrain.cpp(60): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\terrain.cpp(61): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\terrain.cpp(62): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\terrain.cpp(68): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\terrain.cpp(146): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\terrain.cpp(150): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\terrain.cpp(154): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\terrain.cpp(158): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\terrain.cpp(162): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\terrain.cpp(166): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\terrain.cpp(189): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\terrain.cpp(190): warning C4244: инициализация: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\terrain.cpp(444): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\visual 2012\vc\include\stdio.h(218): см. объявление "fopen"
-         Tank.cpp
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\tank.cpp(14): warning C4305: аргумент: усечение из "double" к "float"
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\tank.cpp(45): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\tank.cpp(62): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\tank.cpp(81): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-         OpenGL.cpp
-         GameModel3Ds.cpp
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\/common/inc" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
          main.cpp
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\camera.h(37): warning C4244: return: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\camera.h(38): warning C4244: return: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\camera.h(39): warning C4244: return: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(44): warning C4305: инициализация: усечение из "double" к "float"
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(48): warning C4305: инициализация: усечение из "double" к "float"
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(50): warning C4305: инициализация: усечение из "double" к "float"
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(53): warning C4305: инициализация: усечение из "double" к "float"
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(72): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(73): warning C4244: инициализация: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(106): warning C4305: аргумент: усечение из "double" к "float"
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(346): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(355): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(369): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(377): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(380): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(386): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(389): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(395): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(398): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(404): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(436): warning C4305: -=: усечение из "double" к "float"
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(443): warning C4305: +=: усечение из "double" к "float"
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(492): warning C4244: +=: преобразование "float" в "int", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(498): warning C4244: =: преобразование "int" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(527): warning C4305: инициализация: усечение из "double" к "GLfloat"
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(529): warning C4305: инициализация: усечение из "double" к "GLfloat"
-         main_disabled.cpp
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main_disabled.cpp(68): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main_disabled.cpp(83): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main_disabled.cpp(87): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main_disabled.cpp(91): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main_disabled.cpp(102): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main_disabled.cpp(104): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main_disabled.cpp(106): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\main_disabled.cpp(111): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-         Light.cpp
-         GLTools.cpp
-         Global.cpp
-         ControlWarObject.cpp
-         common.cpp
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\common.cpp(14): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\visual 2012\vc\include\stdio.h(218): см. объявление "fopen"
-         CollisionSquare.cpp
-         CollisionBoxArray.cpp
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionboxarray.cpp(37): warning C4018: <: несоответствие типов со знаком и без знака
-         CollisionBox.cpp
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(41): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(81): warning C4244: =: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(102): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(103): warning C4305: аргумент: усечение из "double" к "GLfloat"
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(113): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(114): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(115): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(116): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(117): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(124): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(125): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(126): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(127): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(128): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(135): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(136): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(137): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(138): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(139): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(146): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(147): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(148): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(149): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(150): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(157): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(158): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(159): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(160): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(161): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(168): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(169): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(170): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(171): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\collisionbox.cpp(172): warning C4244: аргумент: преобразование "double" в "GLfloat", возможна потеря данных
-         Camera2.cpp
-         Camera.cpp
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\camera.h(37): warning C4244: return: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\camera.h(38): warning C4244: return: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\camera.h(39): warning C4244: return: преобразование "double" в "float", возможна потеря данных
-         Создание кода...
-         Компиляция...
-         Brick.cpp
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(39): warning C4244: аргумент: преобразование "double" в "float", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(56): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(57): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(58): warning C4244: инициализация: преобразование "double" в "int", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(64): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(65): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(66): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(67): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(81): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(82): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(84): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(96): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(97): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(98): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(99): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(111): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(113): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(114): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(127): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(128): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(129): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(130): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(143): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(144): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\brick.cpp(146): warning C4244: аргумент: преобразование "int" в "GLfloat", возможна потеря данных
-         3ds.cpp
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\3ds.cpp(37): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\visual 2012\vc\include\stdio.h(218): см. объявление "fopen"
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\3ds.cpp(42): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\visual 2012\vc\include\stdio.h(357): см. объявление "sprintf"
-     1>e:\my_tank\work\tank\bsuir.mg.tanks\bsuir.mg.tanks\3ds.cpp(57): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\visual 2012\vc\include\stdio.h(357): см. объявление "sprintf"
-         Создание кода...
-       ResourceCompile:
-         C:\Program Files\Windows Kits\8.0\bin\x86\rc.exe /l"0x0409" /nologo /fo"Debug\BSUIR.MG.Tanks.res" BSUIR.MG.Tanks.rc 
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\camera.h(37): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\camera.h(38): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\camera.h(39): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(44): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(48): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(50): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(53): warning C4305: 'initializing' : truncation from 'double' to 'float'
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(72): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(73): warning C4244: 'initializing' : conversion from 'double' to 'GLfloat', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(101): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(344): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(353): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(366): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(374): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(377): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(383): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(386): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(392): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(395): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(401): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(433): warning C4305: '-=' : truncation from 'double' to 'float'
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(440): warning C4305: '+=' : truncation from 'double' to 'float'
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(494): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(500): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(529): warning C4305: 'initializing' : truncation from 'double' to 'GLfloat'
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(531): warning C4305: 'initializing' : truncation from 'double' to 'GLfloat'
        Link:
-         D:\Visual 2012\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\My_Tank\Work\Tank\BSUIR.MG.Tanks\Debug\BSUIR.MG.Tanks.exe" /INCREMENTAL /NOLOGO /LIBPATH:E:\My_Tank\Work\Tank\BSUIR.MG.Tanks\/common/lib glew32.lib freeglut.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"E:\My_Tank\Work\Tank\BSUIR.MG.Tanks\Debug\BSUIR.MG.Tanks.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\My_Tank\Work\Tank\BSUIR.MG.Tanks\Debug\BSUIR.MG.Tanks.lib" /MACHINE:X86 Debug\BSUIR.MG.Tanks.res
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\Debug\BSUIR.MG.Tanks.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\/common/lib" glew32.lib freeglut.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\Debug\BSUIR.MG.Tanks.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\Debug\BSUIR.MG.Tanks.lib" /MACHINE:X86 Debug\BSUIR.MG.Tanks.res
          Debug\3ds.obj
          Debug\Brick.obj
          Debug\Camera.obj
@@ -178,33 +53,9 @@
          Debug\Tray.obj
          Debug\Tvector.obj
          Debug\Wall.obj
-     1>main_disabled.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutInit@8 в функции "int __cdecl main_diabled(int,char * * const)" (?main_diabled@@YAHHQAPAD@Z)
-     1>main.obj : error LNK2001: неразрешенный внешний символ "__imp__glutInit@8"
-     1>main_disabled.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutInitWindowSize@8 в функции "int __cdecl main_diabled(int,char * * const)" (?main_diabled@@YAHHQAPAD@Z)
-     1>main.obj : error LNK2001: неразрешенный внешний символ "__imp__glutInitWindowSize@8"
-     1>main_disabled.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutInitDisplayMode@4 в функции "int __cdecl main_diabled(int,char * * const)" (?main_diabled@@YAHHQAPAD@Z)
-     1>main.obj : error LNK2001: неразрешенный внешний символ "__imp__glutInitDisplayMode@4"
-     1>main_disabled.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutMainLoop@0 в функции "int __cdecl main_diabled(int,char * * const)" (?main_diabled@@YAHHQAPAD@Z)
-     1>main.obj : error LNK2001: неразрешенный внешний символ "__imp__glutMainLoop@0"
-     1>main_disabled.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutCreateWindow@4 в функции "int __cdecl main_diabled(int,char * * const)" (?main_diabled@@YAHHQAPAD@Z)
-     1>main.obj : error LNK2001: неразрешенный внешний символ "__imp__glutCreateWindow@4"
-     1>main_disabled.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutPostRedisplay@0 в функции "void __cdecl TimerFunction(int)" (?TimerFunction@@YAXH@Z)
-     1>main.obj : error LNK2001: неразрешенный внешний символ "__imp__glutPostRedisplay@0"
-     1>main_disabled.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutSwapBuffers@0 в функции "void __cdecl RenderScene(void)" (?RenderScene@@YAXXZ)
-     1>main.obj : error LNK2001: неразрешенный внешний символ "__imp__glutSwapBuffers@0"
-     1>main_disabled.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutTimerFunc@12 в функции "void __cdecl TimerFunction(int)" (?TimerFunction@@YAXH@Z)
-     1>main_disabled.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutReshapeFunc@4 в функции "int __cdecl main_diabled(int,char * * const)" (?main_diabled@@YAHHQAPAD@Z)
-     1>main.obj : error LNK2001: неразрешенный внешний символ "__imp__glutReshapeFunc@4"
-     1>main_disabled.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutDisplayFunc@4 в функции "int __cdecl main_diabled(int,char * * const)" (?main_diabled@@YAHHQAPAD@Z)
-     1>main.obj : error LNK2001: неразрешенный внешний символ "__imp__glutDisplayFunc@4"
-     1>main.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutInitWindowPosition@8 в функции _main
-     1>main.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutIdleFunc@4 в функции _main
-     1>main.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutKeyboardFunc@4 в функции _main
-     1>main.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutSpecialFunc@4 в функции _main
-     1>main.obj : error LNK2019: ссылка на неразрешенный внешний символ __imp__glutPassiveMotionFunc@4 в функции _main
-     1>E:\My_Tank\Work\Tank\BSUIR.MG.Tanks\Debug\BSUIR.MG.Tanks.exe : fatal error LNK1120: неразрешенных внешних элементов: 15
-     1>Построение проекта "E:\My_Tank\Work\Tank\BSUIR.MG.Tanks\BSUIR.MG.Tanks\BSUIR.MG.Tanks.vcxproj" завершено (целевые объекты Build) с ошибкой.
+         BSUIR.MG.Tanks.vcxproj -> D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\Debug\BSUIR.MG.Tanks.exe
+     1>Done Building Project "D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\BSUIR.MG.Tanks\BSUIR.MG.Tanks.vcxproj" (Build target(s)).
 
-Сбой построения.
+Build succeeded.
 
-Затраченное время: 00:01:00.41
+Time Elapsed 00:00:01.47

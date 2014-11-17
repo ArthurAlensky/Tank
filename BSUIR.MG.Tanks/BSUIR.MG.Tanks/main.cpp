@@ -13,7 +13,7 @@
 #include <cstdlib>
 #include <time.h>
 
-//#include "GLTools.h"
+#include "GLTools.h"
 #include "Global.h"
 #include "common.h"
 #include "Camera.h"
@@ -70,7 +70,7 @@ Wall wall;
 #define SLOWDOWN 0.3
 
 Camera camera(gCenterPoint.X(), 30.0, gCenterPoint.Z(), gCenterPoint.X()+100.0, 10.0, gCenterPoint.Z(),0.0,1.0,0.0);
-GLfloat lightPosition[]= {gCenterPoint.X(), 70, gCenterPoint.Z(), 1.0f };
+GLfloat lightPosition[]= {gCenterPoint.X() + 50, 150, gCenterPoint.Z() + 50, 1.0f };
 GLint shadowSize = 512;
 
 
@@ -86,9 +86,9 @@ void caculateCameraView(unsigned int viewMode);
 //=======================================
 void draw()
 {
-	//glActiveTexture(GL_TEXTURE0);
+	glActiveTexture(GL_TEXTURE0);
 	//glEnable(GL_TEXTURE_2D);							// Enable texture mapping
-	glEnable(GL_DEPTH_TEST);							// Enables depth testing
+	//glEnable(GL_DEPTH_TEST);							// Enables depth testing
 
 	//draw terrain
 	//glDisable(GL_LIGHTING);
@@ -97,17 +97,18 @@ void draw()
 	glPopMatrix();
 	//glEnable(GL_LIGHTING);
 
+	glPushMatrix();
+		wall.draw(SLOWDOWN);
+	glPopMatrix();
+
 	//draw tank
 	glPushMatrix();
 		myTank.draw(g_ViewMod);
 	glPopMatrix();
-
-	glPushMatrix();
-		wall.draw(SLOWDOWN);
-	glPopMatrix();
 	//collisionBoxArray.draw();
 
-	glDisable(GL_DEPTH_TEST);
+	//glDisable(GL_DEPTH_TEST);
+	glActiveTexture(GL_TEXTURE1);
 }
 
 // Called to regenerate the shadow map
@@ -180,6 +181,7 @@ void RenderScene1()
 		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 		draw();
+		glutSwapBuffers();
 }
 
 //*********************************************************
@@ -196,21 +198,17 @@ GLfloat lowDiffuse[4] = {0.1f, 0.1f, 0.1f, 1.0f};
 //*********************************************************
 
 void myDisplay()
-{	
+{
 	RegenerateShadowMap();
 
-	glViewport(0, 0, gWinWidth, gWinHeight);
 		glMatrixMode(GL_PROJECTION);
 		glLoadIdentity();
 		gluPerspective(45.0, (double)gWinWidth/(double)gWinHeight, 0.1, 1000.0);
 		glMatrixMode(GL_MODELVIEW);
 		glLoadIdentity();
-
 		caculateCameraView(gViewMode);
 		camera.view();
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-
-
+		glViewport(0, 0, gWinWidth, gWinHeight);
 	glPushMatrix();
 		glTranslatef(lightPosition[0], lightPosition[1], lightPosition[2]);
 		glColor3ub(255, 255, 40);
@@ -221,7 +219,7 @@ void myDisplay()
 
 	// Track light position
 	glLightfv(GL_LIGHT0, GL_POSITION, lightPosition);
-	
+			glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	// Because there is no support for an "ambient"
 	// shadow compare fail value, we'll have to
 	// draw an ambient pass first...
@@ -267,7 +265,6 @@ void myDisplay()
 	glDisable(GL_TEXTURE_GEN_T);
 	glDisable(GL_TEXTURE_GEN_R);
 	glDisable(GL_TEXTURE_GEN_Q);
-
 	// Flush drawing commands
 
 	glutSwapBuffers();
@@ -281,7 +278,8 @@ void myIdle()
 
 void initGL()
 {
-	//glActiveTexture = (PFNGLACTIVETEXTUREPROC)gltGetExtensionPointer("glActiveTexture");
+	glewInit();
+	glActiveTexture = (PFNGLACTIVETEXTUREPROC)gltGetExtensionPointer("glActiveTexture");
 	
 	// Black background
     glClearColor(0.0f, 0.0f, 0.0f, 1.0f );
@@ -291,7 +289,7 @@ void initGL()
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
     glPolygonOffset(4.0f, 0.0f);
-	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST); 
+	//glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST); 
 
     // Set up some lighting state that never changes
     glShadeModel(GL_SMOOTH);
@@ -304,7 +302,7 @@ void initGL()
 	GLuint shadowTextureID;
 
     // Set up some texture state that never changes
-	//glActiveTexture(GL_TEXTURE1);
+	glActiveTexture(GL_TEXTURE1);
     glGenTextures(1, &shadowTextureID);
     glBindTexture(GL_TEXTURE_2D, shadowTextureID);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_CLAMP);
@@ -319,13 +317,13 @@ void initGL()
 
 void myInit()
 {
+
+	glActiveTexture(GL_TEXTURE0);
 	//make the background look like the sky
 	float blue[4] = {0.5,0.5,1.0,0.0};
 	glClearColor(0.5, 0.5, 1.0, 0.0);
 
 	glShadeModel(GL_SMOOTH);
-
-	//mqoInit();
 
 	
 	glEnable(GL_FOG);
@@ -336,7 +334,7 @@ void myInit()
 	glFogf(GL_FOG_DENSITY, gFogDensity);
 
 	//initial terrain
-	myTerrain.initializeTerrain("E:/My_Tank/Work/Tank/BSUIR.MG.Tanks/Data/Texture/Terrain/sand.tga", "E:/My_Tank/Work/Tank/BSUIR.MG.Tanks/Data/Texture/Terrain/cactus.tga");
+	myTerrain.initializeTerrain("../Data/Texture/Terrain/sand.tga", "../Data/Texture/Terrain/cactus.tga");
 
 	//initial ground collision square
 	groundCollSquare.setParameters(TVector(0.0, 1.0, 0.0), gCenterPoint);
@@ -345,17 +343,16 @@ void myInit()
 	//initial tank
 	tankHeightPos = myTerrain.GetHeight(gCenterPoint.X()+100.0, gCenterPoint.Z());
 
-	myTank.setParameters("T-90.3DS", "E:/My_Tank/Work/Tank/TANK-T90/T-90/",TVector(gCenterPoint.X()+100.0, tankHeightPos + 9.0, gCenterPoint.Z()), 0.0, &myTerrain, &collisionBoxArray, &wall);
+	myTank.setParameters("T-90.3DS", "../T-90/",TVector(gCenterPoint.X()-510.0, tankHeightPos + 9.0, gCenterPoint.Z()-20), 0.0, &myTerrain, &collisionBoxArray, &wall);
 	myTank.initTank();	
 
 	unsigned int brickTexture;
 
-	createTexture("E:/My_Tank/Work/Tank/BSUIR.MG.Tanks/Data/Texture/Brick/brick.bmp", brickTexture);
+	createTexture("../Data/Texture/Brick/brick.bmp", brickTexture);
 
 	wall.Init(myTank.getPosition().X() + 50, myTank.getPosition().Y(), myTank.getPosition().Z() + 20, NUM_BRICKS, brickTexture, &myTerrain);
 
 	myTank.startFight();
-	//mySetLight();
 }
 
 
@@ -482,6 +479,11 @@ void mySpecialKeyboard(int key, int x, int y)
 		gViewMode = 2;
 		break;
 	}
+
+	printf("==============================");
+	printf("x=%f\n", myTank.getPosition().X());
+	printf("y=%f\n", myTank.getPosition().Y());
+	printf("z=%f\n", myTank.getPosition().Z());
 }
 
 void mouseMotion(int x, int y)
@@ -507,7 +509,7 @@ int main (int argc, char ** const argv)
 	glutInitWindowPosition(0, 0);
 	glutCreateWindow("MyGame");
 
-	//initGL();
+	initGL();
 	myInit();
 
 	glutDisplayFunc(myDisplay);
