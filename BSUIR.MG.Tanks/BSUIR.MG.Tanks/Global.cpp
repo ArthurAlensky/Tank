@@ -1,5 +1,5 @@
 #include "Global.h"
-
+#include "FreeImage\FreeImage.h"
 bool createTexture(LPTSTR szFileName, unsigned int &texture)                            // Creates Texture From A Bitmap File
 {
       HBITMAP hBMP;                                                                 // Handle Of The Bitmap
@@ -27,4 +27,25 @@ bool createTexture(LPTSTR szFileName, unsigned int &texture)                    
       DeleteObject(hBMP);                                                           // Delete The Object
 
       return TRUE;                                                                  // Loading Was Successful
+}
+
+bool createPNGTexture(LPTSTR szFileName, unsigned int &texture)                            // Creates Texture From A Bitmap File
+{
+	FIBITMAP* bitmap = FreeImage_Load(FreeImage_GetFileType(szFileName, 0), szFileName);
+
+	FIBITMAP *pImage = FreeImage_ConvertTo32Bits(bitmap);
+	int nWidth = FreeImage_GetWidth(pImage);
+	int nHeight = FreeImage_GetHeight(pImage);
+	glGenTextures(1, &texture);                                                 // Create The Texture
+
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 8);                                        // Pixel Storage Mode (Word Alignment / 4 Bytes)
+	// Typical Texture Generation Using Data From The Bitmap
+    glBindTexture(GL_TEXTURE_2D, texture);                                      // Bind To The Texture ID
+	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR); // Linear Min Filter
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR); // Linear Mag Filter
+	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA8, nWidth, nHeight,0, GL_BGRA, GL_UNSIGNED_BYTE, (void*)FreeImage_GetBits(pImage));
+
+	FreeImage_Unload(pImage);
+
+	return TRUE;
 }

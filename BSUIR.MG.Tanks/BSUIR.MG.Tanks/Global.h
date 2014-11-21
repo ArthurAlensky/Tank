@@ -15,6 +15,7 @@
 #include <vector>
 #include <GL\glew.h>
 #include <crtdbg.h>
+#include "FreeImage\FreeImage.h"
 using namespace std;
 
 #define SCREEN_WIDTH 800								// We want our screen width 800 pixels
@@ -102,5 +103,5 @@ struct t3DModel
 /////
 ///////////////////////////////// CREATE TEXTURE \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\*
 bool createTexture(LPTSTR szFileName, unsigned int &texture);                            // Creates Texture From A Bitmap File
-
+bool createPNGTexture(LPTSTR szFileName, unsigned int &texture);                          // Creates Texture From A Bitmap File
 #endif 

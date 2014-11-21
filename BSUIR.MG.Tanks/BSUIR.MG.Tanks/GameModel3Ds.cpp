@@ -49,7 +49,8 @@ void GameModel3Ds::initModel()
 			// We pass in our global texture array, the name of the texture, and an ID to reference it.	
 			string texture(rootFolder);
 			texture += g_3DModel.pMaterials[i].strFile; 
-			createTexture((LPTSTR)texture.c_str(), g_Texture[i]);			
+			//createTexture((LPTSTR)texture.c_str(), g_Texture[i]);			
+			createPNGTexture((LPTSTR)texture.c_str(), g_Texture[i]);			
 		}
 
 		// Set the texture ID for this material

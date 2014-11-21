@@ -70,7 +70,7 @@ Wall wall;
 #define SLOWDOWN 0.3
 
 Camera camera(gCenterPoint.X(), 30.0, gCenterPoint.Z(), gCenterPoint.X()+100.0, 10.0, gCenterPoint.Z(),0.0,1.0,0.0);
-GLfloat lightPosition[]= {gCenterPoint.X() + 50, 150, gCenterPoint.Z() + 50, 1.0f };
+GLfloat lightPosition[]= {gCenterPoint.X() + 450, 450, gCenterPoint.Z() + 50, 1.0f };
 GLint shadowSize = 512;
 
 
@@ -343,7 +343,7 @@ void myInit()
 	//initial tank
 	tankHeightPos = myTerrain.GetHeight(gCenterPoint.X()+100.0, gCenterPoint.Z());
 
-	myTank.setParameters("T-90.3DS", "../T-90/",TVector(gCenterPoint.X()-510.0, tankHeightPos + 9.0, gCenterPoint.Z()-20), 0.0, &myTerrain, &collisionBoxArray, &wall);
+	myTank.setParameters("T-90.3DS", "../T-90/",TVector(gCenterPoint.X()-600.0, tankHeightPos + 9.0, gCenterPoint.Z()-20), 0.0, &myTerrain, &collisionBoxArray, &wall);
 	myTank.initTank();	
 
 	unsigned int brickTexture;
