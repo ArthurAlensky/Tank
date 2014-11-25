@@ -301,6 +301,7 @@ void initGL()
 
 	GLuint shadowTextureID;
 
+
     // Set up some texture state that never changes
 	glActiveTexture(GL_TEXTURE1);
     glGenTextures(1, &shadowTextureID);
@@ -350,7 +351,7 @@ void myInit()
 
 	createTexture("../Data/Texture/Brick/brick.bmp", brickTexture);
 
-	wall.Init(myTank.getPosition().X() + 50, myTank.getPosition().Y(), myTank.getPosition().Z() + 20, NUM_BRICKS, brickTexture, &myTerrain);
+	wall.Init(myTank.getPosition().X() + 50, myTank.getPosition().Y()-8, myTank.getPosition().Z() + 20, NUM_BRICKS, brickTexture, &myTerrain);
 
 	myTank.startFight();
 }
