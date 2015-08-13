@@ -7,40 +7,34 @@
  *
  */
 
-#include "ControlWarObject.h"
+#include "ControlPhysicsObject.h"
 
-ControlWarObject::ControlWarObject()
+ControlPhysicsObject::ControlPhysicsObject()
 {
 	position = TVector(0.0, 0.0, 0.0);
 	angleWithX = 0.0;
-	life = true;
 	collisionBoxArray = NULL;
 }
 
-ControlWarObject::~ControlWarObject()
+ControlPhysicsObject::~ControlPhysicsObject()
 {
 }
 
-void ControlWarObject::setPosition(float x, float y, float z)
+void ControlPhysicsObject::setPosition(float x, float y, float z)
 {
 	position.setX(x);
 	position.setY(y);
 	position.setZ(z);
 }
 
-void ControlWarObject::setParameters(TVector position, float angleWithX, CollisionBoxArray *collisionBoxArray)
+void ControlPhysicsObject::setParameters(TVector position, float angleWithX, CollisionBoxArray *collisionBoxArray)
 {
 	this->position = position;
 	this->angleWithX = angleWithX;
 	this->collisionBoxArray = collisionBoxArray;
 }
 
-void ControlWarObject::setLifeStatus(bool lifeStatus)
-{
-	this->life = lifeStatus;
-}
-
-void ControlWarObject::plusPosition(float deltaX, float deltaY, float deltaZ)
+void ControlPhysicsObject::plusPosition(float deltaX, float deltaY, float deltaZ)
 {
 	position += TVector(deltaX, deltaY, deltaZ);
 }

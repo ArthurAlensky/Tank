@@ -11,7 +11,7 @@ Tank::~Tank()
 
 void Tank::setParameters(const char *bodyFile, const char *rootFolder,TVector position, float angleWithX, Terrain *terrain, CollisionBoxArray *collisionBoxArray, Wall *wall)
 {
-	bodyModel.setParameters(bodyFile, 0.2, rootFolder);
+	GameModel3Ds::setParameters(bodyFile, 0.2, rootFolder);
 	this->position = position;
 	this->angleWithX = angleWithX;
 	this->terrain = terrain;
@@ -21,9 +21,6 @@ void Tank::setParameters(const char *bodyFile, const char *rootFolder,TVector po
 
 void Tank::plusAngleWithX(float deltaAngle)
 {
-	if(!life)
-		return;
-
 	angleWithX += deltaAngle;
 	if(angleWithX>= 360)
 		angleWithX = 0;
@@ -34,9 +31,6 @@ void Tank::plusAngleWithX(float deltaAngle)
 
 void Tank::move(float deltaTranslate)
 {
-	if(!life)
-		return;
-
 	if(Collision())
 	{
 		wall->Destroy();
@@ -57,7 +51,7 @@ bool Tank::Collision()
 
 void Tank::initTank()
 {
-	bodyModel.initModel();
+	this->initModel();
 
 	radTankAngle = M_PI*angleWithX/180.0;
 	collisionBox.setParameters(TVector(position.X()-2.5*cos(radTankAngle), position.Y()-2.1, position.Z()), angleWithX, 17.0, 4.5, 8.0);
@@ -67,28 +61,23 @@ void Tank::initTank()
 
 void Tank::startFight()
 {
-	life = true;
 	collisionBox.setTimeLife(30);
 }
 
 void Tank::draw(int viewMode)
 {
-	if(!life)
-		return;
-
 	//printf("Angle with X when draw tank is %2f\n", angleWithX);
 	glPushMatrix();
 	glTranslatef(position.X(), position.Y() - 10, position.Z());
 	glRotatef(angleWithX - 90, 0.0, 1.0, 0.0);
 
 	glScalef(10,10,10);
-	bodyModel.display(viewMode);
+	this->display(viewMode);
 	
 	glPopMatrix();
 
 	if(!collisionBox.isLife())
 	{
-		life = false;
 		printf("player's Tank die\n");
 	}
 }

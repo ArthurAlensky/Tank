@@ -9,15 +9,14 @@
 #ifndef _TANK_H_
 #define _TANK_H_
 #include "GameModel3Ds.h"
-#include "ControlWarObject.h"
+#include "ControlPhysicsObject.h"
 #include "Terrain.h"
 #include "TVector.h"
 #include "Wall.h"
 
-class Tank: public ControlWarObject
+class Tank: public ControlPhysicsObject, public GameModel3Ds
 {
 private:
-	GameModel3Ds bodyModel;
 	float radTankAngle;
 	Terrain *terrain;
 	Wall *wall;

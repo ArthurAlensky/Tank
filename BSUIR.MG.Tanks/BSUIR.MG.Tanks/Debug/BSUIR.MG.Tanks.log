@@ -1,34 +1,12 @@
-﻿Build started 11/25/2014 6:23:10 PM.
+﻿Build started 8/12/2015 2:28:39 PM.
      1>Project "D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\BSUIR.MG.Tanks\BSUIR.MG.Tanks.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\/common/inc" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt main.cpp
-         main.cpp
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\camera.h(37): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\camera.h(38): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\camera.h(39): warning C4244: 'return' : conversion from 'double' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(44): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(48): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(50): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(53): warning C4305: 'initializing' : truncation from 'double' to 'float'
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(72): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(73): warning C4244: 'initializing' : conversion from 'double' to 'GLfloat', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(101): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(345): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(354): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(367): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(375): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(378): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(384): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(387): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(393): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(396): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(402): warning C4244: 'argument' : conversion from 'double' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(434): warning C4305: '-=' : truncation from 'double' to 'float'
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(441): warning C4305: '+=' : truncation from 'double' to 'float'
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(495): warning C4244: '+=' : conversion from 'float' to 'int', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(501): warning C4244: '=' : conversion from 'int' to 'float', possible loss of data
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(530): warning C4305: 'initializing' : truncation from 'double' to 'GLfloat'
-     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\main.cpp(532): warning C4305: 'initializing' : truncation from 'double' to 'GLfloat'
+         D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\/common/inc" /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt Tank.cpp
+         Tank.cpp
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\tank.cpp(14): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\tank.cpp(39): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\tank.cpp(56): warning C4244: '=' : conversion from 'double' to 'float', possible loss of data
+     1>d:\university-9-sem\tank\tank\bsuir.mg.tanks\bsuir.mg.tanks\tank.cpp(71): warning C4244: 'argument' : conversion from 'double' to 'GLfloat', possible loss of data
        Link:
          D:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\Debug\BSUIR.MG.Tanks.exe" /INCREMENTAL /NOLOGO /LIBPATH:"D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\/common/lib" glew32.lib freeimage.lib freeimage64.lib freeglut.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\Debug\BSUIR.MG.Tanks.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"D:\UNIVERSITY-9-Sem\TANK\Tank\BSUIR.MG.Tanks\Debug\BSUIR.MG.Tanks.lib" /MACHINE:X86 Debug\BSUIR.MG.Tanks.res
          Debug\3ds.obj
@@ -39,7 +17,7 @@
          Debug\CollisionBoxArray.obj
          Debug\CollisionSquare.obj
          Debug\common.obj
-         Debug\ControlWarObject.obj
+         Debug\ControlPhysicsObject.obj
          Debug\Global.obj
          Debug\GLTools.obj
          Debug\Light.obj
@@ -58,4 +36,4 @@
 
 Build succeeded.
 
-Time Elapsed 00:00:03.95
+Time Elapsed 00:00:01.41

@@ -1,5 +1,5 @@
 /*
- *  ControlWarObject.h
+ *  ControlPhysicsObject.h
  *  myGame
  *
  *  Created by le van nghia on 12/15/10.
@@ -7,35 +7,32 @@
  *
  */
 
-#ifndef _CONTROLWAROBJECT_H_
-#define _CONTROLWAROBJECT_H_
+#ifndef _CONTROLPHYSICSOBJECT_H_
+#define _CONTROLPHYSICSOBJECT_H_
 
 #include "IncludeS.h"
 #include "Tvector.h"
 #include "CollisionBox.h"
 #include "CollisionBoxArray.h"
 
-class ControlWarObject
+class ControlPhysicsObject
 {
 protected:
 	TVector	position;
 	float angleWithX;
-	bool life;
 	CollisionBox collisionBox;
 	CollisionBoxArray *collisionBoxArray;
 	float radius;
 	
 public:
-	ControlWarObject();
-	~ControlWarObject();
+	ControlPhysicsObject();
+	~ControlPhysicsObject();
 	
 	void setParameters(TVector position, float angleWithX, CollisionBoxArray *collisionBoxArray);
 	void setPosition(float x, float y, float z);
 	float getRadius(){return radius;}
 	TVector getPosition(){ return position;}
 	float getAngleWithX(){return angleWithX;}
-	void setLifeStatus(bool lifeStatus);
-	bool getLifeStatus(){return life;}
 	void plusPosition(float deltaX, float deltaY, float deltaZ);
 	virtual void draw(){}
 };
