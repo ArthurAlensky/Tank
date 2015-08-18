@@ -40,7 +40,6 @@ void Terrain::loadTexture(char *filename, Texture &texture)
 	gluBuild2DMipmaps(GL_TEXTURE_2D, texture.type, texture.width, texture.height, texture.type, GL_UNSIGNED_BYTE, texture.imageData);
 	
 	free(texture.imageData);
-	printf("width  %i  height %i\n",texture.width,texture.height);
 	
 }
 
@@ -62,8 +61,6 @@ void Terrain::initializeTerrain(char *sandFileName, char *treeFileName)  //initi
 			terrain[x+z*mapX][2] = -float(z)*mapScale;
 			
 			currentVertex = z*mapX +x;
-			
-			//printf(" %f   %f   %f\n",terrain[currentVertex][0],terrain[currentVertex][1],terrain[currentVertex][2]);
 			
 			colorArray[currentVertex][0] = colorArray[currentVertex][1]=colorArray[currentVertex][2]=terrain[x+z*mapX][1]/20.0 +0.5;
 			
@@ -459,3 +456,6 @@ void Terrain::LoadRawFile(char *strName, int nSize, char *pHeightMap)
 	// Close the file.
 	fclose(pFile);
 }
+
+/*===========================================3DMax Terrain==================================*/
+

@@ -31,7 +31,6 @@ public:
 	void plusAngleWithX(float deltaAngle);
 	void move(float deltaTranslate);
 	void initTank();
-	void startFight();
 	void draw(int viewMode);
 };
 

@@ -4,20 +4,23 @@ GameModel3Ds::GameModel3Ds()
 {
 }
 
-GameModel3Ds::GameModel3Ds(const char *fileName, float scale)
+GameModel3Ds::GameModel3Ds(const char *fileName, float scale, const char *rootFolder)
 {
-	this->fileName += fileName;
-	this->scale = scale;
+	this->setParameters(fileName, scale, rootFolder);
 }
 
 GameModel3Ds::~GameModel3Ds()
 {
 }
 
-void GameModel3Ds::setParameters(const char *filename, float scale, const char *rootFolder = NULL)
+void GameModel3Ds::setParameters(const char *fileName, float scale, const char *rootFolder)
 {
-	this->fileName += filename;
 	this->scale = scale;
+
+	if (fileName != NULL)
+	{
+		this->fileName += fileName;
+	}
 
 	if(rootFolder != NULL)
 	{

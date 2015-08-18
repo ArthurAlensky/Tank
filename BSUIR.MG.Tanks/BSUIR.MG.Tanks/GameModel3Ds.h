@@ -7,6 +7,8 @@
  *
  */
 
+#ifndef _GAME_MODEL_3DS_H_
+#define _GAME_MODEL_3DS_H_
 
 #include "3ds.h"
 #include "Global.h"
@@ -24,7 +26,7 @@ private:
 
 public:
 	GameModel3Ds();
-	GameModel3Ds(const char *filename, float scale);
+	GameModel3Ds(const char *filename, float scale, const char *rootFolder);
 	~GameModel3Ds();
 	
 	void setParameters(const char *filename, float scale, const char *rootFolder);
@@ -33,3 +35,4 @@ public:
 	void deleteModel();
 };
 
+#endif

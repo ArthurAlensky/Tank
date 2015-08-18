@@ -15,6 +15,7 @@
 #include "Texture.h"
 #include "Tvector.h"
 #include "Global.h"
+#include "GameModel3Ds.h"
 
 #define PI 3.14159
 #define RAND_COORD(x)  ((float)rand()/RAND_MAX * (x))
@@ -62,5 +63,17 @@ public:
 
 
 };
+
+class Terrain3ds : public GameModel3Ds
+{
+private:
+public:
+
+	Terrain3ds(const char *filename, float scale, const char *rootFolder = NULL);
+	~Terrain3ds();
+
+	void init();
+};
+
 
 #endif

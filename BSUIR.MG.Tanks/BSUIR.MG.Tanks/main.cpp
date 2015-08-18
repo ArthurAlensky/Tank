@@ -87,15 +87,9 @@ void caculateCameraView(unsigned int viewMode);
 void draw()
 {
 	glActiveTexture(GL_TEXTURE0);
-	//glEnable(GL_TEXTURE_2D);							// Enable texture mapping
-	//glEnable(GL_DEPTH_TEST);							// Enables depth testing
-
-	//draw terrain
-	//glDisable(GL_LIGHTING);
 	glPushMatrix();
 		myTerrain.drawTerrain();
 	glPopMatrix();
-	//glEnable(GL_LIGHTING);
 
 	glPushMatrix();
 		wall.draw(SLOWDOWN);
@@ -105,9 +99,7 @@ void draw()
 	glPushMatrix();
 		myTank.draw(g_ViewMod);
 	glPopMatrix();
-	//collisionBoxArray.draw();
 
-	//glDisable(GL_DEPTH_TEST);
 	glActiveTexture(GL_TEXTURE1);
 }
 
@@ -272,7 +264,6 @@ void myDisplay()
 
 void myIdle()
 {
-	//caculateCameraView(gViewMode);
 	glutPostRedisplay();
 }
 
@@ -289,7 +280,6 @@ void initGL()
     glEnable(GL_DEPTH_TEST);
     glDepthFunc(GL_LEQUAL);
     glPolygonOffset(4.0f, 0.0f);
-	//glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST); 
 
     // Set up some lighting state that never changes
     glShadeModel(GL_SMOOTH);
@@ -352,8 +342,6 @@ void myInit()
 	createTexture("../Data/Texture/Brick/brick.bmp", brickTexture);
 
 	wall.Init(myTank.getPosition().X() + 50, myTank.getPosition().Y()-8, myTank.getPosition().Z() + 20, NUM_BRICKS, brickTexture, &myTerrain);
-
-	myTank.startFight();
 }
 
 
@@ -363,7 +351,6 @@ void caculateCameraView(unsigned int viewMode)
 	switch(viewMode)
 	{
 	case 0:
-		//gRadViewAngle = M_PI*myTank.getAngleWithX()/180.0 - M_PI; //Depricated
 		gRadViewAngle = M_PI*angleWithX/180.0 - M_PI;
 
 
@@ -410,22 +397,17 @@ void myKeyboard(unsigned char key,int x,int y)
 	switch (key)
 	{
 	case 'g':					//decrease gun angle
-		//myTank.plusGunAngle(-gAngleGunDelta);
 		break;
 	case 'G':					//increase gun angle
-		//myTank.plusGunAngle(gAngleGunDelta);
 		break;
 
 	case 's':					//shot generally bomb
-		//myTank.shot();
 		break;
 	case 'm':					//shot auto bomb
 		break;
 	case 'v':					//decrease generally bomb velocity
-		//myTank.plusBombVelocityMag(-gBombVelocityMagDelta);
 		break;
 	case 'V':					//increase generally bomb velocity
-		//myTank.plusBombVelocityMag(gBombVelocityMagDelta);
 		break;
 
 	case 'f':					//decrease fog density
@@ -444,7 +426,6 @@ void myKeyboard(unsigned char key,int x,int y)
 		break;
 
 	case 'r':					//reset game
-		myTank.startFight();
 		break;
 	case 27:					//exit game
 		exit(0);
@@ -480,11 +461,6 @@ void mySpecialKeyboard(int key, int x, int y)
 		gViewMode = 2;
 		break;
 	}
-
-	printf("==============================");
-	printf("x=%f\n", myTank.getPosition().X());
-	printf("y=%f\n", myTank.getPosition().Y());
-	printf("z=%f\n", myTank.getPosition().Z());
 }
 
 void mouseMotion(int x, int y)
@@ -543,7 +519,6 @@ void mySetLight()
 
 void quit()
 {
-	//mqoCleanup();
 }
 
 void myReshape(int width, int height)

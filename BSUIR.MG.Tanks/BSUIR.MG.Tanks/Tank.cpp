@@ -59,14 +59,8 @@ void Tank::initTank()
 	collisionBoxArray->addCollisionBox(&collisionBox);
 }
 
-void Tank::startFight()
-{
-	collisionBox.setTimeLife(30);
-}
-
 void Tank::draw(int viewMode)
 {
-	//printf("Angle with X when draw tank is %2f\n", angleWithX);
 	glPushMatrix();
 	glTranslatef(position.X(), position.Y() - 10, position.Z());
 	glRotatef(angleWithX - 90, 0.0, 1.0, 0.0);
